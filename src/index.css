@@ -1,0 +1,351 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ocean Color Palette */
+    --background: 210 50% 4%;
+    --foreground: 195 100% 95%;
+    
+    --card: 210 45% 8%;
+    --card-foreground: 195 100% 95%;
+    
+    --popover: 210 45% 8%;
+    --popover-foreground: 195 100% 95%;
+    
+    --primary: 195 100% 50%;
+    --primary-foreground: 210 50% 4%;
+    
+    --secondary: 180 60% 25%;
+    --secondary-foreground: 195 100% 95%;
+    
+    --muted: 210 40% 15%;
+    --muted-foreground: 195 30% 60%;
+    
+    --accent: 175 80% 40%;
+    --accent-foreground: 210 50% 4%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 195 40% 20%;
+    --input: 195 40% 20%;
+    --ring: 195 100% 50%;
+    
+    /* Ocean Special Colors */
+    --deep-ocean: 210 60% 8%;
+    --abyss: 220 70% 5%;
+    --surface-light: 195 80% 60%;
+    --bioluminescent: 175 100% 50%;
+    --coral: 16 100% 65%;
+    --treasure: 45 100% 50%;
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 45% 8%;
+    --sidebar-foreground: 195 100% 95%;
+    --sidebar-primary: 195 100% 50%;
+    --sidebar-primary-foreground: 210 50% 4%;
+    --sidebar-accent: 210 40% 15%;
+    --sidebar-accent-foreground: 195 100% 95%;
+    --sidebar-border: 195 40% 20%;
+    --sidebar-ring: 195 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(180deg, hsl(210 60% 6%) 0%, hsl(220 70% 3%) 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@layer components {
+  /* Ocean Text Gradient */
+  .text-ocean-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--surface-light)) 0%, hsl(var(--bioluminescent)) 50%, hsl(var(--primary)) 100%);
+  }
+
+  /* Bioluminescent Glow Effect */
+  .glow-bioluminescent {
+    text-shadow: 0 0 20px hsl(var(--bioluminescent) / 0.6), 0 0 40px hsl(var(--bioluminescent) / 0.4);
+  }
+
+  /* Glass Effect */
+  .glass-ocean {
+    background: hsl(var(--deep-ocean) / 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--primary) / 0.2);
+  }
+
+  /* Depth Card */
+  .depth-card {
+    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--abyss)) 100%);
+    border: 1px solid hsl(var(--primary) / 0.15);
+    box-shadow: 0 20px 60px -20px hsl(210 100% 10% / 0.8), inset 0 1px 0 hsl(var(--primary) / 0.1);
+  }
+
+  /* Link Hover Effect */
+  .link-wave {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-wave::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--bioluminescent)));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .link-wave:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Bubble Background */
+  .bubbles-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bubbles-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 80% 20%, hsl(var(--bioluminescent) / 0.1) 3px, transparent 3px),
+      radial-gradient(circle at 40% 40%, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 100px 100px, 150px 150px, 80px 80px;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Legacy gradient support */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--surface-light)) 0%, hsl(var(--bioluminescent)) 50%, hsl(var(--primary)) 100%);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-up-score {
+    animation: fadeUpScore 1s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-bubble {
+    animation: bubble-rise 8s ease-in-out infinite;
+  }
+
+  .animate-wave {
+    animation: wave 20s linear infinite;
+  }
+
+  .animate-submarine {
+    animation: submarine-drift 10s ease-in-out infinite;
+  }
+
+  .animate-sonar {
+    animation: sonar 2s ease-out infinite;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpScore {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.5);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-25%) translateY(2px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes submarine-drift {
+  0%, 100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px) rotate(2deg);
+  }
+  50% {
+    transform: translateX(0) translateY(-10px) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-10px) translateY(-5px) rotate(-2deg);
+  }
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Swimming animations for creatures */
+@keyframes swim-left {
+  0% {
+    transform: translateX(100vw) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-100px) scaleX(-1);
+  }
+}
+
+@keyframes swim-right {
+  0% {
+    transform: translateX(-100px) scaleX(1);
+  }
+  100% {
+    transform: translateX(100vw) scaleX(1);
+  }
+}
