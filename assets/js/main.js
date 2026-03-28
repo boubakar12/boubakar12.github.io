@@ -1,161 +1,122 @@
-(function() {
-  "use strict";
+/* Boubakar Diallo Portfolio — main.js */
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
+// NAV TOGGLE (mobile)
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks  = document.querySelector('.nav-links');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+}
+
+// SCROLL REVEAL
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay || 0);
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+      revealObs.unobserve(entry.target);
     }
-  }
-
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
-
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * burgerMenu
-   */
-  const burgerMenu = select('.burger')
-  on('click', '.burger', function(e) {
-    burgerMenu.classList.toggle('active');
-  })
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('#portfolio-grid');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.item',
-      });
-
-      let portfolioFilters = select('#filters a', true);
-
-      on('click', '#filters a', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('active');
-        });
-        this.classList.add('active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
   });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+// MODAL
+function openModal(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
   });
-
-})()
-
-
-
-
-let slideIndex = 1;
-const slidesWrapper = document.querySelector(".slides-wrapper");
-const slides = document.getElementsByClassName("mySlides");
-const totalSlides = slides.length;
-
-// Initialize the slideshow
-document.addEventListener("DOMContentLoaded", () => {
-    setInitialPosition();
-    updateDots(slideIndex);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
 });
 
-function setInitialPosition() {
-    // Offset to show the first "real" slide
-    slidesWrapper.style.transform = `translateX(-100%)`;
-}
+// TERMINAL TYPEWRITER
+const TERMINAL_LINES = [
+  { type: 'prompt', text: 'cat profile.txt' },
+  { type: 'out',    text: 'Name: Boubakar Diallo' },
+  { type: 'out',    text: 'Role: ECE @ Cornell, Class of 2028' },
+  { type: 'out',    text: 'Focus: Embedded · FPGA · Edge AI · Robotics' },
+  { type: 'prompt', text: 'ls -1 internships/' },
+  { type: 'out',    text: 'simulacrum-nyc/  adas-safe/  beta-university/' },
+  { type: 'out',    text: 'ewb-ithaca/  quincy-ma/' },
+  { type: 'prompt', text: 'echo $AVAILABILITY' },
+  { type: 'out',    text: 'Open to Summer 2026 internships ✓' },
+];
 
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides();
-}
+function runTerminal() {
+  const out = document.getElementById('term-output');
+  if (!out || out.dataset.done) return;
+  out.dataset.done = '1';
+  out.innerHTML = '';
+  let lineIdx = 0;
 
-function currentSlide(n) {
-    slideIndex = n;
-    showSlides();
-}
-
-function showSlides() {
-    const dots = document.getElementsByClassName("dot");
-
-    // Smooth transition
-    slidesWrapper.style.transition = "transform 0.8s ease-in-out";
-
-    // Adjust the transform to slide to the current index
-    slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-    // Reset the position if at cloned slides
-    slidesWrapper.addEventListener("transitionend", () => {
-        if (slideIndex === 0) {
-            // Reset to last "real" slide
-            slidesWrapper.style.transition = "none";
-            slideIndex = totalSlides - 2;
-            slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
-        } else if (slideIndex === totalSlides - 1) {
-            // Reset to first "real" slide
-            slidesWrapper.style.transition = "none";
-            slideIndex = 1;
-            slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
-    });
-
-    // Update active dots
-    updateDots(slideIndex);
-}
-
-function updateDots(index) {
-    const dots = document.getElementsByClassName("dot");
-
-    // Adjust for cloned slides
-    let activeIndex = index - 1;
-    if (index === 0) activeIndex = totalSlides - 3; // Last real slide
-    if (index === totalSlides - 1) activeIndex = 0; // First real slide
-
-    // Update dot styles
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+  function typeLine() {
+    if (lineIdx >= TERMINAL_LINES.length) {
+      out.innerHTML += `<div><span class="terminal-prompt">$ </span><span class="cursor-blink">▋</span></div>`;
+      return;
     }
-    dots[activeIndex].className += " active";
+    const line = TERMINAL_LINES[lineIdx];
+    const div = document.createElement('div');
+    out.appendChild(div);
+    let charIdx = 0;
+    const isPrompt = line.type === 'prompt';
+    const speed = isPrompt ? 34 : 10;
+
+    const iv = setInterval(() => {
+      const text = line.text.slice(0, charIdx);
+      if (isPrompt) {
+        div.innerHTML = `<span class="terminal-prompt">$ </span><span class="terminal-cmd">${text}<span class="cursor-blink">▋</span></span>`;
+      } else {
+        div.innerHTML = `<span class="terminal-out">${text}</span>`;
+      }
+      charIdx++;
+      if (charIdx > line.text.length) {
+        clearInterval(iv);
+        if (isPrompt) {
+          div.innerHTML = `<span class="terminal-prompt">$ </span><span class="terminal-cmd">${line.text}</span>`;
+        } else {
+          div.innerHTML = `<span class="terminal-out">${line.text}</span>`;
+        }
+        lineIdx++;
+        setTimeout(typeLine, isPrompt ? 200 : 60);
+      }
+    }, speed);
+  }
+  typeLine();
 }
 
+// CONTACT FORM
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const ok  = document.getElementById('form-ok');
+  if (!btn || !ok) return;
+  btn.textContent = 'Sent.';
+  btn.style.background = '#1a3a5c';
+  btn.disabled = true;
+  ok.style.display = 'block';
+}
+
+// INIT
+window.addEventListener('load', () => {
+  runTerminal();
+});

@@ -1,243 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Boubakar Diallo | Portfolio</title>
-
-  <link href="assets/img/favicon-16x16.png" rel="icon">
-  <link
-    href="https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i&display=swap"
-    rel="stylesheet">
-
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <style>
-    .navbar.sticky-top {
-      background-color: white;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .modal-img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Boubakar Diallo</title>
+  <meta name="description" content="About Boubakar Diallo — ECE sophomore at Cornell. 4 national merit scholarships, embedded systems, edge AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Boubakar Diallo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="nav">
+  <span class="nav-name">Boubakar Diallo</span>
+  <ul class="nav-links">
+    <li><a href="index.html">Work</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="assets/Boubakar_Diallo_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        </ul>
-      </div>
+<div class="page-hero">
+  <span class="page-hero-label">About</span>
+  <h1 class="page-hero-h">Boubakar Diallo</h1>
+  <p class="page-hero-sub">ECE student at Cornell building hardware and software systems at the edge — with purpose.</p>
+</div>
+
+<div class="about-layout">
+  <div class="about-photo-col">
+    <img src="assets/img/profile.png" alt="Boubakar Diallo" class="about-photo" onerror="this.style.display='none'">
+    <div class="about-sidebar-h">Education</div>
+    <div class="sidebar-row"><strong>Cornell University</strong><br>B.S. Electrical & Computer Engineering<br><span style="color:var(--mid)">May 2028 · Minor: Business & CS</span></div>
+    <div class="about-sidebar-h">Scholarships</div>
+    <div class="honor-row">Robert L. Ryan Scholar</div>
+    <div class="honor-row">Bridges Scholar</div>
+    <div class="honor-row">NACME Scholar</div>
+    <div class="honor-row">Thrive NextGen Scholar</div>
+    <div class="honor-row">Community Leadership Award 2025</div>
+    <div class="about-sidebar-h">Contact</div>
+    <div class="sidebar-row">bd453@cornell.edu<br>857-308-6457</div>
+    <div class="sidebar-row"><a href="https://github.com/boubakar12" target="_blank" rel="noopener" style="color:var(--accent);">github.com/boubakar12</a></div>
+    <div class="sidebar-row"><a href="https://www.linkedin.com/in/boubakar/" target="_blank" rel="noopener" style="color:var(--accent);">linkedin.com/in/boubakar</a></div>
+  </div>
+
+  <div class="about-text-col">
+    <p class="about-lead reveal">I'm a sophomore at Cornell University studying Electrical & Computer Engineering (B.S. May 2028), with a minor in Business and Computer Science. I work at the intersection of hardware and software — from bare-metal firmware and FPGA design to edge ML systems that run fully offline in the field.</p>
+    <p class="about-p reveal" data-delay="60">My work is shaped by a simple observation: the most critical engineering problems — healthcare in low-resource settings, crop disease detection in Sub-Saharan Africa, safety-critical automotive systems — exist in places where reliability under constraints matters more than cloud scale. I build for those environments.</p>
+    <p class="about-p reveal" data-delay="120">I'm currently interning at Simulacrum in New York, building embedded data platforms. I lead the hardware team at Engineers Without Borders, deploying a rover-drone system for crop analytics. And I'm building WholeStory Health — a multilingual clinical NLP platform that runs fully offline on NVIDIA Jetson Orin Nano hardware, cutting physician documentation time in under-resourced clinics.</p>
+    <p class="about-p reveal" data-delay="180">I was selected nationally for Beta University's Silicon Valley pre-accelerator and hold 4 competitive national merit scholarships (top ~2% of applicants each). Fluent in English, French, Arabic, and Fulah.</p>
+
+    <div class="about-section-h reveal" data-delay="220">Coursework</div>
+    <p class="course-list reveal" data-delay="240">Digital Logic & Computer Organization · Embedded Systems · Introduction to Circuits · Computer Systems Programming · Machine Learning · Electromagnetism · Power Electronics · Signals & Systems · Linear Algebra · Operations Research</p>
+
+    <div class="about-section-h reveal" data-delay="280">Certifications & Programs</div>
+    <div class="cert-row reveal" data-delay="300"><span>2025</span>GE Aerospace — Explore Electrical Engineering</div>
+    <div class="cert-row reveal" data-delay="320"><span>2025</span>Citi — ICG Technology Software Development</div>
+    <div class="cert-row reveal" data-delay="340"><span>2025</span>EY — Expedition AI & Strategy</div>
+    <div class="cert-row reveal" data-delay="360"><span>2025</span>Electronic Arts — Software Engineering Program</div>
+    <div class="cert-row reveal" data-delay="380"><span>2025</span>AMD — AI Developer Program</div>
+    <div class="cert-row reveal" data-delay="400"><span>2025</span>BCG — Launch Program</div>
+
+    <div style="margin-top:2rem;" class="reveal" data-delay="420">
+      <a href="index.html#contact" class="btn-solid">Get in touch →</a>
     </div>
-  </nav>
+  </div>
+</div>
 
-  <main id="main">
-
-    <section class="section">
-      <div class="container">
-        <div class="row mb-4 align-items-center">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>About Me</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="site-section pb-0 services">
-        <div class="container">
-
-          <div class="row">
-
-            <!-- About text -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-              <p>
-                I’m Boubakar Diallo, an Electrical &amp; Computer Engineering student at Cornell University (B.S. May
-                2028). I’m into hardware + software at the edge — microcontrollers, sensors/telemetry, FPGA design, and
-                practical ML systems that actually run fast in the real world.
-                <br><br>
-                Based in Boston, MA • 857-308-6457 • <a href="mailto:bd453@cornell.edu">bd453@cornell.edu</a> •
-                <a href="https://github.com/boubakar12" target="_blank" rel="noopener noreferrer">github.com/boubakar12</a>
-              </p>
-
-              <!-- NOTE: rename the PDF file in /assets/img/ to match this, or change the href -->
-              <p>
-                <a href="assets/img/Boubakar_Diallo_Resume.pdf" target="_blank" rel="noopener noreferrer"
-                  class="readmore">Resume (updated Dec 2025)</a>
-              </p>
-            </div>
-
-            <!-- Profile image -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-              <!-- NOTE: replace profile.png with your real headshot filename -->
-              <img src="assets/img/profile.png" alt="Boubakar Diallo" class="img-fluid"
-                style="width: 100%; max-width: 60%; height: auto;">
-            </div>
-
-            <!-- Education -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-              <i class="bi bi-mortarboard"></i>
-              <h4 class="h4 mb-2">Education</h4>
-
-              <ul class="list-unstyled list-line">
-                <p><u>Cornell University (B.S. Electrical &amp; Computer Engineering — May 2028)</u></p>
-                <ul class="list-unstyled list-line" style="padding-left:2em">
-                  <li><b>Honors:</b> Community Leadership Award (Aug 2025)</li>
-                  <li><b>Relevant Coursework:</b> Machine Learning, Embedded Systems, Data Science, Digital Logic &amp;
-                    Computer Organization, Circuits, Computer Systems Programming, Linear Algebra, Management Simulation,
-                    IP</li>
-                </ul>
-              </ul>
-            </div>
-
-            <!-- Work & Research -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-              <i class="bi bi-brightness-high"></i>
-              <h4 class="h4 mb-2">Work &amp; Research Experience</h4>
-
-              <ul class="list-unstyled list-line" style="padding-left:2em">
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">Hardware Engineer @ Engineers Without Borders (Oct 2024 – Present)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Co-developed a rover-drone platform integrating microcontrollers, sensors, LoRa telemetry, and Jetson Nano to enable remote crop-health analytics; improved early disease detection outcomes by 40%</li>
-                      <li>Trained and optimized an on-device TensorFlow CNN for maize disease classification (92% accuracy); reduced inference latency by 40% via quantization and edge performance tuning</li>
-                    </ul>
-                  </details>
-                </li>
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">Mobile Tech Intern @ ADAS Safe (Jun – Aug 2025)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Built a diagnostic automation framework for ADAS validation, integrating IMU and LiDAR calibration modules to reduce radar misalignment rates by 15% across test vehicles</li>
-                      <li>Wrote calibration + reliability documentation and debug workflows, translating sensor error behavior into faster root-cause isolation for engineering teams</li>
-                    </ul>
-                  </details>
-                </li>
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">Hardware Design @ Cornell Engineering (Nov – Dec 2025)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Designed and verified a TinyRV1 single-cycle processor and accumulate accelerator in Verilog, running ISA and custom assembly tests, and measuring timing + cycle tradeoffs</li>
-                      <li>Built a low-latency FPGA music player using structural RTL and synchronous design practices</li>
-                    </ul>
-                  </details>
-                </li>
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">Bird Call Classification @ Cornell Engineering (Nov – Dec 2025)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Built an end-to-end bird-call audio classification pipeline in Python (librosa, NumPy, scikit-learn) on 20,000+ labeled 3-second WAV clips</li>
-                      <li>Engineered rich acoustic features and shipped Kaggle-format submissions, reaching 0.887 public leaderboard accuracy with a bagged HistGradientBoosting ensemble</li>
-                    </ul>
-                  </details>
-                </li>
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">Electrical Systems Intern @ City of Quincy, MA (Sep 2022 – Jul 2024)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Repaired traffic-signal controller boards and supported field operations by restoring system performance</li>
-                      <li>Documented 52 intersections in AutoCAD/GIS and maintenance logs to support signal-timing and hardware upgrade planning, improving energy efficiency and reducing pedestrian wait times by 12%</li>
-                    </ul>
-                  </details>
-                </li>
-
-              </ul>
-            </div>
-
-            <!-- Honors / Skills -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
-              <i class="bi bi-journal-bookmark-fill"></i>
-              <h4 class="h4 mb-2">Technical Skills</h4>
-
-              <ul class="list-unstyled list-line" style="padding-left:2em">
-                <li><b>Programming:</b> Python, C++, JavaScript, Swift, Verilog, Embedded C, MATLAB, TensorFlow, PyTorch</li>
-                <li><b>Hardware:</b> FPGA design, PCB layout exposure, signal integrity, power optimization, ASIC fundamentals</li>
-                <li><b>Certifications:</b> Electronic Arts Software Engineering; GE Aerospace Explore Electrical Engineering</li>
-                <li><b>Languages:</b> French, English, Arabic, Fulah</li>
-              </ul>
-            </div>
-
-            <!-- Leadership -->
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="100">
-              <i class="bi bi-clipboard-data"></i>
-              <h4 class="h4 mb-2">Leadership &amp; Extracurriculars</h4>
-
-              <ul class="list-unstyled list-line" style="padding-left:2em">
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">Software Lead @ Cornell Computer Reuse Association (Sep 2024 – Present)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Refurbished 275 desktops, standardized imaging, and shipped reliable systems to schools worldwide</li>
-                    </ul>
-                  </details>
-                </li>
-
-                <li>
-                  <details>
-                    <summary class="underlined underlined--thick">IP Analyst @ Cornell Engineering (Sep – Dec 2025)</summary>
-                    <ul class="list-unstyled list-line bullet-point">
-                      <li>Evaluated semiconductor and AI-hardware disclosures; produced TRL assessments, patent positioning, and commercialization briefs for stakeholders</li>
-                      <li>Characterized Liquid Nanoparticle Ion Source using AFM, SIMS, and in-situ currents to guide IP strategy</li>
-                    </ul>
-                  </details>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer class="footer text-center py-3">
-    <div class="container">
-      <p class="mb-2">Boubakar Diallo</p>
-
-      <a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="footer-icon" aria-label="GitHub">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-
-      <!-- If you want LinkedIn, replace the # with your LinkedIn URL -->
-    
-      <a href="https://www.linkedin.com/in/boubakar/" target="_blank" rel="noopener" class="footer-icon" aria-label="LinkedIn">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-    
-    </div>
-  </footer>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/js/main.js"></script>
+<footer class="footer">
+  <span class="footer-left">Boubakar Diallo · ECE @ Cornell · Boston, MA</span>
+  <div class="footer-right">
+    <a href="index.html">Work</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="https://github.com/boubakar12" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>

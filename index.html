@@ -1,494 +1,235 @@
 <!DOCTYPE html>
-<html lang = "ena">
-  <head>
-    <meta charset = "utf-8">
-    <meta content = "width = device-width, initial-scale = 1.0" name = "viewport">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boubakar Diallo — ECE @ Cornell</title>
+  <meta name="description" content="Boubakar Diallo — ECE sophomore at Cornell. Embedded systems, FPGA design, sensor fusion, edge AI. Open to Summer 2026 internships.">
+  <meta name="keywords" content="Boubakar Diallo, Cornell ECE, embedded systems, FPGA, ROS2, NVIDIA Jetson, hardware engineer, edge AI">
+  <meta property="og:title" content="Boubakar Diallo — ECE @ Cornell">
+  <meta property="og:description" content="Embedded systems, FPGA design, sensor fusion, and ML that runs fast in the real world.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boubakar12.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://boubakar12.github.io">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-    <title> Boubakar Diallo | Portfolio</title>
+<nav class="nav">
+  <span class="nav-name">Boubakar Diallo</span>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="assets/Boubakar_Diallo_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
 
-    <link href = "assets/img/icon1.png" rel="icon">
-    <link
-      href="https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i&display=swap"
-      rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<!-- NOW BAR -->
+<div class="now-bar">
+  <span class="now-dot"></span>
+  <span class="now-text"><strong>Currently:</strong> Embedded data engineer @ Simulacrum NYC · Building WholeStory Health · EWB rover field deployment</span>
+</div>
 
-    <style>
-      .navbar.sticky-top {
-        background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .modal-img {
-        width: 100%;
-        height: auto;
-      }
-    </style>
-  </head>
-
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Boubakar Diallo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          </ul>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div>
+      <p class="hero-eyebrow">ECE @ Cornell · Class of 2028 · Boston, MA</p>
+      <h1 class="hero-name">Boubakar<br>Diallo</h1>
+      <p class="hero-role">Embedded Systems · FPGA Design · Edge AI · Robotics</p>
+    </div>
+    <blockquote class="hero-why">3.5 billion people live beyond reliable connectivity. The most important engineering problems don't have internet access — they need solutions that run on the device, in the field, offline.</blockquote>
+    <div class="hero-cta">
+      <a href="about.html" class="btn-solid">About me</a>
+      <a href="#work" class="btn-out">View work ↓</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="assets/img/profile.png" alt="Boubakar Diallo" class="hero-photo" onerror="this.style.display='none'">
+    <div class="hero-terminal">
+      <div class="term-bar">
+        <span class="tb tb1"></span><span class="tb tb2"></span><span class="tb tb3"></span>
+        <span class="term-title">boubakar@cornell ~ </span>
       </div>
-    </nav>
+      <div id="term-output"></div>
+    </div>
+  </div>
+</section>
 
-    <main id="main">
-      <section id="portfolio" class="section site-portfolio">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 mb-4">
-              <h2>Hi, I'm Boubakar! 👋</h2>
-              <p>
-                I’m a sophomore at Cornell studying Electrical & Computer Engineering (Business minor). Here are a few
-                projects and experiences I’ve worked on.
-              </p>
-            </div>
+<!-- EXPERIENCE -->
+<div class="section-grid" id="work">
+  <div class="sec-label-col">
+    <div class="sec-num">01</div>
+    <h3>Experience</h3>
+  </div>
+  <div class="sec-body">
+    <h2 class="sec-h">Where I've worked</h2>
+    <div class="exp-row reveal">
+      <div><div class="exp-co">Simulacrum</div><div class="exp-role">Embedded Data Systems Intern</div><div class="exp-date">Jan 2026 – Present · New York, NY</div></div>
+      <div><p class="exp-desc">Engineered a distributed low-latency embedded data platform using FastAPI and Pub/Sub — sub-100ms end-to-end latency. Production observability detecting sensor drift and pipeline failures, reducing debug time 30%. Accelerated ML velocity 3× via dbt transformation pipelines on GCP.</p><div class="chips"><span class="chip">FastAPI</span><span class="chip">Pub/Sub</span><span class="chip">BigQuery</span><span class="chip">GCP</span><span class="chip">dbt</span></div></div>
+    </div>
+    <div class="exp-row reveal" data-delay="60">
+      <div><div class="exp-co">ADAS Safe</div><div class="exp-role">Embedded Systems Intern</div><div class="exp-date">Jun – Aug 2025 · Jacksonville, FL</div></div>
+      <div><p class="exp-desc">Real-time multi-sensor validation firmware fusing synchronized radar, IMU, and LiDAR for safety-critical ADAS systems. Cut hardware alignment errors ~15% across production automotive deployment. Cross-sensor calibration framework shaped OEM sensor fusion architecture.</p><div class="chips"><span class="chip">C/C++</span><span class="chip">LiDAR</span><span class="chip">IMU</span><span class="chip">Radar</span><span class="chip">ADAS</span></div></div>
+    </div>
+    <div class="exp-row reveal" data-delay="120">
+      <div><div class="exp-co">Beta University</div><div class="exp-role">Embedded AI Product Engineer</div><div class="exp-date">Sep – Dec 2025 · Silicon Valley</div></div>
+      <div><p class="exp-desc">Selected nationally for 8-week Silicon Valley pre-accelerator. Designed hardware-constrained AI architectures with explicit compute/latency/memory tradeoffs under VC mentorship. Shipped embedded AI speech platform.</p><div class="chips"><span class="chip">Edge AI</span><span class="chip">Embedded</span><span class="chip">VC-mentored</span></div></div>
+    </div>
+    <div class="exp-row reveal" data-delay="180">
+      <div><div class="exp-co">Engineers Without Borders</div><div class="exp-role">Robotics & Hardware Lead</div><div class="exp-date">Oct 2024 – Present · Ithaca, NY</div></div>
+      <div><p class="exp-desc">Adapted NASA's open-source Mars rover for agricultural deployment in Sub-Saharan Africa. Custom PCB electrical subsystems, ROS-controlled robotic arm, autonomous drone across 3 active field sites. CNN on NVIDIA Jetson for maize disease detection.</p><div class="chips"><span class="chip">ROS2</span><span class="chip">Jetson</span><span class="chip">PCB</span><span class="chip">CNN</span><span class="chip">Drone</span></div></div>
+    </div>
+    <div class="exp-row reveal" data-delay="240">
+      <div><div class="exp-co">Cornell Computer Reuse</div><div class="exp-role">Systems Lead & Treasurer</div><div class="exp-date">Oct 2024 – Present · Ithaca, NY</div></div>
+      <div><p class="exp-desc">Automated PCB-level hardware triage and diagnostics tooling. 350+ devices refurbished and deployed globally to 15 countries. Manages organizational finances and hardware donation pipelines.</p><div class="chips"><span class="chip">PCB Diagnostics</span><span class="chip">Automation</span><span class="chip">Operations</span></div></div>
+    </div>
+    <div class="exp-row reveal" data-delay="300">
+      <div><div class="exp-co">City of Quincy, MA</div><div class="exp-role">Electrical Systems Intern</div><div class="exp-date">Sep 2022 – Jul 2024</div></div>
+      <div><p class="exp-desc">Repaired traffic-signal controller boards. Documented 52 intersections in AutoCAD/GIS. Contributed to hardware upgrades that raised energy efficiency and reduced pedestrian wait times 12%.</p><div class="chips"><span class="chip">AutoCAD</span><span class="chip">GIS</span><span class="chip">Electrical Systems</span></div></div>
+    </div>
+  </div>
+</div>
 
-            <div class="col-12">
-              <div class="row">
+<!-- PROJECTS LABEL -->
+<div class="section-grid" style="border-bottom:none;">
+  <div class="sec-label-col"><div class="sec-num">02</div><h3>Projects</h3></div>
+  <div class="sec-body" style="padding-bottom:0;"><h2 class="sec-h">Selected work</h2></div>
+</div>
 
-                <!-- EWB -->
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#ewbModal">
-                    <img src="assets/img/ewb_main.png" class="card-img-top" alt="Engineers Without Borders">
-                    <div class="card-body">
-                      <h5 class="card-title">Hardware Engineer</h5>
-                      <p class="card-text">Engineers Without Borders | Oct 2024 – Present</p>
-                    </div>
-                  </div>
-                </div>
+<!-- PROJECTS GRID -->
+<div class="proj-grid">
+  <div class="proj-item dark wide reveal" onclick="openModal('modal-ws')">
+    <div class="proj-num">Featured — 01</div>
+    <div class="proj-title">WholeStory Health</div>
+    <div class="proj-type">Founder · Edge AI · Clinical NLP · Jan 2026 – Present</div>
+    <p class="proj-desc">Multilingual clinical NLP on NVIDIA Jetson Orin Nano. GPU-accelerated pipeline across 4 languages under 2 seconds, fully offline. INT8 quantization cut DRAM 40%. Cuts physician documentation time 4×. Built for clinics with zero internet infrastructure.</p>
+    <span class="proj-link">View details →</span>
+  </div>
+  <div class="proj-item reveal" onclick="openModal('modal-ewb')" data-delay="60">
+    <div class="proj-num">02</div>
+    <div class="proj-title">Rover-Drone Platform</div>
+    <div class="proj-type">Engineers Without Borders · Robotics & Hardware</div>
+    <p class="proj-desc">NASA Mars rover adapted for agriculture in Sub-Saharan Africa. Custom PCB, ROS robotic arm, autonomous drone across 3 field sites. On-device CNN disease detection.</p>
+    <span class="proj-link">View details →</span>
+  </div>
+  <div class="proj-item reveal" onclick="openModal('modal-revery')" data-delay="80">
+    <div class="proj-num">03</div>
+    <div class="proj-title">Rêvery</div>
+    <div class="proj-type">Founder · DSP & Audio · Sep 2024 – Present</div>
+    <p class="proj-desc">Real-time DSP audio platform with neural vocoder voice transformation. Sub-100ms hardware latency. Deployed on web and iOS.</p>
+    <span class="proj-link">View details →</span>
+  </div>
+  <div class="proj-item reveal" onclick="openModal('modal-fpga')" data-delay="100">
+    <div class="proj-num">04</div>
+    <div class="proj-title">FPGA Music Player</div>
+    <div class="proj-type">Cornell ECE · Verilog · Nov – Dec 2025</div>
+    <p class="proj-desc">Multi-state Moore FSM, clock-synchronized tone generation, sub-ms latency. Full Vivado timing verification at 100 MHz. Also designed TinyRV1 processor.</p>
+    <span class="proj-link">View details →</span>
+  </div>
+  <div class="proj-item reveal" onclick="openModal('modal-marble')" data-delay="120">
+    <div class="proj-num">05</div>
+    <div class="proj-title">African Marble Game</div>
+    <div class="proj-type">Solo Build · React Three Fiber · Live Production</div>
+    <p class="proj-desc">Real-time 3D physics engine — rigid-body collision, drag-to-shoot mechanics, Zustand zero-backend persistence. Live at boubakar12.github.io</p>
+    <span class="proj-link">Play live →</span>
+  </div>
+  <div class="proj-item reveal" onclick="openModal('modal-ml')" data-delay="140">
+    <div class="proj-num">06</div>
+    <div class="proj-title">Signal & Image ML</div>
+    <div class="proj-type">Cornell ECE + EY AI Challenge · Python</div>
+    <p class="proj-desc">Bird call classification (0.887 Kaggle accuracy). SAT-4 satellite CNN. EY AI Challenge: R²=0.70 river water quality prediction.</p>
+    <span class="proj-link">View details →</span>
+  </div>
+</div>
 
-                <!-- CCRA -->
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#ccraModal">
-                    <img src="assets/img/ccra/ccra3.png" class="card-img-top" alt="Cornell Computer Reuse Association">
-                    <div class="card-body">
-                      <h5 class="card-title">Treasurer & Software Lead</h5>
-                      <p class="card-text">Cornell Computer Reuse Association | Sep 2024 – Present</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- R&D Engineer (NLP + SAT-4 kNN/SVM) -->
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#rndModal">
-                    <img src="assets/img/rd_proj.png" class="card-img-top" alt="Cornell Engineering R&D">
-                    <div class="card-body">
-                      <h5 class="card-title">Research & Development Engineer</h5>
-                      <p class="card-text">Cornell Engineering | Sep 2025 – Present</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Innovation Strategy / IP Analyst -->
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#ipModal">
-                    <img src="assets/img/projects/ip1.png" class="card-img-top" alt="Innovation Strategy & IP">
-                    <div class="card-body">
-                      <h5 class="card-title">Innovation Strategy & Commercialization</h5>
-                      <p class="card-text">Cornell Engineering | 2025</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Beta University / Revery 
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#betaModal">
-                    <img src="assets/img/#" class="card-img-top" alt="Revery / Beta University">
-                    <div class="card-body">
-                      <h5 class="card-title">Founder Fellow (Revery)</h5>
-                      <p class="card-text">Beta University Pre-Accelerator | Aug 2025 – Present</p>
-                    </div>
-                  </div>
-                </div>
-
-                -->
-
-              <!-- Internships  -->
-
-                <!-- City of Quincy -->
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#quincyModal">
-                    <img src="assets/img/city1.png" class="card-img-top" alt="City of Quincy">
-                    <div class="card-body">
-                      <h5 class="card-title">Engineering Intern</h5>
-                      <p class="card-text">City of Quincy, MA | Jun – Aug 2022</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- ADAS Safe --> 
-                 <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="50">
-                  <div class="card h-100" data-bs-toggle="modal" data-bs-target="#adasmodal">
-                    <img src="assets/img/intern/adas1.png" class="card-img-top" alt="ADAS Safe">
-                    <div class="card-body">
-                      <h5 class="card-title">Mobile Tech Intern</h5>
-                      <p class="card-text">ADAS SAFE | Jun – Aug 2025</p>
-                    </div>
-                  </div>
-                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ===================== MODALS ===================== -->
-
-    <!-- EWB Modal -->
-    <div class="modal fade" id="ewbModal" tabindex="-1" aria-labelledby="ewbModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="ewbModalLabel">Engineers Without Borders — Hardware Engineer</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
-
-              <div class="col-lg-6 mb-3">
-                <div id="ewbCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="assets/img/ewb_main.png" class="d-block w-100 modal-img" alt="EWB Project Image 1">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/img/ewb2.png" class="d-block w-100 modal-img" alt="EWB Project Image 2">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/img/ewb3.png" class="d-block w-100 modal-img" alt="EWB Project Image 3">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#ewbCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#ewbCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <h4>Rover–Drone Platform for Agricultural Analytics</h4>
-                <p><strong>Oct 2024 – Present</strong></p>
-                <p>
-                  Co-developed a rover–drone system integrating microcontrollers, sensors, LoRa telemetry, and a Jetson Nano
-                  to support remote crop-health analytics and early disease detection.
-                </p>
-                <h5 class="mt-4">Focus Areas</h5>
-                <ul>
-                  <li>Embedded sensing + telemetry (LoRa)</li>
-                  <li>Systems integration (MCUs + compute + sensors)</li>
-                  <li>Rapid prototyping + field testing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- SKILLS -->
+<div class="section-grid">
+  <div class="sec-label-col"><div class="sec-num">03</div><h3>Skills</h3></div>
+  <div class="sec-body">
+    <h2 class="sec-h">Technical stack</h2>
+    <div class="skills-term reveal">
+      <div class="term-header">
+        <span class="tb tb1"></span><span class="tb tb2"></span><span class="tb tb3"></span>
+        <span class="term-title" style="font-family:'IBM Plex Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.25);margin-left:.4rem;">skills.json</span>
+      </div>
+      <div class="term-body">
+        <div class="t-brace">{</div>
+        <div>&nbsp;&nbsp;<span class="t-key">"hardware_hdl"</span>: <span class="t-val">["Verilog", "VHDL", "FPGA", "Vivado", "Quartus", "PCB", "FSM", "signal integrity"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"embedded"</span>: <span class="t-val">["C/C++", "Python", "Bash", "UART", "I2C", "SPI", "JTAG", "GPIO", "RTOS", "bare-metal"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"robotics_sensors"</span>: <span class="t-val">["ROS2", "LiDAR", "IMU", "Radar", "Jetson Orin Nano", "Raspberry Pi", "Arduino", "Roboclaw"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"ml_edge_ai"</span>: <span class="t-val">["PyTorch", "TensorFlow", "Whisper", "spaCy", "INT8 quantization", "CNN", "NLP", "CUDA"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"backend_infra"</span>: <span class="t-val">["FastAPI", "Pub/Sub", "dbt", "BigQuery", "GCP", "Docker", "PostgreSQL", "Redis", "Git"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"languages"</span>: <span class="t-val">["C++", "Python", "JavaScript", "TypeScript", "Swift", "SQL", "Verilog", "MATLAB"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"human_languages"</span>: <span class="t-val">["English", "French", "Arabic", "Fulah"],</span></div>
+        <div>&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">"Open to Summer 2026 internships"</span></div>
+        <div class="t-brace">}</div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- CCRA Modal -->
-    <div class="modal fade" id="ccraModal" tabindex="-1" aria-labelledby="ccraModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="ccraModalLabel">Cornell Computer Reuse Association — Treasurer & Software Lead</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
-              <div class="col-lg-6 mb-3">
-                <div id="ccraCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="assets/img/ccra/ccra1.png" class="d-block w-100 modal-img" alt="ccra Project Image 1">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/img/ccra/ccra2.png" class="d-block w-100 modal-img" alt="EWB Project Image 2">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#ewbCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#ewbCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <h4>Refurbishing & Re-Deploying Computers</h4>
-                <p><strong>Sep 2024 – Present</strong></p>
-                <p>
-                  Managed budgeting and deployment operations while refurbishing and re-deploying devices to partner schools
-                  and nonprofits, expanding access and reducing e-waste.
-                </p>
-                <h5 class="mt-4">Highlights</h5>
-                <ul>
-                  <li>Budgeting + operations for refurb workflow</li>
-                  <li>Standardized rebuild / imaging / QA playbooks</li>
-                  <li>Hands-on troubleshooting + deployment logistics</li>
-                </ul>
-                <a href="assets/img/ccra/CCRA.pdf" target="_blank" class="btn btn-primary mt-3">View Internship Report</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- CONTACT -->
+<div id="contact" style="border-top:1px solid var(--rule);">
+  <div class="page-hero">
+    <span class="page-hero-label">Contact</span>
+    <h2 class="page-hero-h">Let's build something.</h2>
+    <p class="page-hero-sub">Open to Summer 2026 internships in embedded systems, edge AI, hardware engineering, or robotics.</p>
+  </div>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <h3 class="contact-h">Get in touch</h3>
+      <p class="contact-sub">Reach out directly or use the form. I reply within 24 hours.</p>
+      <div class="c-detail"><span>Email</span>bd453@cornell.edu</div>
+      <div class="c-detail"><span>Phone</span>857-308-6457</div>
+      <div class="c-detail"><span>GitHub</span>github.com/boubakar12</div>
+      <div class="c-detail"><span>LinkedIn</span>linkedin.com/in/boubakar</div>
+      <div class="c-detail"><span>Location</span>Boston, MA / Ithaca, NY</div>
     </div>
-
-    <!-- R&D Modal -->
-    <div class="modal fade" id="rndModal" tabindex="-1" aria-labelledby="rndModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="rndModalLabel">Cornell Engineering — Research & Development Engineer</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
-              <div class="col-lg-6 mb-3">
-                <img src="assets/img/rd_proj.png" class="modal-img" alt="R&D">
-              </div>
-              <div class="col-lg-6">
-                <h4>NLP + SAT-4 Image Classification (k-NN / SVM)</h4>
-                <p><strong>Sep 2025 – Present</strong></p>
-                <p>
-                  Built Python pipelines for NLP and SAT-4 airborne image classification using k-NN and SVM, comparing
-                  raw-pixel vs engineered features and improving runtime efficiency by ~30% while documenting accuracy.
-                </p>
-                <h5 class="mt-4">Tools</h5>
-                <ul>
-                  <li>Python, NumPy, pandas, matplotlib</li>
-                  <li>Feature engineering + model evaluation</li>
-                  <li>Reproducible workflows + reports</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+        <div class="f-row">
+          <div class="f-group"><label class="f-label">Name</label><input name="name" class="f-input" placeholder="Your name" required></div>
+          <div class="f-group"><label class="f-label">Email</label><input name="email" type="email" class="f-input" placeholder="your@email.com" required></div>
         </div>
-      </div>
+        <div class="f-group" style="margin-top:.75rem;"><label class="f-label">Subject</label><input name="subject" class="f-input" placeholder="Summer 2026 internship"></div>
+        <div class="f-group" style="margin-top:.75rem;"><label class="f-label">Message</label><textarea name="message" class="f-input" rows="5" placeholder="Tell me what you're working on..." required></textarea></div>
+        <button type="submit" class="f-submit" id="submit-btn">Send message →</button>
+        <div class="f-ok" id="form-ok">Message sent. I'll reply within 24 hours.</div>
+      </form>
     </div>
+  </div>
+</div>
 
-    <!-- IP Modal -->
-    <div class="modal fade" id="ipModal" tabindex="-1" aria-labelledby="ipModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="ipModalLabel">Innovation Strategy & Commercialization</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
-              <div class="col-lg-6 mb-3">
-                <img src="assets/img/projects/ip1.png" class="modal-img" alt="IP / commercialization">
-              </div>
-              <div class="col-lg-6">
-                <h4>IP, TRL, and Commercialization Research</h4>
-                <p><strong>Cornell Engineering | 2025</strong></p>
-                <p>
-                  Evaluated invention disclosures, analyzed patent landscapes, and supported commercialization planning
-                  (value proposition, market relevance, TRL fit) for engineering technologies.
-                </p>
-                <h5 class="mt-4">Focus Areas</h5>
-                <ul>
-                  <li>Patent / prior art scanning</li>
-                  <li>Market use-cases + stakeholder mapping</li>
-                  <li>Clear, decision-ready deliverables</li>
-                </ul>
-                <a href="assets/img/IP_Presentation.pdf" target="_blank" class="btn btn-primary mt-3"> Liquid Nanoparticle Ion Source </a>
+<footer class="footer">
+  <span class="footer-left">© 2026 Boubakar Diallo · ECE @ Cornell</span>
+  <div class="footer-right">
+    <a href="mailto:bd453@cornell.edu">bd453@cornell.edu</a>
+    <a href="https://github.com/boubakar12" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/boubakar/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="about.html">About</a>
+  </div>
+</footer>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-ws"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ws')">✕</button><div class="modal-tag">Founder · Edge AI · Jan 2026 – Present</div><h2 class="modal-h">WholeStory Health</h2><p class="modal-desc">Hardware-software co-designed multilingual clinical NLP platform on NVIDIA Jetson Orin Nano. Fully offline for zero-connectivity clinics, 4 languages under 2s, cuts physician documentation 4×.</p><ul class="modal-list"><li>Whisper ASR + language ID + neural translation + spaCy medical NER pipeline across 4 languages</li><li>INT8 quantization + GPU memory partitioning → 40% DRAM reduction, under 2s end-to-end latency</li><li>Full API layer, inference service, storage schema, and patient UI as one coherent offline-first system</li></ul><div class="modal-chips"><span class="chip">Jetson Orin Nano</span><span class="chip">Whisper</span><span class="chip">spaCy</span><span class="chip">INT8</span><span class="chip">CUDA</span><span class="chip">Python</span></div><div class="modal-actions"><a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="btn-solid" style="font-size:.65rem;padding:9px 20px;">GitHub ↗</a></div></div></div></div>
 
+<div class="modal-overlay" id="modal-ewb"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ewb')">✕</button><div class="modal-tag">Engineers Without Borders · Oct 2024 – Present</div><h2 class="modal-h">Rover-Drone Crop Analytics Platform</h2><p class="modal-desc">Adapted NASA's open-source Mars rover for agricultural deployment in Sub-Saharan Africa — custom PCB, ROS robotic arm, autonomous drone across 3 active field sites.</p><ul class="modal-list"><li>Rebuilt PCB electrical subsystems, ROS-controlled robotic arm, terrain-adaptive motor driver circuits</li><li>Autonomous drone with GPS-guided waypoint navigation and custom image-capture pipelines</li><li>CNN on NVIDIA Jetson for maize disease detection with real-time GPIO-triggered farmer alerts</li><li>LoRa telemetry for remote crop-health analytics across geographically distributed sites</li></ul><div class="modal-chips"><span class="chip">ROS2</span><span class="chip">NVIDIA Jetson</span><span class="chip">PCB</span><span class="chip">CNN</span><span class="chip">LoRa</span><span class="chip">TensorFlow</span></div></div></div></div>
 
-    
-    <!-- Beta / Revery Modal 
-    <div class="modal fade" id="betaModal" tabindex="-1" aria-labelledby="betaModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="betaModalLabel">Founder Fellow — Revery (Beta University Pre-Accelerator)</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
-              <div class="col-lg-6 mb-3">
-                <img src="assets/img/#" class="modal-img" alt="Revery">
-              </div>
-              <div class="col-lg-6">
-                <h4>Revery — AI-Powered Learning Roadmaps</h4>
-                <p><strong>Aug 2025 – Present</strong></p>
-                <p>
-                  Prototyping an AI-enabled learning platform (React + Tailwind + OpenAI APIs), running product–market-fit
-                  experiments, and refining technical roadmaps and pitch materials with venture mentors.
-                </p>
-                <h5 class="mt-4">Stack</h5>
-                <ul>
-                  <li>React, TailwindCSS</li>
-                  <li>OpenAI APIs</li>
-                  <li>Metrics + iteration loops</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  -->
+<div class="modal-overlay" id="modal-revery"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-revery')">✕</button><div class="modal-tag">Founder · DSP & Audio · Sep 2024 – Present</div><h2 class="modal-h">Rêvery — Real-Time Audio DSP</h2><p class="modal-desc">Real-time DSP audio processing pipeline with neural vocoder voice transformation and sub-100ms hardware latency, deployed on web and iOS.</p><ul class="modal-list"><li>Neural vocoder voice transformation — &lt;100ms end-to-end hardware latency</li><li>Custom acoustic filter presets with responsible safeguards built into the transformation layer</li><li>Deployed on web (JavaScript / Web Audio API) and iOS (Swift / AVAudioEngine)</li></ul><div class="modal-chips"><span class="chip">DSP</span><span class="chip">Neural Vocoder</span><span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">Web Audio API</span></div><div class="modal-actions"><a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="btn-solid" style="font-size:.65rem;padding:9px 20px;">GitHub ↗</a></div></div></div></div>
 
-    <!--                                                     Internships                                                  -->
+<div class="modal-overlay" id="modal-fpga"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-fpga')">✕</button><div class="modal-tag">Cornell ECE · Digital Logic · Nov – Dec 2025</div><h2 class="modal-h">FPGA Music Player</h2><p class="modal-desc">Fully functional FPGA music player in Verilog — complete hardware design verification at 100 MHz.</p><ul class="modal-list"><li>Multi-state Moore FSM with clock-synchronized tone generation — sub-ms audio output latency</li><li>Full Vivado timing simulation — resolved critical path violations and setup/hold failures at 100 MHz</li><li>Validated synthesized RTL against behavioral simulation testbenches confirming correct state transitions</li><li>Also designed and verified TinyRV1 single-cycle processor and accumulate accelerator in Verilog</li></ul><div class="modal-chips"><span class="chip">Verilog</span><span class="chip">Vivado</span><span class="chip">Moore FSM</span><span class="chip">RTL</span><span class="chip">100 MHz</span></div></div></div></div>
 
-    <!-- Quincy Modal -->
-    <div class="modal fade" id="quincyModal" tabindex="-1" aria-labelledby="quincyModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="quincyModalLabel">City of Quincy, MA — Engineering Intern</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
+<div class="modal-overlay" id="modal-marble"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-marble')">✕</button><div class="modal-tag">Solo Build · Nov 2025 – Present · Live Production</div><h2 class="modal-h">African Marble Game</h2><p class="modal-desc">Real-time 3D physics web application in React Three Fiber, from physics engine design through live production deployment.</p><ul class="modal-list"><li>Rigid-body collision detection, drag-to-shoot mechanics, power scaling, trajectory calculation</li><li>Zero-backend persistent game state via Zustand custom middleware — deterministic across page reloads</li><li>Live production app at boubakar12.github.io/african-marble-game</li></ul><div class="modal-chips"><span class="chip">React Three Fiber</span><span class="chip">Three.js</span><span class="chip">Zustand</span><span class="chip">TypeScript</span></div><div class="modal-actions"><a href="https://boubakar12.github.io/african-marble-game" target="_blank" rel="noopener" class="btn-solid" style="font-size:.65rem;padding:9px 20px;">Play live ↗</a><a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="btn-out" style="font-size:.65rem;padding:9px 20px;">GitHub ↗</a></div></div></div></div>
 
-              <div class="col-lg-6 mb-3">
-                <div id="ewbCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="assets/img/city2.HEIC" class="d-block w-100 modal-img" alt="city Image 1">
-                    </div>
+<div class="modal-overlay" id="modal-ml"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ml')">✕</button><div class="modal-tag">Cornell ECE + EY AI Challenge · Nov 2025 – Mar 2026</div><h2 class="modal-h">Signal & Image ML Pipelines</h2><p class="modal-desc">End-to-end ML pipelines for audio classification, satellite image recognition, and environmental prediction.</p><ul class="modal-list"><li>20,000+ bird call recordings — 0.887 Kaggle leaderboard accuracy with bagged HistGradientBoosting</li><li>SAT-4 satellite classifier: HSV + NIR features reduced dimensionality 60% vs raw pixel CNN baselines</li><li>EY AI Challenge 2026: R²=0.70 river water quality — GroupKFold cross-validation preventing station-level data leakage</li></ul><div class="modal-chips"><span class="chip">Python</span><span class="chip">librosa</span><span class="chip">scikit-learn</span><span class="chip">PyTorch</span><span class="chip">SMOTE</span></div></div></div></div>
 
-                    <div class="carousel-item">
-                      <img src="assets/img/city3.HEIC" class="d-block w-100 modal-img" alt="city Image 3">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#ewbCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#ewbCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <h4>Engineering Internship</h4>
-                <p><strong>Jun – Aug 2022</strong></p>
-                <p>
-                  Supported city engineering operations through field observations, documentation, and project support work
-                  aligned with municipal infrastructure needs.
-                </p>
-                <h5 class="mt-4">Skills</h5>
-                <ul>
-                  <li>Professional documentation + coordination</li>
-                  <li>Problem solving in real-world constraints</li>
-                  <li>Team communication</li>
-                </ul>
-
-                <a href="assets/img/intern_report.pdf" target="_blank" class="btn btn-primary mt-3">View Internship Report</a>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <!-- ADAS Safe -->
-    <div class="modal fade" id="adasmodal" tabindex="-1" aria-labelledby="adasModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="adasModalLabel">ADAS SAFE — Mobile Tech Intern</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body container-fluid">
-            <div class="row">
-
-              <div class="col-lg-6 mb-3">
-                <div id="adasCarousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="assets/img/intern/adas1.png" class="d-block w-100 modal-img" alt="Adas Project Image 1">
-                    </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#adasCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#adasCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <h4>ADAS Validation Automation (IMU + LiDAR Calibration)</h4>
-                <p><strong>ADAS Safe | Mobile Tech Intern | Jun – Aug 2025</strong></p>
-                <p>
-                  Built a diagnostic automation framework for ADAS validation, integrating IMU + LiDAR calibration
-                  modules to speed up testing and reduce radar misalignment across fleet vehicles.
-                </p>
-                <h5 class="mt-4">Focus Areas</h5>
-                <ul>
-                  <li>ADAS validation automation + diagnostic tooling</li>
-                  <li>IMU + LiDAR calibration and sensor alignment</li>
-                  <li>RDebug workflows + calibration/reliability documentation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer text-center py-3">
-      <div class="container">
-        <p class="mb-2"> Boubakar Diallo </p>
-        <a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="footer-icon" aria-label="GitHub">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-      
-        <a href="https://www.linkedin.com/in/boubakar/" target="_blank" rel="noopener" class="footer-icon"
-          aria-label="LinkedIn">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-
-      </div>
-    </footer>
-
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-
+<script src="assets/js/main.js"></script>
+</body>
 </html>
