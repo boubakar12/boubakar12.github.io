@@ -4,7 +4,17 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks  = document.querySelector('.nav-links');
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 
 // SCROLL REVEAL
@@ -107,13 +117,29 @@ function runTerminal() {
 // CONTACT FORM
 function handleSubmit(e) {
   e.preventDefault();
+  const form = e.target;
   const btn = document.getElementById('submit-btn');
   const ok  = document.getElementById('form-ok');
-  if (!btn || !ok) return;
-  btn.textContent = 'Sent.';
-  btn.style.background = '#1a3a5c';
-  btn.disabled = true;
-  ok.style.display = 'block';
+  if (!(form instanceof HTMLFormElement) || !btn || !ok) return;
+
+  const data = new FormData(form);
+  const name = (data.get('name') || '').toString().trim();
+  const email = (data.get('email') || '').toString().trim();
+  const subjectInput = (data.get('subject') || '').toString().trim();
+  const message = (data.get('message') || '').toString().trim();
+
+  const subject = subjectInput || `Portfolio inquiry from ${name || 'a visitor'}`;
+  const body = [
+    name ? `Name: ${name}` : '',
+    email ? `Email: ${email}` : '',
+    '',
+    message,
+  ].join('\n');
+
+  btn.textContent = 'Open email again →';
+  ok.classList.add('visible');
+
+  window.location.href = `mailto:bd453@cornell.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 // INIT
