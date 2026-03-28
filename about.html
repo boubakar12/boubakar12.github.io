@@ -68,6 +68,61 @@
   </div>
 </div>
 
+<section id="journey">
+  <div class="page-hero">
+    <span class="page-hero-label">Journey / Parcours</span>
+    <h2 class="page-hero-h">The map behind the story.</h2>
+    <p class="page-hero-sub">A live globe tracing the moves, schools, internships, and cities that shaped how I build: from Conakry to Boston, Ithaca, Jacksonville, San Jose, and New York City.</p>
+  </div>
+
+  <div class="globe-wrap">
+    <div class="globe-canvas-wrap reveal">
+      <div class="globe-hud">
+        <span class="globe-hud-title">Orbiting the path so far.</span>
+        <span class="globe-hud-hint">Drag / Zoom / Click Stops</span>
+      </div>
+
+      <canvas id="globe-canvas" aria-label="Interactive 3D globe showing Boubakar Diallo's journey"></canvas>
+      <div class="globe-fallback" id="globe-fallback">Loading 3D globe...</div>
+
+      <div id="globe-card" aria-live="polite">
+        <div id="globe-card-accent"></div>
+        <div id="globe-card-body">
+          <div id="globe-card-index"></div>
+          <div id="globe-card-city"></div>
+          <div id="globe-card-role"></div>
+          <div id="globe-card-desc"></div>
+          <div id="globe-card-progress"><div id="globe-card-bar"></div></div>
+        </div>
+      </div>
+
+      <div id="globe-tooltip"></div>
+
+      <div id="globe-zoom" aria-label="Globe zoom controls">
+        <button type="button" class="globe-zbtn" id="globe-zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" class="globe-zbtn" id="globe-zoom-out" aria-label="Zoom out">-</button>
+      </div>
+    </div>
+
+    <aside class="globe-sidebar reveal" data-delay="80">
+      <div class="globe-sidebar-header">
+        <span class="globe-sidebar-label">Stops On The Route</span>
+      </div>
+
+      <div id="globe-pills"></div>
+
+      <div class="globe-legend">
+        <div class="g-leg"><span class="g-leg-dot" style="background:#f0b429;"></span><span>Home and roots</span></div>
+        <div class="g-leg"><span class="g-leg-dot" style="background:#60a5fa;"></span><span>Education</span></div>
+        <div class="g-leg"><span class="g-leg-dot" style="background:#4ade80;"></span><span>Internships and work</span></div>
+        <div class="g-leg"><span class="g-leg-dot" style="background:#f472b6;"></span><span>Builder community</span></div>
+      </div>
+
+      <div class="globe-note">Drag to orbit. Scroll or pinch to zoom. Click any stop to focus the globe.</div>
+    </aside>
+  </div>
+</section>
+
 <footer class="footer">
   <span class="footer-left">Boubakar Diallo · ECE @ Cornell · Boston, MA</span>
   <div class="footer-right">
@@ -78,5 +133,6 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/globe.js"></script>
 </body>
 </html>
