@@ -76,33 +76,31 @@
   </div>
 
   <div class="globe-wrap">
-    <div class="globe-canvas-wrap reveal">
-      <div class="globe-hud">
-        <span class="globe-hud-title">Orbiting the path so far.</span>
-        <span class="globe-hud-hint">Drag / Zoom / Click Stops</span>
-      </div>
+	    <div class="globe-canvas-wrap reveal">
+	      <div class="globe-hud">
+	        <span class="globe-hud-title">Tracing the path with Google Maps 3D.</span>
+	        <span class="globe-hud-hint">Drag / Tilt / Zoom / Click Stops</span>
+	      </div>
+	
+	      <div id="globe-map-host" aria-label="Interactive Google Maps 3D journey map"></div>
+	      <div class="globe-fallback" id="globe-fallback">Preparing Google Maps 3D...</div>
 
-      <canvas id="globe-canvas" aria-label="Interactive 3D globe showing Boubakar Diallo's journey"></canvas>
-      <div class="globe-fallback" id="globe-fallback">Loading 3D globe...</div>
-
-      <div id="globe-card" aria-live="polite">
-        <div id="globe-card-accent"></div>
+	      <div id="globe-card" aria-live="polite">
+	        <div id="globe-card-accent"></div>
         <div id="globe-card-body">
           <div id="globe-card-index"></div>
           <div id="globe-card-city"></div>
           <div id="globe-card-role"></div>
           <div id="globe-card-desc"></div>
-          <div id="globe-card-progress"><div id="globe-card-bar"></div></div>
-        </div>
-      </div>
+	          <div id="globe-card-progress"><div id="globe-card-bar"></div></div>
+	        </div>
+	      </div>
 
-      <div id="globe-tooltip"></div>
-
-      <div id="globe-zoom" aria-label="Globe zoom controls">
-        <button type="button" class="globe-zbtn" id="globe-zoom-in" aria-label="Zoom in">+</button>
-        <button type="button" class="globe-zbtn" id="globe-zoom-out" aria-label="Zoom out">-</button>
-      </div>
-    </div>
+	      <div class="globe-actions" aria-label="Journey map controls">
+	        <button type="button" class="globe-abtn" id="journey-reset">World View</button>
+	        <button type="button" class="globe-abtn" id="journey-tour">Play Route</button>
+	      </div>
+	    </div>
 
     <aside class="globe-sidebar reveal" data-delay="80">
       <div class="globe-sidebar-header">
@@ -118,9 +116,9 @@
         <div class="g-leg"><span class="g-leg-dot" style="background:#f472b6;"></span><span>Builder community</span></div>
       </div>
 
-      <div class="globe-note">Drag to orbit. Scroll or pinch to zoom. Click any stop to focus the globe.</div>
-    </aside>
-  </div>
+	      <div class="globe-note">Drag to move. Use two fingers or Ctrl + scroll to zoom. Click any stop to fly there.</div>
+	    </aside>
+	  </div>
 </section>
 
 <footer class="footer">
@@ -133,6 +131,7 @@
   </div>
 </footer>
 <script src="assets/js/main.js?v=20260328"></script>
-<script src="assets/js/globe.js?v=20260328"></script>
+<script src="assets/js/portfolio-config.js?v=20260328"></script>
+<script src="assets/js/globe.js?v=20260328-gmaps"></script>
 </body>
 </html>
