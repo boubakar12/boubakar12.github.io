@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260409">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261017-globe-gl">
 </head>
 <body>
 <nav class="nav">
@@ -72,35 +72,37 @@
   <div class="page-hero">
     <span class="page-hero-label">Journey / Parcours</span>
     <h2 class="page-hero-h">The map behind the story.</h2>
-    <p class="page-hero-sub">A live globe tracing the moves, schools, internships, and cities that shaped how I build: from Conakry to Boston, Ithaca, Jacksonville, San Jose, and New York City.</p>
+    <p class="page-hero-sub">An interactive globe tracing the moves, schools, internships, and cities that shaped how I build: from Conakry to Boston, Ithaca, Jacksonville, San Jose, and New York City.</p>
   </div>
 
   <div class="globe-wrap">
-	    <div class="globe-canvas-wrap reveal">
-	      <div class="globe-hud">
-	        <span class="globe-hud-title">Tracing the path with Google Maps 3D.</span>
-	        <span class="globe-hud-hint">Drag / Tilt / Zoom / Click Stops</span>
-	      </div>
-	
-	      <div id="globe-map-host" aria-label="Interactive Google Maps 3D journey map"></div>
-	      <div class="globe-fallback" id="globe-fallback">Preparing Google Maps 3D...</div>
+    <div class="globe-canvas-wrap reveal">
+      <div class="globe-toolbar">
+        <div class="globe-hud">
+          <span class="globe-hud-title">From Conakry, onward.</span>
+          <span class="globe-hud-hint">Six stops. Two continents.</span>
+        </div>
+        <div class="globe-actions" aria-label="Journey map controls">
+          <button type="button" class="globe-abtn" id="journey-reset">World View</button>
+          <button type="button" class="globe-abtn" id="journey-tour" aria-pressed="false">Play Route</button>
+        </div>
+      </div>
 
-	      <div id="globe-card" aria-live="polite">
-	        <div id="globe-card-accent"></div>
+      <div id="globe-map-host" aria-label="Interactive journey map"></div>
+      <div class="globe-fallback" id="globe-fallback" role="status">Preparing the journey map...</div>
+      <noscript><p class="globe-note">Enable JavaScript to explore the interactive journey map.</p></noscript>
+
+      <div id="globe-card" aria-live="polite">
+        <div id="globe-card-accent"></div>
         <div id="globe-card-body">
           <div id="globe-card-index"></div>
           <div id="globe-card-city"></div>
           <div id="globe-card-role"></div>
           <div id="globe-card-desc"></div>
-	          <div id="globe-card-progress"><div id="globe-card-bar"></div></div>
-	        </div>
-	      </div>
-
-	      <div class="globe-actions" aria-label="Journey map controls">
-	        <button type="button" class="globe-abtn" id="journey-reset">World View</button>
-	        <button type="button" class="globe-abtn" id="journey-tour">Play Route</button>
-	      </div>
-	    </div>
+          <div id="globe-card-progress"><div id="globe-card-bar"></div></div>
+        </div>
+      </div>
+    </div>
 
     <aside class="globe-sidebar reveal" data-delay="80">
       <div class="globe-sidebar-header">
@@ -116,9 +118,9 @@
         <div class="g-leg"><span class="g-leg-dot" style="background:#f472b6;"></span><span>Builder community</span></div>
       </div>
 
-	      <div class="globe-note">Drag to move. Use two fingers or Ctrl + scroll to zoom. Click any stop to fly there.</div>
-	    </aside>
-	  </div>
+      <div class="globe-note">Drag to rotate. Pinch, use + / −, or Ctrl + scroll to zoom. Select a stop to fly there.</div>
+    </aside>
+  </div>
 </section>
 
 <footer class="footer">
@@ -131,7 +133,6 @@
   </div>
 </footer>
 <script src="assets/js/main.js?v=20260328"></script>
-<script src="assets/js/portfolio-config.js?v=20260328"></script>
-<script src="assets/js/globe.js?v=20260328-gmaps"></script>
+<script src="assets/js/globe.js?v=20261017-globe-gl"></script>
 </body>
 </html>

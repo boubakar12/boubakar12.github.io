@@ -264,25 +264,145 @@ textarea.f-input:focus { border-color: var(--ink); }
 #journey { background: var(--cream); }
 .globe-wrap {
   display: grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: minmax(0, 1fr) 300px;
   border-bottom: 1px solid var(--rule);
 }
 .globe-canvas-wrap {
   background: radial-gradient(circle at 28% 18%, #163150 0%, #0a1422 45%, #04080f 100%);
   position: relative;
-  min-height: 500px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid var(--rule);
   overflow: hidden;
 }
 #globe-map-host {
+  position: relative;
   display: block;
   width: 100%;
-  height: 500px;
+  height: 420px;
+  flex: 1 0 420px;
+  overflow: hidden;
 }
-#globe-map-host > gmp-map-3d {
+.journey-globe-layer {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, #122a3e, #050d18 72%);
+  transition: opacity .35s ease;
+}
+#globe-map-host.has-3d > .journey-globe-layer {
+  opacity: 1;
+  pointer-events: auto;
+}
+#globe-map-host.has-3d > .journey-route-map {
+  display: none;
+}
+.journey-globe-pin {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #07101c;
+  cursor: pointer;
+  pointer-events: auto;
+  --pin-x: 0px;
+  --pin-y: 0px;
+  translate: var(--pin-x) var(--pin-y);
+}
+.journey-globe-pin[hidden] { display: none; }
+.journey-globe-number {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255,255,255,.8);
+  border-radius: 50%;
+  background: var(--pin-color);
+  box-shadow: 0 2px 12px rgba(0,0,0,.65);
+  font: 600 12px 'IBM Plex Mono', monospace;
+  transition: scale .18s ease;
+}
+.journey-globe-pin.is-active .journey-globe-number,
+.journey-globe-pin:hover .journey-globe-number { scale: 1.16; }
+.journey-globe-label {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  translate: -50% 0;
+  padding: 6px 9px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 4px;
+  background: rgba(4,8,15,.9);
+  color: #fff;
+  white-space: nowrap;
+  font: 11px 'IBM Plex Mono', monospace;
+  pointer-events: none;
+}
+.journey-globe-pin.is-active .journey-globe-label,
+.journey-globe-pin:hover .journey-globe-label,
+.journey-globe-pin:focus-visible .journey-globe-label { display: block; }
+.journey-globe-layer.is-overview .journey-globe-pin[data-stop="1"] { --pin-x: 20px; --pin-y: -24px; }
+.journey-globe-layer.is-overview .journey-globe-pin[data-stop="2"] { --pin-x: -18px; --pin-y: -10px; }
+.journey-globe-layer.is-overview .journey-globe-pin[data-stop="5"] { --pin-x: 12px; --pin-y: 18px; }
+.journey-route-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 60% 50%, #102638, #060f1b);
+  cursor: grab;
+  touch-action: pan-y;
+}
+.journey-route-map.is-dragging { cursor: grabbing; }
+.journey-grid { fill: none; stroke: #426178; stroke-width: .1; opacity: .3; }
+.journey-route { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; opacity: .6; }
+.journey-route.is-active { stroke-width: 3; opacity: 1; }
+.journey-pin { cursor: pointer; outline: none; }
+.journey-pin-leader { stroke-width: 1; fill: none; }
+.journey-pin-dot { stroke: #07101c; stroke-width: 2; }
+.journey-pin:focus .journey-pin-dot { stroke: white; stroke-width: 3; }
+.journey-pin-number { font: 600 11px 'IBM Plex Mono', monospace; fill: #07101c; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.journey-pin-label { font: 12px 'IBM Plex Mono', monospace; fill: #f5f3ed; stroke: #06101b; stroke-width: 4; paint-order: stroke; pointer-events: none; }
+.journey-pin-hit { fill: transparent; }
+.journey-zoom {
+  position: absolute;
+  z-index: 3;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  gap: .3rem;
+}
+.journey-zoom button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #426178;
+  border-radius: 4px;
+  background: #071421;
+  color: #f5f3ed;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.journey-zoom button:hover { background: #163449; }
+.journey-route-map:focus-visible,
+.journey-globe-layer:focus-visible,
+.journey-globe-pin:focus-visible,
+.journey-zoom button:focus-visible,
+.globe-abtn:focus-visible,
+.g-pill:focus-visible { outline: 2px solid var(--accent2); outline-offset: -3px; }
+.globe-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .8rem;
+  padding: 1rem 1.1rem;
+  background: #081320;
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .globe-fallback {
   position: absolute;
@@ -308,17 +428,9 @@ textarea.f-input:focus { border-color: var(--ink); }
   pointer-events: none;
 }
 .globe-hud {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .65rem 1.1rem;
-  background: linear-gradient(to bottom, rgba(4,8,15,.88), transparent);
-  pointer-events: none;
-  z-index: 5;
+  flex-direction: column;
+  gap: .3rem;
 }
 .globe-hud-title {
   font-family: 'Playfair Display', serif;
@@ -334,13 +446,12 @@ textarea.f-input:focus { border-color: var(--ink); }
   color: rgba(255,255,255,.62);
 }
 #globe-card {
-  position: absolute;
-  bottom: 1.1rem;
-  left: 1.1rem;
-  width: 248px;
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
   background: rgba(4,8,15,.9);
   border: 1px solid rgba(255,255,255,.1);
-  border-radius: 5px;
+  border-radius: 0;
   overflow: hidden;
   opacity: 0;
   transform: translateY(10px);
@@ -390,16 +501,13 @@ textarea.f-input:focus { border-color: var(--ink); }
   transition: width .5s ease;
 }
 .globe-actions {
-  position: absolute;
-  top: 1rem;
-  right: .9rem;
   display: flex;
   gap: .45rem;
   z-index: 5;
 }
 .globe-abtn {
   min-width: 92px;
-  height: 30px;
+  height: 40px;
   padding: 0 .8rem;
   border-radius: 999px;
   background: rgba(4,8,15,.75);
@@ -428,6 +536,7 @@ textarea.f-input:focus { border-color: var(--ink); }
 .globe-sidebar {
   display: flex;
   flex-direction: column;
+  min-height: 0;
   background: var(--cream);
 }
 .globe-sidebar-header {
@@ -441,7 +550,7 @@ textarea.f-input:focus { border-color: var(--ink); }
   letter-spacing: .13em;
   color: var(--mid);
 }
-#globe-pills { flex: 1; overflow-y: auto; }
+#globe-pills { flex: 1; min-height: 0; overflow-y: auto; }
 .g-pill {
   width: 100%;
   display: flex;
@@ -513,9 +622,11 @@ textarea.f-input:focus { border-color: var(--ink); }
 @media (max-width: 760px) {
   .globe-wrap { grid-template-columns: 1fr; }
   .globe-canvas-wrap { border-right: none; border-bottom: 1px solid var(--rule); }
-  .globe-sidebar { max-height: 280px; }
-  #globe-card { width: calc(100% - 2.2rem); max-width: 280px; }
-  .globe-actions { top: auto; right: auto; left: 1rem; bottom: 1rem; }
+  #globe-map-host { height: 340px; flex-basis: 340px; }
+  .globe-hud-hint { letter-spacing: .08em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #globe-card, #globe-card-bar, .journey-globe-layer, .journey-globe-number { transition: none; }
 }
 
 /* ── MODAL ── */
