@@ -27,35 +27,12 @@ const revealObs = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-// MODAL
-function openModal(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.querySelectorAll('.modal-overlay').forEach(overlay => {
-  overlay.addEventListener('click', e => {
-    if (e.target === overlay) {
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.open').forEach(m => {
-      m.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+document.querySelectorAll('.reveal').forEach(el => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.classList.add('visible');
+  } else {
+    el.classList.add('pending-reveal');
+    revealObs.observe(el);
   }
 });
 
@@ -65,11 +42,10 @@ const TERMINAL_LINES = [
   { type: 'out',    text: 'Name: Boubakar Diallo' },
   { type: 'out',    text: 'Role: ECE @ Cornell, Class of 2028' },
   { type: 'out',    text: 'Focus: Embedded · FPGA · Edge AI · Robotics' },
-  { type: 'prompt', text: 'ls -1 internships/' },
-  { type: 'out',    text: 'simulacrum-nyc/  adas-safe/  beta-university/' },
-  { type: 'out',    text: 'ewb-ithaca/  quincy-ma/' },
-  { type: 'prompt', text: 'echo $AVAILABILITY' },
-  { type: 'out',    text: 'Open to Summer 2026 internships ✓' },
+  { type: 'prompt', text: 'ls projects/' },
+  { type: 'out',    text: 'risc-v/  rtos/  robotics/  forecasting/' },
+  { type: 'prompt', text: 'cat next.txt' },
+  { type: 'out',    text: 'PNC · Technology Intern · Summer 2027' },
 ];
 
 function runTerminal() {
@@ -77,6 +53,15 @@ function runTerminal() {
   if (!out || out.dataset.done) return;
   out.dataset.done = '1';
   out.innerHTML = '';
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    TERMINAL_LINES.forEach(line => {
+      const div = document.createElement('div');
+      div.className = line.type === 'prompt' ? 'terminal-cmd' : 'terminal-out';
+      div.textContent = (line.type === 'prompt' ? '$ ' : '') + line.text;
+      out.append(div);
+    });
+    return;
+  }
   let lineIdx = 0;
 
   function typeLine() {

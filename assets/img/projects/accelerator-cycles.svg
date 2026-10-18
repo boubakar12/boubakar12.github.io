@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Accumulation accelerator cycle-count comparison</title><desc id="desc">For a 31-element accumulation workload, the TinyRV1 baseline took 131 cycles and the custom accelerator took 32 cycles, a 4.09 times cycle-count speedup.</desc>
+  <rect width="1200" height="600" fill="#efede8"/>
+  <g font-family="monospace" fill="#433f38"><text x="64" y="68" font-size="17" letter-spacing="3">CUSTOM HARDWARE / 31-ELEMENT ACCUMULATION</text><text x="64" y="121" font-family="Georgia,serif" font-size="38" fill="#111010">The same workload. Fewer cycles.</text></g>
+  <g font-family="monospace" font-size="20" fill="#433f38"><text x="64" y="237">TINYRV1</text><text x="64" y="352">ACCELERATOR</text></g>
+  <rect x="278" y="196" width="700" height="64" fill="#1a3a5c" rx="3"/><rect x="278" y="311" width="171" height="64" fill="#c8522a" rx="3"/>
+  <g font-family="monospace" font-size="29" fill="#111010"><text x="1000" y="239">131</text><text x="472" y="354">32</text></g>
+  <g font-family="monospace" font-size="17" fill="#433f38"><text x="278" y="430">CYCLES · LOWER IS BETTER</text><text x="64" y="547">32-BIT DATAPATH · FSM CONTROL · 4.09× CYCLE-COUNT SPEEDUP</text></g><path d="M64 506H1136" stroke="#b9b3a9"/>
+</svg>

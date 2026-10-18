@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Bidirectional occupancy monitor</title><desc id="desc">Two VL53L0X sensors use a shared I2C bus with sequenced startup. A Cortex-M0+ runs direction detection and outputs a count to a display and events to a Python serial logger.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#1a3a5c"/></marker></defs>
+  <rect width="1200" height="600" fill="#efede8"/>
+  <g font-family="monospace" fill="#433f38"><text x="64" y="68" font-size="17" letter-spacing="3">SENSORS / BARE-METAL C</text><text x="64" y="121" font-family="Georgia,serif" font-size="38" fill="#111010">Two measurements become a direction.</text></g>
+  <g fill="#f9f7f3" stroke="#b9b3a9"><rect x="64" y="207" width="246" height="106" rx="5"/><rect x="64" y="350" width="246" height="106" rx="5"/><rect x="463" y="248" width="272" height="165" rx="5"/><rect x="896" y="207" width="240" height="106" rx="5"/><rect x="896" y="350" width="240" height="106" rx="5"/></g>
+  <g text-anchor="middle" font-family="monospace" fill="#1a3a5c"><text x="187" y="252" font-size="25">Sensor A</text><text x="187" y="395" font-size="25">Sensor B</text><text x="599" y="297" font-size="26">Cortex-M0+</text><text x="1016" y="252" font-size="23">LED matrix</text><text x="1016" y="395" font-size="23">Python logger</text></g>
+  <g text-anchor="middle" font-family="monospace" fill="#433f38" font-size="15"><text x="187" y="284">VL53L0X · TOF</text><text x="187" y="427">VL53L0X · TOF</text><text x="599" y="334">ENTRY / EXIT FSM</text><text x="599" y="368">OCCUPANCY COUNT</text><text x="1016" y="284">SPI · MAX7219</text><text x="1016" y="427">UART · EVENT LOG</text></g>
+  <g stroke="#1a3a5c" stroke-width="3" fill="none" marker-end="url(#arrow)"><path d="M312 260h73v70h69"/><path d="M312 403h73v-73h69"/><path d="M737 330h72v-70h79"/><path d="M737 330h72v73h79"/></g>
+  <text x="353" y="200" font-family="monospace" font-size="16" fill="#c8522a">SHARED I²C</text><path d="M64 506H1136" stroke="#b9b3a9"/><text x="64" y="547" font-family="monospace" font-size="16" fill="#433f38">XSHUT STARTUP SEQUENCING · UNIQUE SENSOR ADDRESSES · DIRECTION DETECTION</text>
+</svg>

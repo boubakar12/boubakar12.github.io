@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Five-stage TinyRV2 pipeline</title>
+  <desc id="desc">Fetch, decode, execute, memory, and writeback stages with forwarding and stall/squash control. Conceptual architecture diagram.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#c8522a"/></marker></defs>
+  <rect width="1200" height="600" fill="#111820"/>
+  <g font-family="monospace" fill="#c8c7c0"><text x="64" y="68" font-size="17" letter-spacing="3">COMPUTER ARCHITECTURE / TINYRV2</text><text x="64" y="121" font-family="Georgia,serif" font-size="38" fill="#f5f3ee">Five stages. One coordinated pipeline.</text></g>
+  <g fill="#1d2a38" stroke="#536577"><rect x="64" y="230" width="184" height="124" rx="5"/><rect x="286" y="230" width="184" height="124" rx="5"/><rect x="508" y="230" width="184" height="124" rx="5"/><rect x="730" y="230" width="184" height="124" rx="5"/><rect x="952" y="230" width="184" height="124" rx="5"/></g>
+  <g text-anchor="middle" font-family="monospace" font-size="36" fill="#f5f3ee"><text x="156" y="285">F</text><text x="378" y="285">D</text><text x="600" y="285">X</text><text x="822" y="285">M</text><text x="1044" y="285">W</text></g>
+  <g text-anchor="middle" font-family="monospace" font-size="16" fill="#b7c6d4"><text x="156" y="321">FETCH</text><text x="378" y="321">DECODE</text><text x="600" y="321">EXECUTE</text><text x="822" y="321">MEMORY</text><text x="1044" y="321">WRITEBACK</text></g>
+  <g fill="none" stroke="#c8522a" stroke-width="3" marker-end="url(#arrow)"><path d="M250 292h30"/><path d="M472 292h30"/><path d="M694 292h30"/><path d="M916 292h30"/><path d="M1044 354v70H378v-64"/><path d="M822 354v42H600v-36"/></g>
+  <g font-family="monospace" font-size="15" fill="#d5aa96"><text x="746" y="458">X / M / W FORWARDING</text></g>
+  <path d="M65 506H1136" stroke="#536577"/><g font-family="monospace" font-size="16" fill="#c8c7c0"><text x="64" y="547">RAW HAZARDS · STALL / SQUASH · VAL / RDY MULTIPLIER</text><text x="952" y="547" fill="#d5aa96">IN PROGRESS</text></g>
+</svg>

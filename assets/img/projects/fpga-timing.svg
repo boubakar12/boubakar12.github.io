@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">FPGA counter optimization results</title><desc id="desc">The evaluated 16-bit counter implementations reduced critical-path delay from 24.553 to 7.774 nanoseconds and utilization from 1545 to 109 ALUTs.</desc>
+  <rect width="1200" height="600" fill="#efede8"/>
+  <g font-family="monospace" fill="#433f38"><text x="64" y="68" font-size="17" letter-spacing="3">DIGITAL LOGIC / 16-BIT COUNTER</text><text x="64" y="121" font-family="Georgia,serif" font-size="38" fill="#111010">Measure the path. Rework the logic.</text></g>
+  <path d="M600 204v240" stroke="#b9b3a9"/>
+  <g font-family="monospace" fill="#433f38" font-size="18"><text x="64" y="241">CRITICAL-PATH DELAY</text><text x="656" y="241">LOGIC UTILIZATION</text></g>
+  <g font-family="monospace" fill="#1a3a5c" font-size="39"><text x="64" y="313">24.553 → 7.774</text><text x="656" y="313">1,545 → 109</text></g>
+  <g font-family="monospace" fill="#c8522a" font-size="22"><text x="64" y="371">ns / 68.3% reduction</text><text x="656" y="371">ALUTs / 92.9% reduction</text></g>
+  <path d="M64 506H1136" stroke="#b9b3a9"/><text x="64" y="547" font-family="monospace" font-size="16" fill="#433f38">GATE-LEVEL VS RTL · SYNTHESIS REPORTS · AREA / TIMING TRADEOFFS</text>
+</svg>

@@ -59,9 +59,9 @@
       lat: 40.713,
       lng: -74.006,
       col: '#4ade80',
-      yr: '2026 –',
-      role: 'Simulacrum · Embedded Data Intern',
-      desc: 'Working on low-latency embedded data infrastructure in New York, connecting sensor systems, streaming pipelines, and observability.'
+      yr: 'Jan – Jun 2026',
+      role: 'Simulacrum · Software Engineer Intern',
+      desc: 'Built real-time sensor-data infrastructure in New York, connecting streaming pipelines, forecasting workflows, and production observability.'
     }
   ];
 

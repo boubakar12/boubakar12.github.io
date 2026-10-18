@@ -3,24 +3,27 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Boubakar Diallo</title>
-  <meta name="description" content="About Boubakar Diallo — ECE sophomore at Cornell. 4 national merit scholarships, embedded systems, edge AI.">
+  <meta name="description" content="About Boubakar Diallo — Cornell Electrical & Computer Engineering, Class of 2028. Hardware, real-time systems, robotics, and applied AI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261017-globe-gl">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261018-projects">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <nav class="nav">
-  <span class="nav-name">Boubakar Diallo</span>
+  <a class="nav-name" href="index.html">Boubakar Diallo</a>
   <ul class="nav-links" id="primary-nav">
     <li><a href="index.html">Work</a></li>
     <li><a href="projects.html">Projects</a></li>
-    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="about.html" class="active" aria-current="page">About</a></li>
     <li><a href="index.html#contact">Contact</a></li>
+    <li class="nav-resume-mobile"><a href="about.html#resumes">Resumes ↗</a></li>
   </ul>
   <a href="assets/img/Boubakar_Diallo_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
 </nav>
+<main id="main-content">
 
 <div class="page-hero">
   <span class="page-hero-label">About</span>
@@ -32,7 +35,7 @@
   <div class="about-photo-col">
     <img src="assets/img/profile.png" alt="Boubakar Diallo" class="about-photo" onerror="this.style.display='none'">
     <div class="about-sidebar-h">Education</div>
-    <div class="sidebar-row"><strong>Cornell University</strong><br>B.S. Electrical & Computer Engineering<br><span style="color:var(--mid)">May 2028 · Minor: Business & CS</span></div>
+    <div class="sidebar-row"><strong>Cornell University</strong><br>B.S. Electrical & Computer Engineering<br><span style="color:var(--mid)">Expected May 2028</span></div>
     <div class="about-sidebar-h">Scholarships</div>
     <div class="honor-row">Robert L. Ryan Scholar</div>
     <div class="honor-row">Bridges Scholar</div>
@@ -46,15 +49,16 @@
   </div>
 
   <div class="about-text-col">
-    <p class="about-lead reveal">I'm a sophomore at Cornell University studying Electrical & Computer Engineering (B.S. May 2028), with a minor in Business and Computer Science. I work at the intersection of hardware and software — from bare-metal firmware and FPGA design to edge ML systems that run fully offline in the field.</p>
-    <p class="about-p reveal" data-delay="60">My work is shaped by a simple observation: the most critical engineering problems — healthcare in low-resource settings, crop disease detection in Sub-Saharan Africa, safety-critical automotive systems — exist in places where reliability under constraints matters more than cloud scale. I build for those environments.</p>
-    <p class="about-p reveal" data-delay="120">I'm currently interning at Simulacrum in New York, building embedded data platforms. I lead the hardware team at Engineers Without Borders, deploying a rover-drone system for crop analytics. And I'm building WholeStory Health — a multilingual clinical NLP platform that runs fully offline on NVIDIA Jetson Orin Nano hardware, cutting physician documentation time in under-resourced clinics.</p>
-    <p class="about-p reveal" data-delay="180">I was selected nationally for Beta University's Silicon Valley pre-accelerator and hold 4 competitive national merit scholarships (top ~2% of applicants each). Fluent in English, French, Arabic, and Fulah.</p>
+    <p class="about-lead reveal">I’m studying Electrical & Computer Engineering at Cornell University (B.S. May 2028). I work across digital hardware, embedded software, robotics, and applied AI — from RISC-V datapaths and real-time scheduling to sensor interfaces and on-device inference.</p>
+    <p class="about-p reveal" data-delay="60">I like engineering that has to meet a physical constraint: a timing budget, a noisy sensor, a limited power supply, or a small memory footprint. I’m interested in how decisions at one layer affect the rest of a system, and I use simulation, instrumentation, and field testing to close that loop.</p>
+    <p class="about-p reveal" data-delay="120">At ADAS SAFE, I worked on automotive perception-hardware validation. At Engineers Without Borders, I led rover electronics and robotics integration. I then built real-time data infrastructure as a Software Engineer Intern at Simulacrum from January to June 2026. Next, I’m joining PNC as a Technology Intern in summer 2027.</p>
+    <p class="about-p reveal" data-delay="180">My recent projects include a five-stage RISC-V processor, an ARM real-time scheduler, a bidirectional occupancy monitor, and forecasting research. WholeStory Health brings my interests in language and engineering together. I speak English, French, Arabic, and Fulah.</p>
 
     <div class="about-section-h reveal" data-delay="220">Coursework</div>
-    <p class="course-list reveal" data-delay="240">Digital Logic & Computer Organization · Embedded Systems · Introduction to Circuits · Computer Systems Programming · Machine Learning · Electromagnetism · Power Electronics · Signals & Systems · Linear Algebra · Operations Research</p>
+    <p class="course-list reveal" data-delay="240">Computer Architecture · Digital Logic & Computer Organization · Embedded Systems · Computer Systems Programming · Machine Learning · Foundations of Robotics · Control Systems · Circuits · Signals & Systems · Linear Algebra</p>
 
-    <div class="about-section-h reveal" data-delay="280">Certifications & Programs</div>
+    <div class="about-section-h reveal" data-delay="280">Programs & professional learning</div>
+    <div class="cert-row reveal"><span>2025</span>Beta University — Silicon Valley pre-accelerator</div>
     <div class="cert-row reveal" data-delay="300"><span>2025</span>GE Aerospace — Explore Electrical Engineering</div>
     <div class="cert-row reveal" data-delay="320"><span>2025</span>Citi — ICG Technology Software Development</div>
     <div class="cert-row reveal" data-delay="340"><span>2025</span>EY — Expedition AI & Strategy</div>
@@ -67,6 +71,21 @@
     </div>
   </div>
 </div>
+
+
+<section class="section-grid" id="resumes">
+  <div class="sec-label-col"><div class="sec-num">CV</div><h3>Resumes</h3></div>
+  <div class="sec-body">
+    <h2 class="sec-h">A closer look at my work</h2>
+    <p class="resume-description">Choose the version closest to your team. Updated October 2026 · PDF downloads.</p>
+    <div class="resume-grid">
+      <a href="assets/img/Boubakar_Diallo_Resume.pdf" target="_blank" rel="noopener"><strong>Robotics & embedded</strong><span>Controls, sensors, firmware, and integration ↗</span></a>
+      <a href="assets/docs/Boubakar_Diallo_Hardware_Resume.pdf" target="_blank" rel="noopener"><strong>Digital hardware</strong><span>RISC-V, RTL, FPGA, and verification ↗</span></a>
+      <a href="assets/docs/Boubakar_Diallo_Electrical_Resume.pdf" target="_blank" rel="noopener"><strong>Electrical engineering</strong><span>Circuits, board bring-up, and validation ↗</span></a>
+      <a href="assets/docs/Boubakar_Diallo_Software_Resume.pdf" target="_blank" rel="noopener"><strong>Software & AI</strong><span>Data infrastructure, ML, and applications ↗</span></a>
+    </div>
+  </div>
+</section>
 
 <section id="journey">
   <div class="page-hero">
@@ -123,8 +142,9 @@
   </div>
 </section>
 
+</main>
 <footer class="footer">
-  <span class="footer-left">Boubakar Diallo · ECE @ Cornell · Boston, MA</span>
+  <span class="footer-left">Boubakar Diallo · ECE @ Cornell · Quincy / Ithaca</span>
   <div class="footer-right">
     <a href="index.html">Work</a>
     <a href="projects.html">Projects</a>
@@ -132,7 +152,7 @@
     <a href="https://github.com/boubakar12" target="_blank" rel="noopener">GitHub</a>
   </div>
 </footer>
-<script src="assets/js/main.js?v=20260328"></script>
-<script src="assets/js/globe.js?v=20261017-globe-gl"></script>
+<script src="assets/js/main.js?v=20261018-projects"></script>
+<script src="assets/js/globe.js?v=20261018"></script>
 </body>
 </html>

@@ -3,126 +3,257 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Boubakar Diallo</title>
-  <meta name="description" content="Projects by Boubakar Diallo — WholeStory Health, FPGA design, rover-drone platform, African Marble Game, ML pipelines.">
+  <meta name="description" content="Boubakar Diallo’s hardware, robotics, and AI projects, including RISC-V, RTOS, bird-call classification, residual CNNs, SAT-4, audio prediction, and WholeStory Health.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260409">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261018-projects">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <nav class="nav">
-  <span class="nav-name">Boubakar Diallo</span>
+  <a class="nav-name" href="index.html">Boubakar Diallo</a>
   <ul class="nav-links" id="primary-nav">
     <li><a href="index.html">Work</a></li>
-    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="index.html#contact">Contact</a></li>
+    <li class="nav-resume-mobile"><a href="about.html#resumes">Resumes ↗</a></li>
   </ul>
   <a href="assets/img/Boubakar_Diallo_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
 </nav>
+<main id="main-content">
 
 <div class="page-hero">
   <span class="page-hero-label">Projects</span>
   <h1 class="page-hero-h">Selected work</h1>
-  <p class="page-hero-sub">Hardware systems, edge AI platforms, ML pipelines, 3D physics apps, and research — all shipped.</p>
+  <p class="page-hero-sub">From processor pipelines and real-time firmware to robotics, forecasting, and software people can use. Completed work and current experiments.</p>
 </div>
 
-<!-- Products -->
-<div class="section-grid" style="border-bottom:none;">
-  <div class="sec-label-col"><div class="sec-num">01</div><h3>Products</h3></div>
-  <div class="sec-body"><h2 class="sec-h">Built from scratch</h2></div>
-</div>
-<div class="proj-grid">
-  <div class="proj-item dark wide reveal" onclick="openModal('modal-ws')">
-    <div class="proj-num">Featured — 01</div>
-    <div class="proj-title">WholeStory Health</div>
-    <div class="proj-type">Founder · Edge AI · Clinical NLP · Jan 2026 – Present</div>
-    <p class="proj-desc">Multilingual clinical NLP on NVIDIA Jetson Orin Nano. GPU-accelerated pipeline across 4 languages under 2 seconds, fully offline. INT8 quantization cut DRAM 40%. Cuts physician documentation time 4×.</p>
-    <span class="proj-link">View details →</span>
+<section class="project-catalogue" aria-label="Project catalogue">
+  <div class="project-toolbar">
+    <div class="project-filters" role="group" aria-label="Filter projects"><button type="button" data-project-filter="all" aria-pressed="true">All work</button>
+<button type="button" data-project-filter="hardware" aria-pressed="false">Digital hardware</button>
+<button type="button" data-project-filter="embedded" aria-pressed="false">Embedded</button>
+<button type="button" data-project-filter="robotics" aria-pressed="false">Robotics</button>
+<button type="button" data-project-filter="ai" aria-pressed="false">AI & data</button>
+<button type="button" data-project-filter="software" aria-pressed="false">Software</button>
+<button type="button" data-project-filter="community" aria-pressed="false">Engineering & service</button></div>
+    <p id="project-count" role="status" aria-live="polite">20 projects</p>
   </div>
-  <div class="proj-item reveal" onclick="openModal('modal-revery')" data-delay="60">
-    <div class="proj-num">02</div>
-    <div class="proj-title">Rêvery</div>
-    <div class="proj-type">Founder · DSP & Audio · Sep 2024 – Present</div>
-    <p class="proj-desc">Real-time DSP audio platform with neural vocoder voice transformation. Sub-100ms hardware latency. Deployed on web and iOS.</p>
-    <span class="proj-link">View details →</span>
-  </div>
-  <div class="proj-item reveal" onclick="openModal('modal-marble')" data-delay="80">
-    <div class="proj-num">03</div>
-    <div class="proj-title">African Marble Game</div>
-    <div class="proj-type">Solo Build · React Three Fiber · Live</div>
-    <p class="proj-desc">Real-time 3D physics engine — rigid-body collision, drag-to-shoot, Zustand zero-backend persistence. Live at boubakar12.github.io</p>
-    <span class="proj-link">Play live →</span>
-  </div>
-</div>
+  <div class="proj-grid">
+  <article class="proj-item reveal" id="project-riscv" data-categories="hardware">
+<img class="project-card-image" src="assets/img/projects/riscv-pipeline.svg" alt="Five-stage TinyRV2 pipeline architecture" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">01</div>
+      <h3 class="proj-title"><a href="projects.html#project-riscv" data-project="riscv">Pipelined RISC-V Processor</a></h3>
+      <div class="proj-type">Computer architecture · Fall 2026 · In progress</div>
+      <p class="proj-desc">Five-stage TinyRV2 with forwarding, hazard detection, stall/squash control, and a val/rdy multiplier. Directed and randomized RTL verification.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-accelerator" data-categories="hardware">
+<img class="project-card-image" src="assets/img/projects/accelerator-cycles.svg" alt="31-element accumulation workload cycle-count comparison" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">02</div>
+      <h3 class="proj-title"><a href="projects.html#project-accelerator" data-project="accelerator">RISC-V Processor &amp; Accelerator</a></h3>
+      <div class="proj-type">Digital hardware · December 2025</div>
+      <p class="proj-desc">Single-cycle TinyRV1 plus a custom accumulation accelerator. Reduced a 31-element workload from 131 to 32 cycles: a 4.09× cycle-count speedup.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-fpga" data-categories="hardware">
+<img class="project-card-image" src="assets/img/projects/fpga-timing.svg" alt="FPGA counter critical-path delay and logic utilization results" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">03</div>
+      <h3 class="proj-title"><a href="projects.html#project-fpga" data-project="fpga">FPGA Logic &amp; Timing</a></h3>
+      <div class="proj-type">Digital hardware · December 2025</div>
+      <p class="proj-desc">16-bit counter optimization: critical path from 24.553 to 7.774 ns, logic from 1,545 to 109 ALUTs. Plus a Moore FSM music player.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-rtos" data-categories="embedded">
+<img class="project-card-image" src="assets/img/projects/rtos-scheduler.svg" alt="Conceptual preemptive scheduler flow" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">04</div>
+      <h3 class="proj-title"><a href="projects.html#project-rtos" data-project="rtos">Preemptive RTOS &amp; Scheduler</a></h3>
+      <div class="proj-type">Embedded systems · ARM Cortex-M0+</div>
+      <p class="proj-desc">Context switching, spin/blocking locks, and Earliest Deadline First scheduling on a 1 ms timer, exercised with concurrency and deadline tests.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-occupancy" data-categories="embedded">
+<img class="project-card-image" src="assets/img/projects/occupancy-system.svg" alt="Dual-sensor occupancy monitor system overview" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">05</div>
+      <h3 class="proj-title"><a href="projects.html#project-occupancy" data-project="occupancy">Bidirectional Occupancy Monitor</a></h3>
+      <div class="proj-type">Embedded systems · Team project · May 2026</div>
+      <p class="proj-desc">Two time-of-flight sensors, one I²C bus. Bare-metal direction detection, SPI display output, and UART event logging to Python.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-hexacopter" data-categories="robotics embedded">
 
-<!-- Engineering -->
-<div class="section-grid" style="border-bottom:none;border-top:1px solid var(--rule);">
-  <div class="sec-label-col"><div class="sec-num">02</div><h3>Engineering</h3></div>
-  <div class="sec-body"><h2 class="sec-h">Academic & team projects</h2></div>
-</div>
-<div class="proj-grid">
-  <div class="proj-item reveal" onclick="openModal('modal-ewb')">
-    <div class="proj-num">04</div>
-    <div class="proj-title">Rover-Drone Platform</div>
-    <div class="proj-type">Engineers Without Borders · Robotics & Hardware</div>
-    <p class="proj-desc">NASA Mars rover adapted for agriculture in Sub-Saharan Africa. Custom PCB, ROS robotic arm, autonomous drone. On-device CNN disease detection across 3 field sites.</p>
-    <span class="proj-link">View details →</span>
-  </div>
-  <div class="proj-item reveal" onclick="openModal('modal-fpga')" data-delay="60">
-    <div class="proj-num">05</div>
-    <div class="proj-title">FPGA Music Player</div>
-    <div class="proj-type">Cornell ECE · Verilog · Nov – Dec 2025</div>
-    <p class="proj-desc">Multi-state Moore FSM, sub-ms latency. Full Vivado timing verification at 100 MHz. Also designed TinyRV1 single-cycle processor in Verilog.</p>
-    <span class="proj-link">View details →</span>
-  </div>
-  <div class="proj-item reveal" onclick="openModal('modal-ml')" data-delay="80">
-    <div class="proj-num">06</div>
-    <div class="proj-title">Signal & Image ML</div>
-    <div class="proj-type">Cornell ECE + EY AI Challenge · Python</div>
-    <p class="proj-desc">Bird call classification (0.887 Kaggle accuracy, 20k+ clips). SAT-4 satellite CNN. EY AI Challenge: R²=0.70 river water quality prediction.</p>
-    <span class="proj-link">View details →</span>
-  </div>
-  <div class="proj-item reveal" onclick="openModal('modal-ip')" data-delay="100">
-    <div class="proj-num">07</div>
-    <div class="proj-title">LNIS IP & Commercialization</div>
-    <div class="proj-type">Cornell ECE · IP Analyst · Sep – Dec 2025</div>
-    <p class="proj-desc">TRL assessment, patent search, commercialization brief for a DARPA/NSF-funded Liquid Nanoparticle Ion Source. Scored 41/50 on commercialization tool. $108B satellite market opportunity.</p>
-    <span class="proj-link">View slides →</span>
-  </div>
-  <div class="proj-item reveal" onclick="openModal('modal-ccra')" data-delay="120">
-    <div class="proj-num">08</div>
-    <div class="proj-title">Cornell Computer Reuse Assoc.</div>
-    <div class="proj-type">Systems Lead & Treasurer · Oct 2024 – Present</div>
-    <p class="proj-desc">Automated PCB-level hardware triage and diagnostics tooling. 350+ devices refurbished and deployed globally to 15 countries.</p>
-    <span class="proj-link">View details →</span>
-  </div>
-  <div class="proj-item reveal" onclick="openModal('modal-quincy')" data-delay="140">
-    <div class="proj-num">09</div>
-    <div class="proj-title">City of Quincy — Electrical Intern</div>
-    <div class="proj-type">Electrical Systems · Sep 2022 – Jul 2024</div>
-    <p class="proj-desc">Traffic signal board repair, 52 intersections documented in AutoCAD/GIS. Contributed to hardware upgrades reducing pedestrian wait times 12%.</p>
-    <span class="proj-link">View report →</span>
-  </div>
-</div>
+    <div class="project-card-body">
+      <div class="proj-num">06</div>
+      <h3 class="proj-title"><a href="projects.html#project-hexacopter" data-project="hexacopter">Hexacopter UAV Integration</a></h3>
+      <div class="proj-type">Robotics · July 2026</div>
+      <p class="proj-desc">Six ESCs, Pixhawk, power distribution, GPS/compass, and live electrical telemetry. Calibrated interfaces and failsafes through bench and tethered tests.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-mobile" data-categories="robotics embedded">
 
+    <div class="project-card-body">
+      <div class="proj-num">07</div>
+      <h3 class="proj-title"><a href="projects.html#project-mobile" data-project="mobile">Autonomous Mobile Robot</a></h3>
+      <div class="proj-type">Robotics · Electrical &amp; controls · 2026</div>
+      <p class="proj-desc">Closed-loop PID motor control, actuator interfaces, signal conditioning, and battery/DC/DC power systems validated under load.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-ewb" data-categories="robotics embedded ai">
+<img class="project-card-image" src="assets/img/ewb_main.png" alt="Rover and drone beside an agricultural field" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">08</div>
+      <h3 class="proj-title"><a href="projects.html#project-ewb" data-project="ewb">Rover-Drone Crop Analytics</a></h3>
+      <div class="proj-type">Engineers Without Borders · 2024–2026</div>
+      <p class="proj-desc">Custom rover electronics, a ROS-controlled arm, GPS-guided aerial sensing, and crop-disease inference on NVIDIA Jetson.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-forecasting" data-categories="ai">
+<img class="project-card-image" src="assets/img/projects/tempusbench.webp" alt="TempusBench forecast-comparison interface" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">09</div>
+      <h3 class="proj-title"><a href="projects.html#project-forecasting" data-project="forecasting">Time-Series Forecasting Research</a></h3>
+      <div class="proj-type">Machine learning · TempusBench · 2026</div>
+      <p class="proj-desc">30M+ NYC ride-hailing records across 263 zones. Reproducible zero-shot GPU evaluation of TiRex, TimesFM, and Kronos 2.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-ws" data-categories="ai software">
+<img class="project-card-image" src="assets/img/projects/wholestory-demo.webp" alt="WholeStory Health language-selection interface" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">10</div>
+      <h3 class="proj-title"><a href="projects.html#project-ws" data-project="ws">WholeStory Health</a></h3>
+      <div class="proj-type">Clinical AI · Hackathon project · 2026</div>
+      <p class="proj-desc">Multilingual speech, body mapping, and clinical summaries. An eight-language web demo alongside a separate offline Jetson NLP prototype.</p>
+      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="assets/docs/WholeStory_Health_Concept.pdf" target="_blank" rel="noopener" aria-label="Presentation for WholeStory Health">Presentation ↗</a></div>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-bird" data-categories="ai">
+    <img class="project-card-image" src="assets/img/projects/bird-call-spectrogram.webp" alt="Spectrogram of an example bird-call training clip" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">11</div>
+      <h3 class="proj-title"><a href="projects.html#project-bird" data-project="bird">Bird-Call Classification</a></h3>
+      <div class="proj-type">Audio ML · Eight-class classification</div>
+      <p class="proj-desc">20,000 labeled clips. MFCC, mel, spectral, and temporal features, a stratified validation split, and a five-model gradient-boosting ensemble.</p>
+      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/bird-call-classification" target="_blank" rel="noopener" aria-label="GitHub for Bird-Call Classification">GitHub ↗</a></div>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-hexagonian" data-categories="ai">
+    <img class="project-card-image" src="assets/img/projects/hexagonian-cnn.svg" alt="Conceptual residual CNN architecture for digit-pair classification" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">12</div>
+      <h3 class="proj-title"><a href="projects.html#project-hexagonian" data-project="hexagonian">Hexagonian Digit Classification</a></h3>
+      <div class="proj-type">Computer vision · Cornell ECE · Spring 2026</div>
+      <p class="proj-desc">Residual CNN for 15 overlapping digit-pair classes. Best logged validation accuracy: 97.66%, with augmentation, label smoothing, and OneCycle training.</p>
+      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/hexagonian-digit-classification" target="_blank" rel="noopener" aria-label="GitHub for Hexagonian Digit Classification">GitHub ↗</a></div>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-audio" data-categories="ai">
+    <img class="project-card-image" src="assets/img/projects/audio-prediction.webp" alt="Actual and predicted waveform samples in the audio test segment" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">13</div>
+      <h3 class="proj-title"><a href="projects.html#project-audio" data-project="audio">Audio Signal Prediction</a></h3>
+      <div class="proj-type">Signal processing · Regression &amp; regularization</div>
+      <p class="proj-desc">One-step waveform prediction at 8.82 kHz. Reproduced test R² ≈ 0.957 using a four-sample linear predictor and a chronological split.</p>
+      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/audio-signal-prediction" target="_blank" rel="noopener" aria-label="GitHub for Audio Signal Prediction">GitHub ↗</a></div>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-sat4" data-categories="ai">
+    <img class="project-card-image" src="assets/img/projects/sat4-samples.webp" alt="Four SAT-4 input patches with RGB and near-infrared channels" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">14</div>
+      <h3 class="proj-title"><a href="projects.html#project-sat4" data-project="sat4">SAT-4 Land-Cover Classification</a></h3>
+      <div class="proj-type">Remote sensing · k-NN &amp; SVM</div>
+      <p class="proj-desc">Compared 3,136 raw RGB/NIR values with 8 engineered features for four land-cover classes. Includes parameter sweeps, errors, and support-vector analysis.</p>
+      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/sat4-knn-svm-classification" target="_blank" rel="noopener" aria-label="GitHub for SAT-4 Land-Cover Classification">GitHub ↗</a></div>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-ml" data-categories="ai">
+
+    <div class="project-card-body">
+      <div class="proj-num">15</div>
+      <h3 class="proj-title"><a href="projects.html#project-ml" data-project="ml">Water-Quality Modeling</a></h3>
+      <div class="proj-type">Environmental machine learning · EY AI Challenge</div>
+      <p class="proj-desc">Modeling three water-quality targets from 9,319 records and 60 features. Compared tree models and Ridge regression with grouped cross-validation.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-marble" data-categories="software">
+
+    <img class="project-card-image" src="assets/img/projects/marble-game.webp" alt="Live African Marble Game showing the 3D sand-board hole challenge" loading="lazy" width="1200" height="600">
+    <div class="project-card-body">
+      <div class="proj-num">16</div>
+      <h3 class="proj-title"><a href="projects.html#project-marble" data-project="marble">African Marble Game</a></h3>
+      <div class="proj-type">Interactive software · React Three Fiber</div>
+      <p class="proj-desc">A playable 3D marble game with three challenges, drag-to-shoot controls, AI-opponent difficulty, and persistent progress.</p>
+      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/african-marble-game" target="_blank" rel="noopener" aria-label="GitHub for African Marble Game">GitHub ↗</a></div>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-revery" data-categories="software ai">
+
+    <div class="project-card-body">
+      <div class="proj-num">17</div>
+      <h3 class="proj-title"><a href="projects.html#project-revery" data-project="revery">Rêvery — Audio DSP</a></h3>
+      <div class="proj-type">Audio software · Personal project</div>
+      <p class="proj-desc">Voice transformation and acoustic effects across web and iOS interfaces, combining audio processing with neural inference.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-ip" data-categories="community">
+
+    <div class="project-card-body">
+      <div class="proj-num">18</div>
+      <h3 class="proj-title"><a href="projects.html#project-ip" data-project="ip">LNIS IP &amp; Commercialization</a></h3>
+      <div class="proj-type">Engineering analysis · Fall 2025</div>
+      <p class="proj-desc">A technology-readiness and prior-art study connecting a Liquid Nanoparticle Ion Source with potential commercialization paths.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-ccra" data-categories="community">
+
+    <div class="project-card-body">
+      <div class="proj-num">19</div>
+      <h3 class="proj-title"><a href="projects.html#project-ccra" data-project="ccra">Cornell Computer Reuse</a></h3>
+      <div class="proj-type">Community engineering · Treasurer &amp; volunteer</div>
+      <p class="proj-desc">Computer troubleshooting, refurbishment, and organizational support for electronics reuse and technology access.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  <article class="proj-item reveal" id="project-quincy" data-categories="community">
+
+    <div class="project-card-body">
+      <div class="proj-num">20</div>
+      <h3 class="proj-title"><a href="projects.html#project-quincy" data-project="quincy">City of Quincy</a></h3>
+      <div class="proj-type">Public works internship · Summer 2022</div>
+      <p class="proj-desc">A field survey of pedestrian signals, signs, and crosswalks across 46 intersections, with findings and recommendations for city improvements.</p>
+      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
+    </div>
+  </article>
+  </div>
+</section>
+
+</main>
 <footer class="footer">
   <span class="footer-left">Boubakar Diallo · ECE @ Cornell</span>
   <div class="footer-right"><a href="index.html">Work</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></div>
 </footer>
 
-<!-- MODALS -->
-<div class="modal-overlay" id="modal-ws"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ws')">✕</button><div class="modal-tag">Founder · Edge AI · Jan 2026 – Present</div><h2 class="modal-h">WholeStory Health</h2><p class="modal-desc">Hardware-software co-designed multilingual clinical NLP platform on NVIDIA Jetson Orin Nano — fully offline, 4 languages under 2s, cuts physician documentation 4×.</p><ul class="modal-list"><li>Whisper ASR + language ID + neural translation + spaCy medical NER across 4 languages</li><li>INT8 quantization + GPU memory partitioning → 40% DRAM reduction, under 2s latency</li><li>Full API layer, inference service, storage schema, and patient UI as one coherent offline-first system</li></ul><div class="modal-chips"><span class="chip">Jetson Orin Nano</span><span class="chip">Whisper</span><span class="chip">spaCy</span><span class="chip">INT8</span><span class="chip">CUDA</span></div><div class="modal-actions"><a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="btn-solid" style="font-size:.72rem;padding:9px 20px;">GitHub ↗</a></div></div></div></div>
-<div class="modal-overlay" id="modal-revery"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-revery')">✕</button><div class="modal-tag">Founder · DSP · Sep 2024 – Present</div><h2 class="modal-h">Rêvery — Real-Time Audio DSP</h2><p class="modal-desc">Real-time DSP pipeline with neural vocoder voice transformation and sub-100ms latency on web and iOS.</p><ul class="modal-list"><li>Neural vocoder voice transformation — &lt;100ms end-to-end hardware latency</li><li>Custom acoustic filter presets with responsible safeguards</li><li>Deployed on web (JavaScript) and iOS (Swift/SwiftUI)</li></ul><div class="modal-chips"><span class="chip">DSP</span><span class="chip">Swift</span><span class="chip">Web Audio API</span><span class="chip">ONNX Runtime</span></div><div class="modal-actions"><a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="btn-solid" style="font-size:.72rem;padding:9px 20px;">GitHub ↗</a></div></div></div></div>
-<div class="modal-overlay" id="modal-marble"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-marble')">✕</button><div class="modal-tag">Solo Build · Nov 2025 – Present · Live</div><h2 class="modal-h">African Marble Game</h2><p class="modal-desc">Real-time 3D physics web app in React Three Fiber — full-stack engineering through live production deployment.</p><ul class="modal-list"><li>Rigid-body collision detection, drag-to-shoot, power scaling, trajectory calculation</li><li>Zero-backend persistent state via Zustand custom middleware — deterministic across page reloads</li><li>Live at boubakar12.github.io/african-marble-game</li></ul><div class="modal-chips"><span class="chip">React Three Fiber</span><span class="chip">Three.js</span><span class="chip">Zustand</span><span class="chip">TypeScript</span></div><div class="modal-actions"><a href="https://boubakar12.github.io/african-marble-game" target="_blank" rel="noopener" class="btn-solid" style="font-size:.72rem;padding:9px 20px;">Play live ↗</a><a href="https://github.com/boubakar12" target="_blank" rel="noopener" class="btn-out" style="font-size:.72rem;padding:9px 20px;">GitHub ↗</a></div></div></div></div>
-<div class="modal-overlay" id="modal-ewb"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ewb')">✕</button><div class="modal-tag">Engineers Without Borders · Oct 2024 – Present</div><h2 class="modal-h">Rover-Drone Platform</h2><p class="modal-desc">NASA Mars rover adapted for agricultural deployment in Sub-Saharan Africa — custom PCB, ROS arm, autonomous drone across 3 field sites.</p><div class="modal-media"><a href="assets/img/ewb_main.png" target="_blank" rel="noopener" class="modal-cover-link"><img src="assets/img/ewb_main.png" alt="Engineers Without Borders rover-drone platform overview" class="modal-cover"></a><div class="modal-gallery"><a href="assets/img/rd_proj.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/rd_proj.png" alt="Rover-drone project overview"></a><a href="assets/img/ewm_main1.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ewm_main1.png" alt="Rover-drone system overview"></a><a href="assets/img/ewb1.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ewb1.png" alt="Rover field deployment photo"></a><a href="assets/img/ewb2.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ewb2.png" alt="Rover hardware closeup"></a><a href="assets/img/ewb3.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ewb3.png" alt="Rover field test image"></a><a href="assets/img/ewb5.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ewb5.png" alt="Crop analytics platform photo"></a></div><div class="modal-file-links"><a href="assets/img/ewb4.MOV" target="_blank" rel="noopener" class="modal-file-link">Open field video ↗</a><a href="assets/img/ewb6.HEIC" target="_blank" rel="noopener" class="modal-file-link">Raw photo 1 ↗</a><a href="assets/img/ewb7.HEIC" target="_blank" rel="noopener" class="modal-file-link">Raw photo 2 ↗</a><a href="assets/img/ewb8.HEIC" target="_blank" rel="noopener" class="modal-file-link">Raw photo 3 ↗</a></div></div><ul class="modal-list"><li>Rebuilt PCB electrical subsystems, ROS robotic arm, terrain-adaptive motor driver circuits</li><li>Autonomous drone with GPS-guided waypoint navigation and custom image-capture pipelines</li><li>CNN on NVIDIA Jetson for maize disease detection with real-time GPIO alerts</li><li>LoRa telemetry for remote crop-health analytics</li></ul><div class="modal-chips"><span class="chip">ROS2</span><span class="chip">NVIDIA Jetson</span><span class="chip">PCB</span><span class="chip">CNN</span><span class="chip">LoRa</span></div></div></div></div>
-<div class="modal-overlay" id="modal-fpga"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-fpga')">✕</button><div class="modal-tag">Cornell ECE · Nov – Dec 2025</div><h2 class="modal-h">FPGA Music Player</h2><p class="modal-desc">Fully functional FPGA music player in Verilog — complete hardware design verification at 100 MHz.</p><ul class="modal-list"><li>Multi-state Moore FSM with clock-synchronized tone generation — sub-ms audio latency</li><li>Full Vivado timing simulation — resolved critical path violations at 100 MHz</li><li>Also designed TinyRV1 single-cycle processor in Verilog</li></ul><div class="modal-chips"><span class="chip">Verilog</span><span class="chip">Vivado</span><span class="chip">Moore FSM</span><span class="chip">RTL</span><span class="chip">100 MHz</span></div></div></div></div>
-<div class="modal-overlay" id="modal-ml"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ml')">✕</button><div class="modal-tag">Cornell ECE + EY Challenge · Nov 2025 – Mar 2026</div><h2 class="modal-h">Signal & Image ML Pipelines</h2><p class="modal-desc">End-to-end ML pipelines for audio classification, satellite image recognition, and environmental prediction.</p><ul class="modal-list"><li>20,000+ bird call recordings — 0.887 Kaggle accuracy with bagged HistGradientBoosting</li><li>SAT-4 satellite classifier: HSV + NIR features reduced dimensionality 60% vs raw pixel CNN</li><li>EY AI Challenge 2026: R²=0.70 river water quality — GroupKFold preventing data leakage</li></ul><div class="modal-chips"><span class="chip">Python</span><span class="chip">librosa</span><span class="chip">scikit-learn</span><span class="chip">PyTorch</span></div></div></div></div>
-<div class="modal-overlay" id="modal-ip"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ip')">✕</button><div class="modal-tag">Cornell Engineering · IP Analyst · Sep – Dec 2025</div><h2 class="modal-h">LNIS IP & Commercialization</h2><p class="modal-desc">Evaluated a DARPA/NSF-funded Liquid Nanoparticle Ion Source for satellite microthruster applications.</p><div class="modal-media"><a href="assets/img/projects/ip1.png" target="_blank" rel="noopener" class="modal-cover-link"><img src="assets/img/projects/ip1.png" alt="LNIS commercialization presentation preview" class="modal-cover"></a><div class="modal-file-links"><a href="assets/img/projects/ip1.png" target="_blank" rel="noopener" class="modal-file-link">Open preview image ↗</a><a href="assets/img/IP_Presentation.pdf" target="_blank" rel="noopener" class="modal-file-link">Open slide deck ↗</a></div></div><ul class="modal-list"><li>Characterized LNIS via AFM, SIMS, and in-situ currents to guide IP positioning</li><li>Prior art search across KR/US/JP/TW databases — scored 41/50 on commercialization tool</li><li>Assessed $108B satellite market by 2035 and licensing paths with propulsion manufacturers</li></ul><div class="modal-chips"><span class="chip">TRL Assessment</span><span class="chip">AFM</span><span class="chip">SIMS</span><span class="chip">Patent Search</span></div><div class="modal-actions"><a href="assets/img/IP_Presentation.pdf" target="_blank" rel="noopener" class="btn-solid" style="font-size:.72rem;padding:9px 20px;">View slides ↗</a></div></div></div></div>
-<div class="modal-overlay" id="modal-ccra"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-ccra')">✕</button><div class="modal-tag">Cornell Computer Reuse Association · Oct 2024 – Present</div><h2 class="modal-h">Systems Lead & Treasurer</h2><p class="modal-desc">Built and scaled CCRA's technical operations — automated hardware triage and global device redistribution.</p><div class="modal-media"><div class="modal-gallery"><a href="assets/img/ccra/ccra1.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ccra/ccra1.png" alt="Cornell Computer Reuse operations image one"></a><a href="assets/img/ccra/ccra2.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ccra/ccra2.png" alt="Cornell Computer Reuse operations image two"></a><a href="assets/img/ccra/ccra3.png" target="_blank" rel="noopener" class="modal-thumb"><img src="assets/img/ccra/ccra3.png" alt="Cornell Computer Reuse operations image three"></a></div><div class="modal-file-links"><a href="assets/img/ccra/CCRA.pdf" target="_blank" rel="noopener" class="modal-file-link">Open project PDF ↗</a></div></div><ul class="modal-list"><li>Automated PCB-level fault classification, reliability scoring, and functional validation workflows</li><li>350+ devices refurbished and deployed to 15 countries including Sub-Saharan Africa</li><li>Manages organizational finances, hardware donations, and external partnerships</li></ul><div class="modal-chips"><span class="chip">PCB Diagnostics</span><span class="chip">Automation</span><span class="chip">Operations</span></div></div></div></div>
-<div class="modal-overlay" id="modal-quincy"><div class="modal-box"><div class="modal-accent-bar"></div><div class="modal-inner"><button class="modal-close" onclick="closeModal('modal-quincy')">✕</button><div class="modal-tag">City of Quincy, MA · Sep 2022 – Jul 2024</div><h2 class="modal-h">Electrical Systems Intern</h2><p class="modal-desc">Municipal electrical systems internship — traffic signal hardware, infrastructure documentation, field engineering.</p><div class="modal-media"><a href="assets/img/city1.png" target="_blank" rel="noopener" class="modal-cover-link"><img src="assets/img/city1.png" alt="City of Quincy infrastructure project visual" class="modal-cover"></a><div class="modal-file-links"><a href="assets/img/city1.png" target="_blank" rel="noopener" class="modal-file-link">Open image ↗</a><a href="assets/img/city2.HEIC" target="_blank" rel="noopener" class="modal-file-link">Field photo 1 ↗</a><a href="assets/img/city3.HEIC" target="_blank" rel="noopener" class="modal-file-link">Field photo 2 ↗</a><a href="assets/img/intern_report.pdf" target="_blank" rel="noopener" class="modal-file-link">Open report ↗</a></div></div><ul class="modal-list"><li>Repaired traffic-signal controller boards and supported field operations citywide</li><li>Documented 52 intersections in AutoCAD/GIS supporting hardware upgrade planning</li><li>Contributed to improvements that raised energy efficiency and cut pedestrian wait times 12%</li></ul><div class="modal-chips"><span class="chip">AutoCAD</span><span class="chip">GIS</span><span class="chip">Electrical Systems</span></div><div class="modal-actions"><a href="assets/img/intern_report.pdf" target="_blank" rel="noopener" class="btn-solid" style="font-size:.72rem;padding:9px 20px;">View report ↗</a></div></div></div></div>
-
-<script src="assets/js/main.js?v=20260328"></script>
+<script src="assets/js/projects.js?v=20261018-projects"></script>
+<script src="assets/js/main.js?v=20261018-projects"></script>
 </body>
 </html>

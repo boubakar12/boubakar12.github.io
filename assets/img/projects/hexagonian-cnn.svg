@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Hexagonian digit-pair classifier</title>
+  <desc id="desc">A conceptual residual CNN architecture: 28 by 28 grayscale input, convolutional blocks with 64, 128, and 256 channels, and a classifier over 15 overlapping digit-pair classes.</desc>
+  <rect width="1200" height="600" fill="#111820"/>
+  <g font-family="monospace" fill="#c8c7c0"><text x="64" y="68" font-size="17" letter-spacing="3">COMPUTER VISION / OVERLAPPING DIGITS</text><text x="64" y="121" font-family="Georgia,serif" font-size="38" fill="#f5f3ee">Learn the shapes. Resolve the overlap.</text></g>
+  <g fill="#1d2a38" stroke="#536577"><rect x="64" y="222" width="184" height="128" rx="5"/><rect x="286" y="222" width="184" height="128" rx="5"/><rect x="508" y="222" width="184" height="128" rx="5"/><rect x="730" y="222" width="184" height="128" rx="5"/><rect x="952" y="222" width="184" height="128" rx="5"/></g>
+  <g text-anchor="middle" font-family="monospace" font-size="30" fill="#f5f3ee"><text x="156" y="275">28 × 28</text><text x="378" y="275">64</text><text x="600" y="275">128</text><text x="822" y="275">256</text><text x="1044" y="275">15</text></g>
+  <g text-anchor="middle" font-family="monospace" font-size="15" fill="#b7c6d4"><text x="156" y="315">GRAYSCALE INPUT</text><text x="378" y="315">RESIDUAL BLOCK</text><text x="600" y="315">RESIDUAL BLOCK</text><text x="822" y="315">RESIDUAL BLOCK</text><text x="1044" y="315">PAIR CLASSES</text></g>
+  <g font-family="monospace" font-size="27" fill="#c8522a"><text x="257" y="294">→</text><text x="479" y="294">→</text><text x="701" y="294">→</text><text x="923" y="294">→</text></g>
+  <text x="286" y="411" font-family="monospace" font-size="18" fill="#c8c7c0">BATCH NORM · RELU · POOLING · DROPOUT</text>
+  <path d="M64 506H1136" stroke="#536577"/><text x="64" y="547" font-family="monospace" font-size="16" fill="#c8c7c0">PYTORCH · STRATIFIED VALIDATION · AUGMENTATION · ONECYCLE LR</text>
+</svg>
