@@ -355,6 +355,11 @@ const PROJECTS = {
   const cards = document.querySelectorAll('[data-categories]');
   const count = document.getElementById('project-count');
   if (count) count.textContent = `${cards.length} projects`;
+  // Show only categories represented on this page's selection.
+  filters.forEach(button => {
+    const category = button.dataset.projectFilter;
+    button.hidden = category !== 'all' && ![...cards].some(card => card.dataset.categories.split(' ').includes(category));
+  });
   filters.forEach(button => button.addEventListener('click', () => {
     const category = button.dataset.projectFilter;
     filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
@@ -362,6 +367,11 @@ const PROJECTS = {
     cards.forEach(card => {
       card.hidden = category !== 'all' && !card.dataset.categories.split(' ').includes(category);
       if (!card.hidden) { visible++; card.classList.add('visible'); }
+      const railLink = document.querySelector(`.section-nav a[href="#heading-${card.id.replace('project-', '')}"]`);
+      if (railLink) {
+        railLink.hidden = card.hidden;
+        railLink.removeAttribute('aria-current');
+      }
     });
     if (count) count.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'}`;
   }));

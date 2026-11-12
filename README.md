@@ -15,11 +15,13 @@ Open `http://127.0.0.1:8000/`. The site is static and requires no build step.
 
 ## Content
 
-- `index.html`: introduction, experience, selected projects, and contact.
+- `index.html`: introduction, filterable selected projects, experience, skills, and contact.
 - `projects.html`: project summaries and category filters.
 - `assets/js/projects.js`: shared case-study content and dialog behavior.
 - `about.html`: biography, focused PDF resumes, and the journey globe.
 - `assets/css/style.css`: shared responsive styles.
+- `assets/css/journey.css`: the interactive journey map's styles.
+- `assets/js/theme.js`: saved light/dark preference, applied before the page renders.
 - `assets/docs/`: focused resume PDFs; the main resume retains its existing path
   at `assets/img/Boubakar_Diallo_Resume.pdf`.
 

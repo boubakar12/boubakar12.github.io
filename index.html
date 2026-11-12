@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="assets/js/theme.js?v=20261112"></script>
   <title>Boubakar Diallo — ECE @ Cornell</title>
   <meta name="description" content="Boubakar Diallo — Cornell ECE, Class of 2028. Digital hardware, embedded systems, robotics, and AI. Incoming PNC Technology Intern, Summer 2027.">
   <meta name="keywords" content="Boubakar Diallo, Cornell ECE, embedded systems, FPGA, ROS2, NVIDIA Jetson, hardware engineer, edge AI">
@@ -13,201 +14,174 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://boubakar12.github.io">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261018-projects">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261112">
 </head>
-<body>
+<body id="top">
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-<nav class="nav">
-  <a class="nav-name" href="index.html">Boubakar Diallo</a>
-  <ul class="nav-links" id="primary-nav">
-    <li><a href="index.html" class="active" aria-current="page">Work</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-    <li class="nav-resume-mobile"><a href="about.html#resumes">Resumes ↗</a></li>
-  </ul>
-  <a href="assets/img/Boubakar_Diallo_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">boubakar diallo</a>
+    <ul class="nav-links" id="primary-nav"><li><a href="index.html" class="active" aria-current="page">home</a></li><li><a href="about.html">about</a></li><li><a href="projects.html">projects</a></li><li><a href="index.html#contact">contact</a></li></ul>
+    <div class="nav-tools">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☾</span></button>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
 </nav>
 <main id="main-content">
-
-<!-- NOW BAR -->
-<div class="now-bar">
-  <span class="now-dot"></span>
-  <span class="now-text"><strong>Next:</strong> Incoming Technology Intern @ PNC · Summer 2027 <span class="now-divider">/</span> Cornell ECE ’28 · Building RISC-V hardware</span>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div>
-      <p class="hero-eyebrow">ECE @ Cornell · Class of 2028 · Quincy, MA</p>
-      <h1 class="hero-name">Boubakar<br>Diallo</h1>
-      <p class="hero-role">Digital Hardware · Embedded Systems · Robotics · AI</p>
-    </div>
-    <blockquote class="hero-why">I build across the hardware–software boundary: processors that move data, firmware that meets deadlines, and robots that turn sensing into action.</blockquote>
-    <div class="hero-cta">
-      <a href="#selected-work" class="btn-solid">Explore projects ↓</a>
-      <a href="assets/img/Boubakar_Diallo_Resume.pdf" class="btn-out" target="_blank" rel="noopener">Resume ↗</a>
-    </div>
+<section class="hero-section home-intro" aria-labelledby="intro-heading">
+  <div class="home-intro-greeting">
+    <h1 id="intro-heading">hi, I'm Boubakar</h1>
+    <svg class="intro-circuit" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="13" y="13" width="22" height="22" rx="4"/><rect x="20" y="20" width="8" height="8" rx="1"/><path d="M18 7v6m6-6v6m6-6v6M18 35v6m6-6v6m6-6v6M7 18h6m-6 6h6m-6 6h6m22-12h6m-6 6h6m-6 6h6"/></svg>
   </div>
-  <div class="hero-right">
-    <img src="assets/img/profile.png" alt="Boubakar Diallo" class="hero-photo" onerror="this.style.display='none'">
-    <div class="hero-terminal">
-      <div class="term-bar">
-        <span class="tb tb1"></span><span class="tb tb2"></span><span class="tb tb3"></span>
-        <span class="term-title">boubakar@cornell ~ </span>
-      </div>
-      <div id="term-output"></div>
-    </div>
+  <div class="home-intro-copy">
+    <p><mark>Building at the intersection of hardware, embedded systems, robotics, and AI.</mark></p>
+    <p>I study electrical &amp; computer engineering at Cornell, class of 2028. Previously at Simulacrum and ADAS SAFE; next, a technology internship at PNC in summer 2027. I'd love to <a href="mailto:bd453@cornell.edu">connect</a>!</p>
   </div>
+  <div class="intro-links"><a href="about.html">a little about me ↗</a><a href="assets/img/Boubakar_Diallo_Resume.pdf" target="_blank" rel="noopener">resume ↗</a></div>
 </section>
-
-<!-- EXPERIENCE -->
-<div class="section-grid" id="work">
-  <div class="sec-label-col">
-    <div class="sec-num">01</div>
-    <h3>Experience</h3>
+<section id="selected-work" class="content-section project-catalogue" aria-labelledby="selected-heading">
+  <h2 class="section-label" id="selected-heading">selected projects</h2>
+  <div class="project-toolbar">
+  <div class="project-filters" role="group" aria-label="Filter projects">
+    <button type="button" data-project-filter="all" aria-pressed="true">all</button>
+    <button type="button" data-project-filter="hardware" aria-pressed="false">hardware</button>
+    <button type="button" data-project-filter="embedded" aria-pressed="false">embedded</button>
+    <button type="button" data-project-filter="robotics" aria-pressed="false">robotics</button>
+    <button type="button" data-project-filter="ai" aria-pressed="false">AI &amp; data</button>
+    <button type="button" data-project-filter="software" aria-pressed="false">software</button>
+    <button type="button" data-project-filter="community" aria-pressed="false">community</button>
   </div>
-  <div class="sec-body">
-    <h2 class="sec-h">Experience & what’s next</h2>
-    <div class="exp-row reveal" data-delay="0">
+  <p id="project-count" role="status" aria-live="polite"></p>
+</div>
+  <div class="project-list"><article class="project-row" id="project-ewb" data-categories="robotics embedded ai" aria-labelledby="heading-ewb">
+  <figure class="project-visual"><a href="projects.html#project-ewb" data-project="ewb" aria-label="Read case study: Rover-Drone Crop Analytics"><img src="assets/img/ewb_main.png" alt="Agricultural rover and multirotor platform beside a crop field" loading="lazy" width="776" height="474"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-ewb"><a href="projects.html#project-ewb" data-project="ewb">Rover-Drone Crop Analytics</a></h3>
+    <p class="project-meta">Engineers Without Borders · Robotics &amp; Hardware Systems Lead · October 2024–January 2026</p>
+    <p class="project-summary">Custom rover electronics, a ROS-controlled arm, GPS-guided aerial sensing, and crop-disease inference on NVIDIA Jetson.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Designed and fabricated custom PCBs, motor-driver circuits, and power-regulation subsystems; led board bring-up and hardware/software integration.</li><li>Integrated a ROS-controlled robotic arm and diagnosed power and sensor-interface faults using laboratory instrumentation.</li></ul>
+    <p class="project-tech">ROS · NVIDIA Jetson · PCB bring-up · Computer vision</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-ewb" data-project="ewb">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="assets/img/ewb4.MOV" target="_blank" rel="noopener">Field video <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row project-row-reversed" id="project-riscv" data-categories="hardware" aria-labelledby="heading-riscv">
+  <figure class="project-visual"><a href="projects.html#project-riscv" data-project="riscv" aria-label="Read case study: Pipelined RISC-V Processor"><img src="assets/img/projects/riscv-pipeline.svg" alt="Conceptual five-stage processor pipeline with forwarding and hazard control" loading="lazy" width="1200" height="600"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-riscv"><a href="projects.html#project-riscv" data-project="riscv">Pipelined RISC-V Processor</a></h3>
+    <p class="project-meta">Computer architecture · Team project · Fall 2026 · In progress</p>
+    <p class="project-summary">Five-stage TinyRV2 with forwarding, hazard detection, stall/squash control, and a val/rdy multiplier. Directed and randomized RTL verification.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Implementing X/M/W forwarding, RAW hazard detection, and stall/squash control across the five pipeline stages.</li><li>Designed fixed- and variable-latency iterative multipliers with FSM control and zero-bit skipping.</li></ul>
+    <p class="project-tech">Verilog · TinyRV2 · Microarchitecture · pytest</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-riscv" data-project="riscv">Read case study <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row" id="project-rtos" data-categories="embedded" aria-labelledby="heading-rtos">
+  <figure class="project-visual"><a href="projects.html#project-rtos" data-project="rtos" aria-label="Read case study: Preemptive RTOS &amp; Scheduler"><img src="assets/img/projects/rtos-scheduler.svg" alt="Scheduler overview showing a timer tick, deadline-ordered ready queue, context switch, and running task" loading="lazy" width="1200" height="600"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-rtos"><a href="projects.html#project-rtos" data-project="rtos">Preemptive RTOS &amp; Scheduler</a></h3>
+    <p class="project-meta">Embedded systems · ARM Cortex-M0+ · 2025–2026</p>
+    <p class="project-summary">Context switching, spin/blocking locks, and Earliest Deadline First scheduling on a 1 ms timer, exercised with concurrency and deadline tests.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Implemented context switching, process-state queues, spin locks, and blocking locks in C and ARM assembly.</li><li>Used a 1 ms interrupt-driven time base with Earliest Deadline First scheduling, deadline-ordered ready queues, and delayed task activation.</li></ul>
+    <p class="project-tech">C · ARM assembly · Cortex-M0+ · EDF</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-rtos" data-project="rtos">Read case study <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row project-row-reversed" id="project-ws" data-categories="ai software" aria-labelledby="heading-ws">
+  <figure class="project-visual"><a href="projects.html#project-ws" data-project="ws" aria-label="Read case study: WholeStory Health"><img src="assets/img/projects/wholestory-demo.webp" alt="WholeStory Health web demo with eight language choices" loading="lazy" width="1280" height="720"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-ws"><a href="projects.html#project-ws" data-project="ws">WholeStory Health</a></h3>
+    <p class="project-meta">Clinical AI · Hackathon project · 2026</p>
+    <p class="project-summary">Multilingual speech, body mapping, and clinical summaries. An eight-language web demo alongside a separate offline Jetson NLP prototype.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Built an offline NLP prototype combining Whisper, language identification, neural translation, and spaCy entity extraction, with approximately 2-second pipeline latency.</li><li>Applied Jetson model quantization to reduce memory use by 40% while maintaining evaluated accuracy.</li></ul>
+    <p class="project-tech">Python · Whisper · Jetson · React</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-ws" data-project="ws">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="assets/docs/WholeStory_Health_Concept.pdf" target="_blank" rel="noopener">Concept presentation <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row" id="project-bird" data-categories="ai" aria-labelledby="heading-bird">
+  <figure class="project-visual"><a href="projects.html#project-bird" data-project="bird" aria-label="Read case study: Bird-Call Classification"><img src="assets/img/projects/bird-call-spectrogram.webp" alt="Spectrogram of a training bird-call recording, showing frequency content over time" loading="lazy" width="1680" height="840"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-bird"><a href="projects.html#project-bird" data-project="bird">Bird-Call Classification</a></h3>
+    <p class="project-meta">Audio machine learning · Eight-class classification</p>
+    <p class="project-summary">20,000 labeled clips. MFCC, mel, spectral, and temporal features, a stratified validation split, and a five-model gradient-boosting ensemble.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Built a librosa preprocessing pipeline that resamples audio to 22.05 kHz and pads or trims recordings to three seconds.</li><li>Extracted time-aggregated MFCCs and their first/second derivatives, mel spectra, chroma, spectral descriptors, zero crossings, and RMS energy.</li></ul>
+    <p class="project-tech">Python · librosa · scikit-learn · MFCC</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-bird" data-project="bird">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/bird-call-classification" target="_blank" rel="noopener">GitHub source <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row project-row-reversed" id="project-hexagonian" data-categories="ai" aria-labelledby="heading-hexagonian">
+  <figure class="project-visual"><a href="projects.html#project-hexagonian" data-project="hexagonian" aria-label="Read case study: Hexagonian Digit Classification"><img src="assets/img/projects/hexagonian-cnn.svg" alt="Residual CNN architecture with 64, 128, and 256-channel blocks leading to 15 digit-pair classes" loading="lazy" width="1200" height="600"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-hexagonian"><a href="projects.html#project-hexagonian" data-project="hexagonian">Hexagonian Digit Classification</a></h3>
+    <p class="project-meta">Computer vision · Cornell ECE 3200/5200 · Spring 2026</p>
+    <p class="project-summary">Residual CNN for 15 overlapping digit-pair classes. Best logged validation accuracy: 97.66%, with augmentation, label smoothing, and OneCycle training.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Prepared 82,875 labeled 28 × 28 grayscale images with normalization and a stratified 80/20 validation split.</li><li>Compared Gaussian Naive Bayes and softmax regression with a three-block residual CNN using BatchNorm, ReLU, pooling, and dropout.</li></ul>
+    <p class="project-tech">PyTorch · Residual CNN · Computer vision · Augmentation</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-hexagonian" data-project="hexagonian">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/hexagonian-digit-classification" target="_blank" rel="noopener">GitHub source <span aria-hidden="true">↗</span></a><a class="project-open" href="assets/docs/Hexagonian_Digit_Classification_Report.pdf" target="_blank" rel="noopener">Project report <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row" id="project-marble" data-categories="software" aria-labelledby="heading-marble">
+  <figure class="project-visual"><a href="projects.html#project-marble" data-project="marble" aria-label="Read case study: African Marble Game"><img src="assets/img/projects/marble-game.webp" alt="Live African Marble Game showing the 3D sand board and hole challenge" loading="lazy" width="1280" height="720"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-marble"><a href="projects.html#project-marble" data-project="marble">African Marble Game</a></h3>
+    <p class="project-meta">Interactive software · Solo build · Playable web demo</p>
+    <p class="project-summary">A playable 3D marble game with three challenges, drag-to-shoot controls, AI-opponent difficulty, and persistent progress.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Implemented a 3D web experience with React Three Fiber and Three.js.</li><li>Built drag-to-shoot controls, trajectory calculation, power scaling, and rigid-body collision mechanics.</li></ul>
+    <p class="project-tech">React Three Fiber · Three.js · TypeScript · Zustand</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-marble" data-project="marble">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://boubakar12.github.io/african-marble-game" target="_blank" rel="noopener">Play the web game <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/african-marble-game" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article></div>
+  <div class="section-actions"><p>There’s more where these came from.</p><a href="projects.html">explore all 20 projects →</a></div>
+</section>
+<section class="content-section experience-section" id="work" aria-labelledby="experience-heading">
+  <h2 class="section-label" id="experience-heading">experience &amp; what’s next</h2>
+  <div class="exp-row reveal" data-delay="0">
       <div><h3 class="exp-co">PNC Bank</h3><div class="exp-role">Incoming Technology Intern</div><div class="exp-date">Summer 2027</div></div>
       <div><p class="exp-desc">Joining PNC’s technology internship program in summer 2027.</p><div class="chips"><span class="chip">Incoming · Summer 2027</span></div></div>
     </div>
-    <div class="exp-row reveal" data-delay="40">
+<div class="exp-row reveal" data-delay="40">
       <div><h3 class="exp-co">Simulacrum</h3><div class="exp-role">Software Engineer Intern</div><div class="exp-date">Jan – Jun 2026 · New York, NY</div></div>
       <div><p class="exp-desc">Built a real-time sensor-data platform using FastAPI and Google Cloud Pub/Sub with sub-100 ms stream-processing latency. Added structured logging and alerts for latency, data drift, and failures, reducing debugging cycles by approximately 30%.</p><div class="chips"><span class="chip">FastAPI</span><span class="chip">Pub/Sub</span><span class="chip">BigQuery</span><span class="chip">GCP</span><span class="chip">Observability</span></div></div>
     </div>
-    <div class="exp-row reveal" data-delay="80">
+<div class="exp-row reveal" data-delay="80">
       <div><h3 class="exp-co">ADAS SAFE</h3><div class="exp-role">Embedded Systems Intern</div><div class="exp-date">Jun – Aug 2025 · Jacksonville, FL</div></div>
       <div><p class="exp-desc">Validated radar, IMU, and LiDAR hardware, reducing radar alignment errors by 15%. Diagnosed microsecond-level synchronization drift during perception-hardware bring-up and automated diagnostic workflows for calibration and reliability.</p><div class="chips"><span class="chip">Sensor calibration</span><span class="chip">Hardware validation</span><span class="chip">Radar / IMU / LiDAR</span></div></div>
     </div>
-    <div class="exp-row reveal" data-delay="120">
+<div class="exp-row reveal" data-delay="120">
       <div><h3 class="exp-co">Engineers Without Borders</h3><div class="exp-role">Robotics & Hardware Systems Lead</div><div class="exp-date">Oct 2024 – Jan 2026 · Ithaca, NY</div></div>
       <div><p class="exp-desc">Designed rover PCBs, motor-driver circuits, and power regulation. Integrated a ROS-controlled arm, on-device crop-disease inference, and UAV image capture; developed motor-control and navigation tests across three field sites.</p><div class="chips"><span class="chip">PCB bring-up</span><span class="chip">ROS</span><span class="chip">Jetson</span><span class="chip">Robotics</span></div></div>
     </div>
-    <div class="exp-row reveal" data-delay="160">
+<div class="exp-row reveal" data-delay="160">
       <div><h3 class="exp-co">City of Quincy</h3><div class="exp-role">Traffic Engineering Intern</div><div class="exp-date">Summer 2022 · Quincy, MA</div></div>
       <div><p class="exp-desc">Surveyed pedestrian signals, signs, and crosswalk conditions at 46 intersections. Prepared recommendations for improvements and joined field visits and construction-planning meetings.</p><div class="chips"><span class="chip">Field survey</span><span class="chip">Public infrastructure</span><span class="chip">Technical reporting</span></div></div>
     </div>
-  </div>
-</div>
-
-<!-- PROJECTS LABEL -->
-<div class="section-grid" id="selected-work" style="border-bottom:none;">
-  <div class="sec-label-col"><div class="sec-num">02</div><h3>Projects</h3></div>
-  <div class="sec-body" style="padding-bottom:0;"><h2 class="sec-h">Selected work</h2></div>
-</div>
-
-<!-- PROJECTS GRID -->
-<div class="proj-grid selected-projects">
-  <article class="proj-item reveal project-featured" id="project-ewb" data-categories="robotics embedded ai">
-<img class="project-card-image" src="assets/img/ewb_main.png" alt="Rover and drone beside an agricultural field" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">Featured / 01</div>
-      <h3 class="proj-title"><a href="projects.html#project-ewb" data-project="ewb">Rover-Drone Crop Analytics</a></h3>
-      <div class="proj-type">Engineers Without Borders · 2024–2026</div>
-      <p class="proj-desc">Custom rover electronics, a ROS-controlled arm, GPS-guided aerial sensing, and crop-disease inference on NVIDIA Jetson.</p>
-      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
-    </div>
-  </article>
-  <article class="proj-item reveal" id="project-riscv" data-categories="hardware">
-<img class="project-card-image" src="assets/img/projects/riscv-pipeline.svg" alt="Five-stage TinyRV2 pipeline architecture" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">02</div>
-      <h3 class="proj-title"><a href="projects.html#project-riscv" data-project="riscv">Pipelined RISC-V Processor</a></h3>
-      <div class="proj-type">Computer architecture · Fall 2026 · In progress</div>
-      <p class="proj-desc">Five-stage TinyRV2 with forwarding, hazard detection, stall/squash control, and a val/rdy multiplier. Directed and randomized RTL verification.</p>
-      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
-    </div>
-  </article>
-  <article class="proj-item reveal" id="project-rtos" data-categories="embedded">
-<img class="project-card-image" src="assets/img/projects/rtos-scheduler.svg" alt="Conceptual preemptive scheduler flow" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">03</div>
-      <h3 class="proj-title"><a href="projects.html#project-rtos" data-project="rtos">Preemptive RTOS &amp; Scheduler</a></h3>
-      <div class="proj-type">Embedded systems · ARM Cortex-M0+</div>
-      <p class="proj-desc">Context switching, spin/blocking locks, and Earliest Deadline First scheduling on a 1 ms timer, exercised with concurrency and deadline tests.</p>
-      <span class="proj-link" aria-hidden="true">Read case study ↗</span>
-    </div>
-  </article>
-  <article class="proj-item reveal" id="project-ws" data-categories="ai software">
-<img class="project-card-image" src="assets/img/projects/wholestory-demo.webp" alt="WholeStory Health language-selection interface" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">04</div>
-      <h3 class="proj-title"><a href="projects.html#project-ws" data-project="ws">WholeStory Health</a></h3>
-      <div class="proj-type">Clinical AI · Hackathon project · 2026</div>
-      <p class="proj-desc">Multilingual speech, body mapping, and clinical summaries. An eight-language web demo alongside a separate offline Jetson NLP prototype.</p>
-      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="assets/docs/WholeStory_Health_Concept.pdf" target="_blank" rel="noopener" aria-label="Presentation for WholeStory Health">Presentation ↗</a></div>
-    </div>
-  </article>
-  <article class="proj-item reveal" id="project-bird" data-categories="ai">
-    <img class="project-card-image" src="assets/img/projects/bird-call-spectrogram.webp" alt="Spectrogram of an example bird-call training clip" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">05</div>
-      <h3 class="proj-title"><a href="projects.html#project-bird" data-project="bird">Bird-Call Classification</a></h3>
-      <div class="proj-type">Audio ML · Eight-class classification</div>
-      <p class="proj-desc">20,000 labeled clips. MFCC, mel, spectral, and temporal features, a stratified validation split, and a five-model gradient-boosting ensemble.</p>
-      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/bird-call-classification" target="_blank" rel="noopener" aria-label="GitHub for Bird-Call Classification">GitHub ↗</a></div>
-    </div>
-  </article>
-  <article class="proj-item reveal" id="project-hexagonian" data-categories="ai">
-    <img class="project-card-image" src="assets/img/projects/hexagonian-cnn.svg" alt="Conceptual residual CNN architecture for digit-pair classification" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">06</div>
-      <h3 class="proj-title"><a href="projects.html#project-hexagonian" data-project="hexagonian">Hexagonian Digit Classification</a></h3>
-      <div class="proj-type">Computer vision · Cornell ECE · Spring 2026</div>
-      <p class="proj-desc">Residual CNN for 15 overlapping digit-pair classes. Best logged validation accuracy: 97.66%, with augmentation, label smoothing, and OneCycle training.</p>
-      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/hexagonian-digit-classification" target="_blank" rel="noopener" aria-label="GitHub for Hexagonian Digit Classification">GitHub ↗</a></div>
-    </div>
-  </article>
-  <article class="proj-item reveal" id="project-marble" data-categories="software">
-
-    <img class="project-card-image" src="assets/img/projects/marble-game.webp" alt="Live African Marble Game showing the 3D sand-board hole challenge" loading="lazy" width="1200" height="600">
-    <div class="project-card-body">
-      <div class="proj-num">07</div>
-      <h3 class="proj-title"><a href="projects.html#project-marble" data-project="marble">African Marble Game</a></h3>
-      <div class="proj-type">Interactive software · React Three Fiber</div>
-      <p class="proj-desc">A playable 3D marble game with three challenges, drag-to-shoot controls, AI-opponent difficulty, and persistent progress.</p>
-      <div class="project-card-actions"><span class="proj-link" aria-hidden="true">Read case study ↗</span><a class="project-source" href="https://github.com/boubakar12/african-marble-game" target="_blank" rel="noopener" aria-label="GitHub for African Marble Game">GitHub ↗</a></div>
-    </div>
-  </article>
-</div>
-<div class="section-actions project-selection-actions">
-  <p class="more-projects">Also explore: <a href="projects.html#project-sat4" data-project="sat4">SAT-4 imagery</a> · <a href="projects.html#project-audio" data-project="audio">Audio prediction</a> · <a href="projects.html#project-forecasting" data-project="forecasting">Forecasting research</a></p>
-  <a href="projects.html" class="btn-out">All 20 projects →</a>
-</div>
-
-<!-- SKILLS -->
-<div class="section-grid">
-  <div class="sec-label-col"><div class="sec-num">03</div><h3>Skills</h3></div>
-  <div class="sec-body">
-    <h2 class="sec-h">Technical stack</h2>
-    <div class="skills-term reveal">
-      <div class="term-header">
-        <span class="tb tb1"></span><span class="tb tb2"></span><span class="tb tb3"></span>
-        <span class="term-title" style="font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:rgba(255,255,255,.58);margin-left:.4rem;">skills.json</span>
-      </div>
-      <div class="term-body">
-        <div class="t-brace">{</div>
-        <div>&nbsp;&nbsp;<span class="t-key">"hardware_hdl"</span>: <span class="t-val">["Verilog/SystemVerilog", "RISC-V", "FPGA", "Vivado", "Quartus", "Timing analysis", "PCB bring-up"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"embedded"</span>: <span class="t-val">["C/C++", "ARM assembly", "Cortex-M", "RTOS / EDF", "Interrupts", "I²C", "SPI", "UART"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"robotics_sensors"</span>: <span class="t-val">["ROS/ROS2", "Pixhawk/ArduPilot", "PID", "LiDAR", "IMU", "Radar", "NVIDIA Jetson"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"ml_edge_ai"</span>: <span class="t-val">["PyTorch", "TensorFlow", "Whisper", "spaCy", "INT8 quantization", "CNN", "NLP", "CUDA"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"backend_infra"</span>: <span class="t-val">["FastAPI", "Pub/Sub", "dbt", "BigQuery", "GCP", "Docker", "PostgreSQL", "Redis", "Git"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"languages"</span>: <span class="t-val">["C++", "Python", "JavaScript", "TypeScript", "Swift", "SQL", "Verilog", "MATLAB"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"human_languages"</span>: <span class="t-val">["English", "French", "Arabic", "Fulah"],</span></div>
-        <div>&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">"Incoming PNC Technology Intern · Summer 2027"</span></div>
-        <div class="t-brace">}</div>
-      </div>
-    </div>
-  </div>
-</div>
-
+</section>
+<section class="content-section skills-section" aria-labelledby="skills-heading">
+  <h2 class="section-label" id="skills-heading">tools &amp; technologies</h2>
+  <dl class="skills-list">
+    <div><dt>hardware</dt><dd>Verilog / SystemVerilog, RISC-V, FPGA, Vivado, Quartus, timing analysis, PCB bring-up</dd></div>
+    <div><dt>embedded</dt><dd>C / C++, ARM assembly, Cortex-M, RTOS, interrupts, I²C, SPI, UART</dd></div>
+    <div><dt>robotics</dt><dd>ROS / ROS2, Pixhawk / ArduPilot, PID, LiDAR, IMU, radar, NVIDIA Jetson</dd></div>
+    <div><dt>AI &amp; data</dt><dd>Python, PyTorch, TensorFlow, Whisper, spaCy, CNNs, NLP, INT8 quantization, CUDA</dd></div>
+    <div><dt>software</dt><dd>JavaScript, TypeScript, Swift, SQL, MATLAB, FastAPI, Pub/Sub, dbt, BigQuery, GCP, Docker, PostgreSQL, Redis, Git</dd></div>
+    <div><dt>languages</dt><dd>English, French, Arabic, Fulah</dd></div>
+  </dl>
+</section>
 <!-- CONTACT -->
 <div id="contact" style="border-top:1px solid var(--rule);">
   <div class="page-hero">
@@ -242,18 +216,18 @@
 </div>
 
 </main>
-<footer class="footer">
-  <span class="footer-left">© 2026 Boubakar Diallo · ECE @ Cornell</span>
-  <div class="footer-right">
-    <a href="mailto:bd453@cornell.edu">bd453@cornell.edu</a>
-    <a href="https://github.com/boubakar12" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/boubakar/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
+<nav class="section-nav" aria-label="Selected projects"><a href="#heading-ewb" aria-label="Rover-Drone Crop Analytics"><span>Rover-Drone Crop Analytics</span></a><a href="#heading-riscv" aria-label="Pipelined RISC-V Processor"><span>Pipelined RISC-V Processor</span></a><a href="#heading-rtos" aria-label="Preemptive RTOS &amp; Scheduler"><span>Preemptive RTOS &amp; Scheduler</span></a><a href="#heading-ws" aria-label="WholeStory Health"><span>WholeStory Health</span></a><a href="#heading-bird" aria-label="Bird-Call Classification"><span>Bird-Call Classification</span></a><a href="#heading-hexagonian" aria-label="Hexagonian Digit Classification"><span>Hexagonian Digit Classification</span></a><a href="#heading-marble" aria-label="African Marble Game"><span>African Marble Game</span></a></nav>
+<footer class="site-footer">
+  <span class="footer-name">boubakar diallo <span aria-hidden="true">⌁</span></span>
+  <a class="footer-top" href="#top">back to top ↑</a>
+  <div class="footer-links">
+    <a href="mailto:bd453@cornell.edu" aria-label="Email Boubakar">email ↗</a>
+    <a href="https://github.com/boubakar12" target="_blank" rel="noopener">github ↗</a>
+    <a href="https://www.linkedin.com/in/boubakar/" target="_blank" rel="noopener">linkedin ↗</a>
   </div>
 </footer>
 
-<script src="assets/js/projects.js?v=20261018-projects"></script>
-<script src="assets/js/main.js?v=20261018-projects"></script>
+<script src="assets/js/projects.js?v=20261112"></script>
+<script src="assets/js/main.js?v=20261112"></script>
 </body>
 </html>
