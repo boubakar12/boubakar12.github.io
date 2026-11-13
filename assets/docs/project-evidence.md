@@ -60,3 +60,36 @@ portfolio instead links the supplied [concept presentation](WholeStory_Health_Co
 The eight-language web demo and the offline Jetson prototype remain described
 separately. The presentation includes proposed capabilities and is labeled as
 a concept presentation.
+
+## CS 4750 mobile-robot coursework
+
+Reviewed November 13, 2026, from the supplied `cs4750-hw1-main.zip`,
+`cs4750-hw2-main (1).zip`, and `cs4750-hw3-main.zip` archives. The entry is
+identified as team coursework. Individual ownership of every component has
+not been established, so the description summarizes the coursework sequence.
+
+- HW1 contains ROS-node exercises and submitted screenshots of robot setup,
+  teleoperation topic messages, and live LiDAR visualization.
+- HW2 contains forward/inverse differential-drive kinematics, wheel odometry,
+  transform broadcasting, and measured-versus-predicted wheel-speed plots.
+- HW3 contains a LiDAR likelihood model, particle-filter integration,
+  low-variance resampling, gyroscope-tuning screenshots, and a team writeup
+  with qualitative localization comparisons.
+
+The three portfolio figures come from submitted `writeup/` folders:
+`hw1/.../writeup/lidar-foxglove.png`, `hw2/writeup/Q2.1_plot.png`, and
+`hw3/writeup/tuned_gyro.png`. Their bytes are preserved in the portfolio.
+Starter/example images in the archives' `images/` folders were not used as
+student results. The system overview is an explanatory HTML diagram.
+
+This is localization in a supplied map. The case study does not attribute
+later motion-planning or feedback-control assignments to these archives.
+The pasted syllabus is for Fall 2022; it is not evidence of the student's
+course semester, and no semester is assigned to this entry.
+
+Independent review reproduced an in-place resampling defect in the supplied
+HW3 implementation: with four particles and weights `[0.5, 0.5, 0, 0]`, selected
+ancestors `[0, 0, 1, 1]` are overwritten during sequential copying. The supplied
+coursework archives remain unchanged. Full ROS/hardware execution and
+quantitative localization validation have not been performed. No accuracy,
+recovery-time, or verified-correctness claim is made for this implementation.

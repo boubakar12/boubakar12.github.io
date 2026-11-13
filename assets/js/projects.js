@@ -1,5 +1,41 @@
 /* Shared case studies for the Work and Projects pages. */
 const PROJECTS = {
+  cs4750: {
+    title: 'Mobile Robot Kinematics & LiDAR Localization',
+    meta: 'Cornell CS 4750 · Team coursework · HW1–HW3',
+    intro: 'A mobile-robot coursework sequence connecting ROS integration, differential-drive kinematics, wheel odometry, and LiDAR-based particle-filter localization in a provided map.',
+    image: 'assets/img/projects/cs4750-wheel-kinematics.png',
+    alt: 'Foxglove plots comparing predicted and measured angular velocities for the robot’s left and right wheels',
+    caption: 'HW2 recording: predicted and measured wheel velocities track closely during steady motion, with discrepancies around direction changes. This plot shows one recorded run, not an aggregate error benchmark.',
+    pipeline: [
+      ['Wheel telemetry', 'Forward kinematics turns wheel velocities into body motion and an odometry prediction.'],
+      ['LiDAR + supplied map', 'Scan distances are compared with expected ranges to evaluate particle likelihoods.'],
+      ['Robot pose', 'The particle filter combines motion prediction, observation weighting, and resampling to estimate position and heading.']
+    ],
+    bullets: [
+      'HW1 — Connected ROS publishers/subscribers and teleoperation topics, and visualized the robot model and live LiDAR scans in Foxglove.',
+      'HW2 — Implemented differential-drive forward and inverse kinematics, converting between wheel angular velocities and body linear/angular motion.',
+      'Integrated wheel odometry with midpoint heading updates, quaternion orientation, and odom-to-base_link transforms; examined failure cases when wheels spun without corresponding robot motion.',
+      'HW3 — Implemented a LiDAR sensor-likelihood model and low-variance particle resampling within the course-provided localization framework.',
+      'Captured gyroscope-tuning plots and documented qualitative comparisons between odometry-only localization, particle filtering, and AMCL.'
+    ],
+    figures: [
+      {
+        heading: 'ROS integration & live LiDAR',
+        image: 'assets/img/projects/cs4750-lidar.png',
+        alt: 'Foxglove 3D view of the mobile robot surrounded by live LiDAR scan points',
+        caption: 'HW1 screenshot from the submitted writeup: the robot model and live scan points in Foxglove. This is a sensor visualization.'
+      },
+      {
+        heading: 'Gyroscope calibration',
+        image: 'assets/img/projects/cs4750-gyro-tuning.png',
+        alt: 'Foxglove IMU plots showing tuned angular-velocity readings near zero and linear-acceleration traces',
+        caption: 'HW3 tuned-gyroscope screenshot from the team writeup. These stationary sensor traces document calibration; they do not measure localization accuracy.'
+      }
+    ],
+    evaluation: 'The team writeup describes accumulated odometry drift and qualitatively compares localization behavior with LiDAR corrections and AMCL. This case study covers HW1–HW3 and uses a provided map. No numerical localization-accuracy or recovery-time benchmark is reported.',
+    tags: ['Python', 'ROS', 'Kinematics', 'Odometry', 'LiDAR', 'Particle filters', 'Foxglove']
+  },
   riscv: {
     title: 'Pipelined RISC-V Processor',
     meta: 'Computer architecture · Team project · Fall 2026 · In progress',
@@ -325,9 +361,23 @@ const PROJECTS = {
     opener = trigger || document.activeElement;
     const media = project.image ? `<figure class="case-figure">${imageLink(project.image, project.alt, 'case-cover')}<figcaption>${escape(project.caption)}</figcaption></figure>` : '';
     const gallery = project.gallery ? `<div class="modal-gallery">${project.gallery.map(([src, alt]) => imageLink(src, alt, 'modal-thumb')).join('')}</div>` : '';
+    const pipeline = project.pipeline ? `<section class="case-flow-section" aria-label="Localization system overview"><h3 class="case-subhead">How the system fits together</h3><ol class="case-flow">${project.pipeline.map(([title, description]) => `<li><h4>${escape(title)}</h4><p>${escape(description)}</p></li>`).join('')}</ol></section>` : '';
+    const figures = project.figures ? project.figures.map(figure => `<section class="case-evidence"><h3 class="case-subhead">${escape(figure.heading)}</h3><figure class="case-figure">${imageLink(figure.image, figure.alt, 'case-cover')}<figcaption>${escape(figure.caption)}</figcaption></figure></section>`).join('') : '';
+    const evaluation = project.evaluation ? `<section class="case-evaluation"><h3 class="case-subhead">Evaluation scope</h3><p class="modal-desc">${escape(project.evaluation)}</p></section>` : '';
     const metrics = project.metrics ? `<dl class="case-metrics">${project.metrics.map(([value, label]) => `<div><dt>${escape(value)}</dt><dd>${escape(label)}</dd></div>`).join('')}</dl>` : '';
     const links = project.links ? `<div class="modal-actions">${project.links.map(([label, url]) => `<a class="btn-out" href="${escape(url)}" target="_blank" rel="noopener">${escape(label)} ↗</a>`).join('')}</div>` : '';
-    dialog.innerHTML = `<div class="modal-accent-bar"></div><div class="modal-inner"><button type="button" class="modal-close" aria-label="Close project" autofocus>×</button><p class="modal-tag">${escape(project.meta)}</p><h2 class="modal-h" id="project-dialog-title">${escape(project.title)}</h2><p class="modal-desc">${escape(project.intro)}</p>${media}${gallery}${metrics}<h3 class="case-subhead">Engineering work</h3><ul class="modal-list">${project.bullets.map(item => `<li>${escape(item)}</li>`).join('')}</ul><div class="modal-chips">${project.tags.map(tag => `<span class="chip">${escape(tag)}</span>`).join('')}</div>${links}</div>`;
+    dialog.innerHTML = `<div class="modal-accent-bar"></div><div class="modal-inner">
+      <button type="button" class="modal-close" aria-label="Close project" autofocus>×</button>
+      <p class="modal-tag">${escape(project.meta)}</p>
+      <h2 class="modal-h" id="project-dialog-title">${escape(project.title)}</h2>
+      <p class="modal-desc">${escape(project.intro)}</p>
+      ${pipeline}${media}${gallery}${metrics}
+      <h3 class="case-subhead">Engineering work</h3>
+      <ul class="modal-list">${project.bullets.map(item => `<li>${escape(item)}</li>`).join('')}</ul>
+      ${figures}${evaluation}
+      <div class="modal-chips">${project.tags.map(tag => `<span class="chip">${escape(tag)}</span>`).join('')}</div>
+      ${links}
+    </div>`;
     dialog.querySelector('.modal-close').addEventListener('click', () => dialog.close());
     originalOverflow = document.body.style.overflow;
     dialog.showModal();

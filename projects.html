@@ -4,10 +4,10 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="assets/js/theme.js?v=20261112"></script>
   <title>Projects — Boubakar Diallo</title>
-  <meta name="description" content="Boubakar Diallo’s hardware, robotics, and AI projects, including RISC-V, RTOS, bird-call classification, residual CNNs, SAT-4, audio prediction, and WholeStory Health.">
+  <meta name="description" content="Boubakar Diallo’s hardware, robotics, and AI projects, including RISC-V, RTOS, CS 4750 robot localization, bird-call classification, residual CNNs, SAT-4, audio prediction, and WholeStory Health.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261112">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261113-cs4750">
 </head>
 <body id="top">
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -108,7 +108,30 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed project-text-only" id="project-hexacopter" data-categories="robotics embedded" aria-labelledby="heading-hexacopter">
+<article class="project-row project-row-reversed" id="project-cs4750" data-categories="robotics software" aria-labelledby="heading-cs4750">
+  <figure class="project-visual">
+    <a href="projects.html#project-cs4750" data-project="cs4750" aria-label="Read case study: Mobile Robot Kinematics &amp; LiDAR Localization">
+      <img src="assets/img/projects/cs4750-lidar.png" alt="Foxglove view of a mobile robot surrounded by live LiDAR scan points" loading="lazy" width="652" height="727">
+    </a>
+  </figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-cs4750"><a href="projects.html#project-cs4750" data-project="cs4750">Mobile Robot Kinematics &amp; LiDAR Localization</a></h3>
+    <p class="project-meta">Cornell CS 4750 · Team coursework · HW1–HW3</p>
+    <p class="project-summary">From wheel motion to robot pose: ROS integration, differential-drive kinematics, wheel odometry, and LiDAR-based particle-filter localization in a provided map.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details">
+      <li>Implemented forward/inverse kinematics and odometry with quaternion orientation and coordinate transforms.</li>
+      <li>Integrated LiDAR likelihoods and particle resampling in the course framework; documented sensor tuning and qualitative localization comparisons.</li>
+    </ul>
+    <p class="project-tech">Python · ROS · Odometry · LiDAR · Particle filters</p>
+    <div class="project-links">
+      <a class="project-open" href="projects.html#project-cs4750" data-project="cs4750">Read case study <span aria-hidden="true">↗</span></a>
+      <a class="project-open" href="assets/img/projects/cs4750-wheel-kinematics.png" target="_blank" rel="noopener">Wheel-speed plots <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
+
+<article class="project-row project-text-only" id="project-hexacopter" data-categories="robotics embedded" aria-labelledby="heading-hexacopter">
 
   <div class="project-copy">
     <h3 class="project-name" id="heading-hexacopter"><a href="projects.html#project-hexacopter" data-project="hexacopter">Hexacopter UAV Integration</a></h3>
@@ -121,7 +144,7 @@
   </div>
 </article>
 
-<article class="project-row project-text-only" id="project-mobile" data-categories="robotics embedded" aria-labelledby="heading-mobile">
+<article class="project-row project-row-reversed project-text-only" id="project-mobile" data-categories="robotics embedded" aria-labelledby="heading-mobile">
 
   <div class="project-copy">
     <h3 class="project-name" id="heading-mobile"><a href="projects.html#project-mobile" data-project="mobile">Autonomous Mobile Robot</a></h3>
@@ -134,7 +157,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-ewb" data-categories="robotics embedded ai" aria-labelledby="heading-ewb">
+<article class="project-row" id="project-ewb" data-categories="robotics embedded ai" aria-labelledby="heading-ewb">
   <figure class="project-visual"><a href="projects.html#project-ewb" data-project="ewb" aria-label="Read case study: Rover-Drone Crop Analytics"><img src="assets/img/ewb_main.png" alt="Agricultural rover and multirotor platform beside a crop field" loading="lazy" width="776" height="474"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-ewb"><a href="projects.html#project-ewb" data-project="ewb">Rover-Drone Crop Analytics</a></h3>
@@ -147,7 +170,7 @@
   </div>
 </article>
 
-<article class="project-row" id="project-forecasting" data-categories="ai" aria-labelledby="heading-forecasting">
+<article class="project-row project-row-reversed" id="project-forecasting" data-categories="ai" aria-labelledby="heading-forecasting">
   <figure class="project-visual"><a href="projects.html#project-forecasting" data-project="forecasting" aria-label="Read case study: Time-Series Forecasting Research"><img src="assets/img/projects/tempusbench.webp" alt="TempusBench task explorer comparing forecast trajectories and uncertainty against ground truth" loading="lazy" width="1600" height="769"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-forecasting"><a href="projects.html#project-forecasting" data-project="forecasting">Time-Series Forecasting Research</a></h3>
@@ -160,7 +183,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-ws" data-categories="ai software" aria-labelledby="heading-ws">
+<article class="project-row" id="project-ws" data-categories="ai software" aria-labelledby="heading-ws">
   <figure class="project-visual"><a href="projects.html#project-ws" data-project="ws" aria-label="Read case study: WholeStory Health"><img src="assets/img/projects/wholestory-demo.webp" alt="WholeStory Health web demo with eight language choices" loading="lazy" width="1280" height="720"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-ws"><a href="projects.html#project-ws" data-project="ws">WholeStory Health</a></h3>
@@ -173,7 +196,7 @@
   </div>
 </article>
 
-<article class="project-row" id="project-bird" data-categories="ai" aria-labelledby="heading-bird">
+<article class="project-row project-row-reversed" id="project-bird" data-categories="ai" aria-labelledby="heading-bird">
   <figure class="project-visual"><a href="projects.html#project-bird" data-project="bird" aria-label="Read case study: Bird-Call Classification"><img src="assets/img/projects/bird-call-spectrogram.webp" alt="Spectrogram of a training bird-call recording, showing frequency content over time" loading="lazy" width="1680" height="840"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-bird"><a href="projects.html#project-bird" data-project="bird">Bird-Call Classification</a></h3>
@@ -186,7 +209,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-hexagonian" data-categories="ai" aria-labelledby="heading-hexagonian">
+<article class="project-row" id="project-hexagonian" data-categories="ai" aria-labelledby="heading-hexagonian">
   <figure class="project-visual"><a href="projects.html#project-hexagonian" data-project="hexagonian" aria-label="Read case study: Hexagonian Digit Classification"><img src="assets/img/projects/hexagonian-cnn.svg" alt="Residual CNN architecture with 64, 128, and 256-channel blocks leading to 15 digit-pair classes" loading="lazy" width="1200" height="600"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-hexagonian"><a href="projects.html#project-hexagonian" data-project="hexagonian">Hexagonian Digit Classification</a></h3>
@@ -199,7 +222,7 @@
   </div>
 </article>
 
-<article class="project-row" id="project-audio" data-categories="ai" aria-labelledby="heading-audio">
+<article class="project-row project-row-reversed" id="project-audio" data-categories="ai" aria-labelledby="heading-audio">
   <figure class="project-visual"><a href="projects.html#project-audio" data-project="audio" aria-label="Read case study: Audio Signal Prediction"><img src="assets/img/projects/audio-prediction.webp" alt="Actual and predicted audio samples from a four-sample linear predictor on the test segment" loading="lazy" width="1680" height="840"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-audio"><a href="projects.html#project-audio" data-project="audio">Audio Signal Prediction</a></h3>
@@ -212,7 +235,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-sat4" data-categories="ai" aria-labelledby="heading-sat4">
+<article class="project-row" id="project-sat4" data-categories="ai" aria-labelledby="heading-sat4">
   <figure class="project-visual"><a href="projects.html#project-sat4" data-project="sat4" aria-label="Read case study: SAT-4 Land-Cover Classification"><img src="assets/img/projects/sat4-samples.webp" alt="Four actual SAT-4 image samples with their RGB and near-infrared channels" loading="lazy" width="1680" height="840"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-sat4"><a href="projects.html#project-sat4" data-project="sat4">SAT-4 Land-Cover Classification</a></h3>
@@ -225,7 +248,7 @@
   </div>
 </article>
 
-<article class="project-row project-text-only" id="project-ml" data-categories="ai" aria-labelledby="heading-ml">
+<article class="project-row project-row-reversed project-text-only" id="project-ml" data-categories="ai" aria-labelledby="heading-ml">
 
   <div class="project-copy">
     <h3 class="project-name" id="heading-ml"><a href="projects.html#project-ml" data-project="ml">Water-Quality Modeling</a></h3>
@@ -238,7 +261,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-marble" data-categories="software" aria-labelledby="heading-marble">
+<article class="project-row" id="project-marble" data-categories="software" aria-labelledby="heading-marble">
   <figure class="project-visual"><a href="projects.html#project-marble" data-project="marble" aria-label="Read case study: African Marble Game"><img src="assets/img/projects/marble-game.webp" alt="Live African Marble Game showing the 3D sand board and hole challenge" loading="lazy" width="1280" height="720"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-marble"><a href="projects.html#project-marble" data-project="marble">African Marble Game</a></h3>
@@ -251,7 +274,7 @@
   </div>
 </article>
 
-<article class="project-row project-text-only" id="project-revery" data-categories="software ai" aria-labelledby="heading-revery">
+<article class="project-row project-row-reversed project-text-only" id="project-revery" data-categories="software ai" aria-labelledby="heading-revery">
 
   <div class="project-copy">
     <h3 class="project-name" id="heading-revery"><a href="projects.html#project-revery" data-project="revery">Rêvery — Audio DSP</a></h3>
@@ -264,7 +287,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-ip" data-categories="community" aria-labelledby="heading-ip">
+<article class="project-row" id="project-ip" data-categories="community" aria-labelledby="heading-ip">
   <figure class="project-visual"><a href="projects.html#project-ip" data-project="ip" aria-label="Read case study: LNIS IP &amp; Commercialization"><img src="assets/img/projects/ip1.png" alt="Liquid Nanoparticle Ion Source illustration from the team presentation" loading="lazy" width="1042" height="642"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-ip"><a href="projects.html#project-ip" data-project="ip">LNIS IP &amp; Commercialization</a></h3>
@@ -277,7 +300,7 @@
   </div>
 </article>
 
-<article class="project-row project-text-only" id="project-ccra" data-categories="community" aria-labelledby="heading-ccra">
+<article class="project-row project-row-reversed project-text-only" id="project-ccra" data-categories="community" aria-labelledby="heading-ccra">
 
   <div class="project-copy">
     <h3 class="project-name" id="heading-ccra"><a href="projects.html#project-ccra" data-project="ccra">Cornell Computer Reuse</a></h3>
@@ -290,7 +313,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-quincy" data-categories="community" aria-labelledby="heading-quincy">
+<article class="project-row" id="project-quincy" data-categories="community" aria-labelledby="heading-quincy">
   <figure class="project-visual"><a href="projects.html#project-quincy" data-project="quincy" aria-label="Read case study: City of Quincy — Traffic Engineering"><img src="assets/img/city1.png" alt="City of Quincy internship project image" loading="lazy" width="804" height="712"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-quincy"><a href="projects.html#project-quincy" data-project="quincy">City of Quincy — Traffic Engineering</a></h3>
@@ -315,7 +338,7 @@
   </div>
 </footer>
 
-<script src="assets/js/projects.js?v=20261112"></script>
+<script src="assets/js/projects.js?v=20261113-cs4750"></script>
 <script src="assets/js/main.js?v=20261112"></script>
 </body>
 </html>

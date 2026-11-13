@@ -15,7 +15,7 @@
   <link rel="canonical" href="https://boubakar12.github.io">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261112">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261113-cs4750">
 </head>
 <body id="top">
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -69,7 +69,30 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-riscv" data-categories="hardware" aria-labelledby="heading-riscv">
+<article class="project-row project-row-reversed" id="project-cs4750" data-categories="robotics software" aria-labelledby="heading-cs4750">
+  <figure class="project-visual">
+    <a href="projects.html#project-cs4750" data-project="cs4750" aria-label="Read case study: Mobile Robot Kinematics &amp; LiDAR Localization">
+      <img src="assets/img/projects/cs4750-lidar.png" alt="Foxglove view of a mobile robot surrounded by live LiDAR scan points" loading="lazy" width="652" height="727">
+    </a>
+  </figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-cs4750"><a href="projects.html#project-cs4750" data-project="cs4750">Mobile Robot Kinematics &amp; LiDAR Localization</a></h3>
+    <p class="project-meta">Cornell CS 4750 · Team coursework · HW1–HW3</p>
+    <p class="project-summary">From wheel motion to robot pose: ROS integration, differential-drive kinematics, wheel odometry, and LiDAR-based particle-filter localization in a provided map.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details">
+      <li>Implemented forward/inverse kinematics and odometry with quaternion orientation and coordinate transforms.</li>
+      <li>Integrated LiDAR likelihoods and particle resampling in the course framework; documented sensor tuning and qualitative localization comparisons.</li>
+    </ul>
+    <p class="project-tech">Python · ROS · Odometry · LiDAR · Particle filters</p>
+    <div class="project-links">
+      <a class="project-open" href="projects.html#project-cs4750" data-project="cs4750">Read case study <span aria-hidden="true">↗</span></a>
+      <a class="project-open" href="assets/img/projects/cs4750-wheel-kinematics.png" target="_blank" rel="noopener">Wheel-speed plots <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
+
+<article class="project-row" id="project-riscv" data-categories="hardware" aria-labelledby="heading-riscv">
   <figure class="project-visual"><a href="projects.html#project-riscv" data-project="riscv" aria-label="Read case study: Pipelined RISC-V Processor"><img src="assets/img/projects/riscv-pipeline.svg" alt="Conceptual five-stage processor pipeline with forwarding and hazard control" loading="lazy" width="1200" height="600"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-riscv"><a href="projects.html#project-riscv" data-project="riscv">Pipelined RISC-V Processor</a></h3>
@@ -82,7 +105,7 @@
   </div>
 </article>
 
-<article class="project-row" id="project-rtos" data-categories="embedded" aria-labelledby="heading-rtos">
+<article class="project-row project-row-reversed" id="project-rtos" data-categories="embedded" aria-labelledby="heading-rtos">
   <figure class="project-visual"><a href="projects.html#project-rtos" data-project="rtos" aria-label="Read case study: Preemptive RTOS &amp; Scheduler"><img src="assets/img/projects/rtos-scheduler.svg" alt="Scheduler overview showing a timer tick, deadline-ordered ready queue, context switch, and running task" loading="lazy" width="1200" height="600"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-rtos"><a href="projects.html#project-rtos" data-project="rtos">Preemptive RTOS &amp; Scheduler</a></h3>
@@ -95,7 +118,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-ws" data-categories="ai software" aria-labelledby="heading-ws">
+<article class="project-row" id="project-ws" data-categories="ai software" aria-labelledby="heading-ws">
   <figure class="project-visual"><a href="projects.html#project-ws" data-project="ws" aria-label="Read case study: WholeStory Health"><img src="assets/img/projects/wholestory-demo.webp" alt="WholeStory Health web demo with eight language choices" loading="lazy" width="1280" height="720"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-ws"><a href="projects.html#project-ws" data-project="ws">WholeStory Health</a></h3>
@@ -108,7 +131,7 @@
   </div>
 </article>
 
-<article class="project-row" id="project-bird" data-categories="ai" aria-labelledby="heading-bird">
+<article class="project-row project-row-reversed" id="project-bird" data-categories="ai" aria-labelledby="heading-bird">
   <figure class="project-visual"><a href="projects.html#project-bird" data-project="bird" aria-label="Read case study: Bird-Call Classification"><img src="assets/img/projects/bird-call-spectrogram.webp" alt="Spectrogram of a training bird-call recording, showing frequency content over time" loading="lazy" width="1680" height="840"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-bird"><a href="projects.html#project-bird" data-project="bird">Bird-Call Classification</a></h3>
@@ -121,7 +144,7 @@
   </div>
 </article>
 
-<article class="project-row project-row-reversed" id="project-hexagonian" data-categories="ai" aria-labelledby="heading-hexagonian">
+<article class="project-row" id="project-hexagonian" data-categories="ai" aria-labelledby="heading-hexagonian">
   <figure class="project-visual"><a href="projects.html#project-hexagonian" data-project="hexagonian" aria-label="Read case study: Hexagonian Digit Classification"><img src="assets/img/projects/hexagonian-cnn.svg" alt="Residual CNN architecture with 64, 128, and 256-channel blocks leading to 15 digit-pair classes" loading="lazy" width="1200" height="600"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-hexagonian"><a href="projects.html#project-hexagonian" data-project="hexagonian">Hexagonian Digit Classification</a></h3>
@@ -134,7 +157,7 @@
   </div>
 </article>
 
-<article class="project-row" id="project-marble" data-categories="software" aria-labelledby="heading-marble">
+<article class="project-row project-row-reversed" id="project-marble" data-categories="software" aria-labelledby="heading-marble">
   <figure class="project-visual"><a href="projects.html#project-marble" data-project="marble" aria-label="Read case study: African Marble Game"><img src="assets/img/projects/marble-game.webp" alt="Live African Marble Game showing the 3D sand board and hole challenge" loading="lazy" width="1280" height="720"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-marble"><a href="projects.html#project-marble" data-project="marble">African Marble Game</a></h3>
@@ -146,7 +169,7 @@
     <div class="project-links"><a class="project-open" href="projects.html#project-marble" data-project="marble">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://boubakar12.github.io/african-marble-game" target="_blank" rel="noopener">Play the web game <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/african-marble-game" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a></div>
   </div>
 </article></div>
-  <div class="section-actions"><p>There’s more where these came from.</p><a href="projects.html">explore all 20 projects →</a></div>
+  <div class="section-actions"><p>There’s more where these came from.</p><a href="projects.html">explore all 21 projects →</a></div>
 </section>
 <section class="content-section experience-section" id="work" aria-labelledby="experience-heading">
   <h2 class="section-label" id="experience-heading">experience &amp; what’s next</h2>
@@ -216,7 +239,7 @@
 </div>
 
 </main>
-<nav class="section-nav" aria-label="Selected projects"><a href="#heading-ewb" aria-label="Rover-Drone Crop Analytics"><span>Rover-Drone Crop Analytics</span></a><a href="#heading-riscv" aria-label="Pipelined RISC-V Processor"><span>Pipelined RISC-V Processor</span></a><a href="#heading-rtos" aria-label="Preemptive RTOS &amp; Scheduler"><span>Preemptive RTOS &amp; Scheduler</span></a><a href="#heading-ws" aria-label="WholeStory Health"><span>WholeStory Health</span></a><a href="#heading-bird" aria-label="Bird-Call Classification"><span>Bird-Call Classification</span></a><a href="#heading-hexagonian" aria-label="Hexagonian Digit Classification"><span>Hexagonian Digit Classification</span></a><a href="#heading-marble" aria-label="African Marble Game"><span>African Marble Game</span></a></nav>
+<nav class="section-nav" aria-label="Selected projects"><a href="#heading-ewb" aria-label="Rover-Drone Crop Analytics"><span>Rover-Drone Crop Analytics</span></a><a href="#heading-cs4750" aria-label="Mobile Robot Kinematics &amp; LiDAR Localization"><span>Mobile Robot Kinematics &amp; LiDAR Localization</span></a><a href="#heading-riscv" aria-label="Pipelined RISC-V Processor"><span>Pipelined RISC-V Processor</span></a><a href="#heading-rtos" aria-label="Preemptive RTOS &amp; Scheduler"><span>Preemptive RTOS &amp; Scheduler</span></a><a href="#heading-ws" aria-label="WholeStory Health"><span>WholeStory Health</span></a><a href="#heading-bird" aria-label="Bird-Call Classification"><span>Bird-Call Classification</span></a><a href="#heading-hexagonian" aria-label="Hexagonian Digit Classification"><span>Hexagonian Digit Classification</span></a><a href="#heading-marble" aria-label="African Marble Game"><span>African Marble Game</span></a></nav>
 <footer class="site-footer">
   <span class="footer-name">boubakar diallo <span aria-hidden="true">⌁</span></span>
   <a class="footer-top" href="#top">back to top ↑</a>
@@ -227,7 +250,7 @@
   </div>
 </footer>
 
-<script src="assets/js/projects.js?v=20261112"></script>
+<script src="assets/js/projects.js?v=20261113-cs4750"></script>
 <script src="assets/js/main.js?v=20261112"></script>
 </body>
 </html>

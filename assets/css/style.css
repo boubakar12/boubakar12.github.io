@@ -199,6 +199,13 @@ textarea.f-input { resize: vertical; }
 .case-cover img { width: 100%; height: auto; border-radius: 3px; }
 .case-figure figcaption { font-size: .72rem; line-height: 1.7; color: var(--mid); margin-top: .5rem; }
 .case-subhead { font: 400 .7rem var(--font-mono); text-transform: uppercase; letter-spacing: .1em; margin: 1.75rem 0 .75rem; color: var(--accent); }
+.case-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.case-flow li { margin: 0; padding: 1rem; border: 1px solid var(--rule); border-radius: 5px; }
+.case-flow li:last-child { grid-column: 1 / -1; background: var(--sage-light); border-color: var(--sage); }
+.case-flow h4 { font: 500 .78rem/1.6 var(--font-mono); color: var(--accent); margin-bottom: .4rem; }
+.case-flow p { font-size: .8rem; line-height: 1.75; }
+.case-evidence .case-figure { margin-top: .75rem; }
+.case-evaluation { padding-top: .25rem; }
 .case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1rem 0; margin: 1.25rem 0; border-block: 1px solid var(--rule); }
 .case-metrics dt { font: 500 1.1rem var(--font-mono); color: var(--accent); }
 .case-metrics dd { font-size: .78rem; margin-top: .4rem; }
@@ -261,6 +268,7 @@ textarea.f-input { resize: vertical; }
   .project-dialog { width: calc(100% - 1.25rem); max-height: calc(100dvh - 1.25rem); }
   .modal-inner { padding: 1.5rem 1.25rem; }
   .modal-gallery { grid-template-columns: 1fr 1fr; }
+  .case-flow { grid-template-columns: 1fr; }
   .site-footer { margin-inline: 1.25rem; flex-wrap: wrap; gap: 1rem; }
   .footer-links { width: 100%; }
 }
