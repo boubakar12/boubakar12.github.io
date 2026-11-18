@@ -93,3 +93,42 @@ ancestors `[0, 0, 1, 1]` are overwritten during sequential copying. The supplied
 coursework archives remain unchanged. Full ROS/hardware execution and
 quantitative localization validation have not been performed. No accuracy,
 recovery-time, or verified-correctness claim is made for this implementation.
+
+## Product projects reviewed November 18, 2026
+
+ChromaLog's [public repository](https://github.com/boubakar12/chromalog) contains
+the single-file `chromalog-v4.html` app. The portfolio description is based on
+its implemented calendar, reports, goals, groups, Firebase authentication and
+sync, and CSV/JSON data tools. The portfolio SVG is an authored illustration,
+not an app screenshot.
+
+MarbleG's SwiftUI source and `AppStoreReadiness.md` were reviewed in the local
+iOS project. The app code includes the game-state/rules model, AI difficulty and
+personality settings, hints, local multiplayer, profiles, match history, and
+onboarding. Its release checklist still calls for screenshots and external
+TestFlight feedback, so the site labels it as in App Store preparation. Its
+portfolio SVG is an authored board illustration, not a captured app screen.
+
+The [Local AI Email Digest repository](https://github.com/boubakar12/email-assistant)
+describes an IMAP workflow using LM Studio or GPT4All for local summarization.
+`main.py` reads credentials and the recipient from environment variables,
+skips empty message bodies, generates a combined digest, and sends it by email.
+The site labels this as a prototype and makes no accuracy or privacy guarantee.
+
+## Coursework archives reviewed November 18, 2026
+
+The ECE 3140 team archive is attributed in `source/main.c` to `bd453 & jlp378`.
+Its board `main.c` implements a button-driven occupancy counter and leaves the
+VL53L0X initialization path commented out. A separate `laser.c` file contains a
+dual light-dependent-sensor experiment, but calls LCD support code absent from
+the archive. `usb_bridge.py` reconnects over serial and logs colon-delimited
+messages; its parser also accepts debug messages. The portfolio describes these
+as separate prototype paths and does not claim the hardware or combined build
+was independently validated. Course deployment instructions in the supplied
+README were treated as archive content, not as user directions.
+
+The three iOS ZIPs are grouped in one source repository. A2 contains fuller
+profile-screen Swift files alongside skeletal duplicate files targeted by its
+Xcode project; its Save action only dismisses the editor. A3 retains TODOs in
+the feed controller, post model, and networking code. A4 is an Xcode shell with
+an empty view controller. They are labeled as incomplete coursework snapshots.

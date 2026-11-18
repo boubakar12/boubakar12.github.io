@@ -98,18 +98,34 @@ const PROJECTS = {
   },
   occupancy: {
     title: 'Bidirectional Occupancy Monitor',
-    meta: 'Embedded systems · Team project · May 2026',
-    intro: 'A doorway people counter that turns the order of two distance measurements into entry and exit events.',
+    meta: 'ECE 3140 · Team coursework · Spring 2026 · bd453 & jlp378',
+    intro: 'A FRDM-KL46Z occupancy-counter coursework prototype with a button-driven board implementation, a separate dual-beam sensor experiment, and a Python USB-serial logger.',
     image: 'assets/img/projects/occupancy-system.svg',
-    alt: 'Two time-of-flight sensors connect over I2C to an ARM controller, then to a display and serial event logger',
-    caption: 'System overview based on the project firmware and report.',
+    alt: 'Manual entry and exit buttons and a separate two-beam light-sensor experiment connect to an ARM occupancy counter and Python serial logger',
+    caption: 'Conceptual overview of the distinct firmware and sensor experiment included in the team archive.',
     bullets: [
-      'Connected two VL53L0X time-of-flight sensors to a shared I²C bus on the FRDM-KL46Z.',
-      'Sequenced XSHUT initialization and reassigned a sensor address to resolve the devices’ identical startup addresses.',
-      'Implemented a two-zone entry/exit state machine and occupancy-count updates in bare-metal C.',
-      'Added MAX7219 LED-matrix output over SPI and UART event logging to a Python application.'
+      'The supplied board main.c implements GPIO button inputs for manual entry/exit counts, capacity-threshold LEDs, and UART event output.',
+      'A separate laser.c experiment polls two light-dependent sensors every 10 ms and infers direction from beam-break order; it references LCD support files that are not included in the archive.',
+      'The Python USB-serial bridge reconnects to the board and appends timestamped colon-delimited messages to CSV. The current parser also accepts debug messages, not only entry/exit events.',
+      'VL53L0X initialization in main.c is commented out, so the archive does not establish a working ToF sensor path or a fully integrated dual-beam build.'
     ],
-    tags: ['C', 'I²C', 'SPI', 'UART', 'VL53L0X', 'Python']
+    evaluation: 'The archive contains separate manual-counter and light-sensor code paths. The LCD implementation is missing, the ToF path is commented out, and hardware execution was not independently verified.',
+    tags: ['C', 'ARM Cortex-M0+', 'GPIO', 'LDR sensors', 'UART', 'Python'],
+    links: [['GitHub source', 'https://github.com/boubakar12/boubakar12.github.io/tree/main/coursework/ece3140-occupancy-monitor']]
+  },
+  'ios-coursework': {
+    title: 'UIKit App Development Coursework',
+    meta: 'Swift · UIKit · Three coursework snapshots',
+    intro: 'Three early iOS assignment archives covering a profile editor, a social feed scaffold, and a food-planning app shell. The source is presented as coursework in its supplied state.',
+    bullets: [
+      'A2 Profile includes fuller programmatic profile and edit-screen source files, while the included Xcode projects also point at skeletal duplicate controller files. The Save action only returns to the profile and does not persist edits.',
+      'A3 ChatDev includes UIKit feed cells and a collection-view controller, but core feed, post-model, and networking code still contains TODOs.',
+      'A4 ChefOS is an Xcode project shell with a generated, empty view controller.',
+      'The grouped repository documents archive limitations and retains the three assignment folders for review.'
+    ],
+    evaluation: 'These are coursework snapshots, not finished or tested apps. The archive READMEs specify the original Swift, iOS, and Xcode requirements; the project source has not been rebuilt in a current Xcode environment.',
+    tags: ['Swift', 'UIKit', 'Auto Layout', 'UICollectionView'],
+    links: [['GitHub source', 'https://github.com/boubakar12/boubakar12.github.io/tree/main/coursework/ios-coursework-apps']]
   },
   hexacopter: {
     title: 'Hexacopter UAV Integration',
@@ -282,6 +298,49 @@ const PROJECTS = {
     ],
     tags: ['React Three Fiber', 'Three.js', 'TypeScript', 'Zustand'],
     links: [['Play the web game', 'https://boubakar12.github.io/african-marble-game'], ['Source', 'https://github.com/boubakar12/african-marble-game']]
+  },
+  chromalog: {
+    title: 'ChromaLog — Weekly Planner',
+    meta: 'Personal productivity app · 2026',
+    intro: 'A color-coded planning workspace that turns a weekly schedule into a lightweight record of how time is spent, with AI-assisted goals and weekly summaries.',
+    image: 'assets/img/projects/chromalog-calendar.svg',
+    alt: 'Illustration of a weekly hour calendar with color-coded activity blocks',
+    caption: 'Custom illustration of the weekly calendar and activity palette; this is not a captured app screen.',
+    bullets: [
+      'Built an hour-by-hour weekly calendar with color-coded activity blocks, a movable activity palette, and notes.',
+      'Added weekly and monthly reports, an AI weekly summary, category streaks, goal planning that schedules tasks on the calendar, and group calendar sharing.',
+      'Implemented Firebase authentication and Firestore sync, plus CSV and JSON export/import for personal data.'
+    ],
+    tags: ['JavaScript', 'HTML/CSS', 'Firebase Auth', 'Firestore', 'Chart.js'],
+    links: [['GitHub source', 'https://github.com/boubakar12/chromalog']]
+  },
+  marbleg: {
+    title: 'MarbleG for iOS',
+    meta: 'Native iOS game · Personal project · 2026 · App Store preparation',
+    intro: 'A native SwiftUI Mancala-style strategy game with local multiplayer, configurable AI matches, and a reusable rules engine.',
+    image: 'assets/img/projects/marbleg-board.svg',
+    alt: 'Illustration of a Mancala-style board with two rows of pits and marble counters',
+    caption: 'Custom game-board illustration, not a screenshot of the iOS app. App Store preparation is still in progress.',
+    bullets: [
+      'Built a Swift game model and rules engine for legal moves, sowing, captures, extra turns, and end-of-game scoring.',
+      'Implemented a SwiftUI board with local two-player and AI modes, adjustable difficulty and play style, turn timers, match series, move hints, and an in-app guide.',
+      'Added player profiles, saved match history, onboarding, accessibility announcements, and audio feedback.',
+      'The AI uses alpha-beta minimax search at configured depths for medium and hard modes. The app is in release preparation; its readiness checklist still calls for screenshots and external TestFlight feedback.'
+    ],
+    tags: ['Swift', 'SwiftUI', 'Game AI', 'Minimax', 'iOS'],
+    links: [['Support page', 'https://boubakar12.github.io/apps-site/marbleg/support.html'], ['Privacy policy', 'https://boubakar12.github.io/apps-site/marbleg/privacy.html']]
+  },
+  'email-digest': {
+    title: 'Local AI Email Digest',
+    meta: 'Personal automation · Prototype · Python',
+    intro: 'A command-line workflow that summarizes the previous week of inbox messages with a locally run language model and emails a weekly digest.',
+    bullets: [
+      'Fetches recent messages over IMAP, skips messages without a body, and analyzes each message before creating a combined summary.',
+      'Uses LM Studio or GPT4All for local model inference, then sends the result as an email digest.',
+      'Reads account credentials and the digest recipient from environment variables rather than hard-coding them in the script.'
+    ],
+    tags: ['Python', 'IMAP', 'Local LLM', 'LM Studio', 'GPT4All'],
+    links: [['GitHub source', 'https://github.com/boubakar12/email-assistant']]
   },
   revery: {
     title: 'Rêvery — Audio DSP',

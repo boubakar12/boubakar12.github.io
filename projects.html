@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="assets/js/theme.js?v=20261112"></script>
   <title>Projects — Boubakar Diallo</title>
-  <meta name="description" content="Boubakar Diallo’s hardware, robotics, and AI projects, including RISC-V, RTOS, CS 4750 robot localization, bird-call classification, residual CNNs, SAT-4, audio prediction, and WholeStory Health.">
+  <meta name="description" content="Boubakar Diallo’s hardware, robotics, AI, and software projects, including RISC-V, an ECE 3140 occupancy counter, UIKit coursework, ChromaLog, MarbleG for iOS, and local AI tools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css?v=20261113-cs4750">
@@ -26,7 +26,7 @@
 <div class="page-hero">
   <span class="page-hero-label">Projects</span>
   <h1 class="page-hero-h">Things I’ve been building</h1>
-  <p class="page-hero-sub">From processor pipelines and real-time firmware to robotics, forecasting, and software people can use. Completed work and current experiments.</p>
+  <p class="page-hero-sub">From processor pipelines and real-time firmware to robotics, planning tools, and games. Completed work, prototypes, and current experiments.</p>
 </div>
 
 <section class="project-catalogue content-section" id="all-projects" aria-label="Project catalogue">
@@ -96,15 +96,27 @@
 </article>
 
 <article class="project-row" id="project-occupancy" data-categories="embedded" aria-labelledby="heading-occupancy">
-  <figure class="project-visual"><a href="projects.html#project-occupancy" data-project="occupancy" aria-label="Read case study: Bidirectional Occupancy Monitor"><img src="assets/img/projects/occupancy-system.svg" alt="Two time-of-flight sensors connect over I2C to an ARM controller, then to a display and serial event logger" loading="lazy" width="1200" height="600"></a></figure>
+  <figure class="project-visual"><a href="projects.html#project-occupancy" data-project="occupancy" aria-label="Read case study: Bidirectional Occupancy Monitor"><img src="assets/img/projects/occupancy-system.svg" alt="Manual buttons and a separate light-sensor experiment shown with an ARM occupancy counter and serial logger" loading="lazy" width="1200" height="600"></a></figure>
   <div class="project-copy">
     <h3 class="project-name" id="heading-occupancy"><a href="projects.html#project-occupancy" data-project="occupancy">Bidirectional Occupancy Monitor</a></h3>
-    <p class="project-meta">Embedded systems · Team project · May 2026</p>
-    <p class="project-summary">Two time-of-flight sensors, one I²C bus. Bare-metal direction detection, SPI display output, and UART event logging to Python.</p>
+    <p class="project-meta">ECE 3140 · Team coursework · Spring 2026</p>
+    <p class="project-summary">A FRDM-KL46Z coursework prototype with a button-driven occupancy counter, a separate dual-beam light-sensor experiment, and a Python USB-serial logger.</p>
     <h4 class="project-detail-label">Engineering work</h4>
-    <ul class="project-details"><li>Connected two VL53L0X time-of-flight sensors to a shared I²C bus on the FRDM-KL46Z.</li><li>Sequenced XSHUT initialization and reassigned a sensor address to resolve the devices’ identical startup addresses.</li></ul>
-    <p class="project-tech">C · I²C · SPI · UART</p>
-    <div class="project-links"><a class="project-open" href="projects.html#project-occupancy" data-project="occupancy">Read case study <span aria-hidden="true">↗</span></a></div>
+    <ul class="project-details"><li>The board main.c supports manual entry and exit through GPIO buttons, occupancy-threshold LEDs, and UART output.</li><li>A separate laser.c experiment polls two light-dependent sensors every 10 ms and classifies direction from beam-break order; it references LCD files missing from the archive.</li><li>The Python bridge reconnects over USB serial and logs colon-delimited messages to CSV. The VL53L0X setup in main.c is commented out.</li></ul>
+    <p class="project-tech">C · ARM Cortex-M0+ · GPIO · LDR sensors · UART · Python</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-occupancy" data-project="occupancy">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/boubakar12.github.io/tree/main/coursework/ece3140-occupancy-monitor" target="_blank" rel="noopener">GitHub source <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row project-text-only" id="project-ios-coursework" data-categories="software" aria-labelledby="heading-ios-coursework">
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-ios-coursework"><a href="projects.html#project-ios-coursework" data-project="ios-coursework">UIKit App Development Coursework</a></h3>
+    <p class="project-meta">BM 734 · Swift / UIKit · Coursework snapshots</p>
+    <p class="project-summary">Three iOS assignment snapshots: a profile editor, a ChatDev feed scaffold, and a ChefOS app shell, presented with their original implementation gaps.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>A2 includes fuller programmatic profile and edit-screen files, but the included Xcode projects also target skeletal duplicate controllers; Save does not persist edits.</li><li>A3 ChatDev contains UIKit feed scaffolding with TODOs in the controller, post model, and networking code.</li><li>A4 ChefOS is an Xcode app shell with an empty view controller. All three archives are preserved as coursework snapshots, not finished apps.</li></ul>
+    <p class="project-tech">Swift · UIKit · Auto Layout · UICollectionView</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-ios-coursework" data-project="ios-coursework">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/boubakar12.github.io/tree/main/coursework/ios-coursework-apps" target="_blank" rel="noopener">GitHub source <span aria-hidden="true">↗</span></a></div>
   </div>
 </article>
 
@@ -274,6 +286,44 @@
   </div>
 </article>
 
+<article class="project-row project-row-reversed" id="project-chromalog" data-categories="software ai" aria-labelledby="heading-chromalog">
+  <figure class="project-visual"><a href="projects.html#project-chromalog" data-project="chromalog" aria-label="Read case study: ChromaLog"><img src="assets/img/projects/chromalog-calendar.svg" alt="Illustration of a weekly hour calendar with color-coded activity blocks" loading="lazy" width="1200" height="600"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-chromalog"><a href="projects.html#project-chromalog" data-project="chromalog">ChromaLog — Weekly Planner</a></h3>
+    <p class="project-meta">Personal productivity app · 2026</p>
+    <p class="project-summary">A color-coded weekly planner with time tracking, AI-assisted goal planning, reports, and shared calendars.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Built an hour-by-hour weekly calendar with activity colors, notes, and an adjustable palette.</li><li>Added weekly and monthly reports, an AI weekly summary, category streaks, goal planning that schedules tasks onto the calendar, and group calendar sharing.</li><li>Implemented Firebase sign-in and Firestore sync, plus CSV and JSON export/import for personal data.</li></ul>
+    <p class="project-tech">JavaScript · HTML/CSS · Firebase Auth · Firestore · Chart.js</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-chromalog" data-project="chromalog">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/chromalog" target="_blank" rel="noopener">GitHub source <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row" id="project-marbleg" data-categories="software ai" aria-labelledby="heading-marbleg">
+  <figure class="project-visual"><a href="projects.html#project-marbleg" data-project="marbleg" aria-label="Read case study: MarbleG for iOS"><img src="assets/img/projects/marbleg-board.svg" alt="Illustration of a Mancala-style board with two rows of pits and marble counters" loading="lazy" width="1200" height="600"></a></figure>
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-marbleg"><a href="projects.html#project-marbleg" data-project="marbleg">MarbleG for iOS</a></h3>
+    <p class="project-meta">Native iOS game · Personal project · 2026 · App Store preparation</p>
+    <p class="project-summary">A SwiftUI Mancala-style strategy game with local two-player and AI matches, move hints, player profiles, and an in-app guide.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Built a Swift game model and rules engine for legal moves, sowing, captures, extra turns, and end-of-game scoring.</li><li>Implemented a SwiftUI board, local multiplayer, adjustable AI difficulty and style, turn timers, match series, and contextual move hints.</li><li>Added player profiles, saved match history, onboarding, accessibility announcements, and audio feedback while preparing the app for release.</li></ul>
+    <p class="project-tech">Swift · SwiftUI · Game AI · Minimax · iOS</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-marbleg" data-project="marbleg">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://boubakar12.github.io/apps-site/marbleg/support.html" target="_blank" rel="noopener">Support page <span aria-hidden="true">↗</span></a><a class="project-open" href="https://boubakar12.github.io/apps-site/marbleg/privacy.html" target="_blank" rel="noopener">Privacy policy <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
+<article class="project-row project-text-only" id="project-email-digest" data-categories="ai software" aria-labelledby="heading-email-digest">
+  <div class="project-copy">
+    <h3 class="project-name" id="heading-email-digest"><a href="projects.html#project-email-digest" data-project="email-digest">Local AI Email Digest</a></h3>
+    <p class="project-meta">Personal automation · Prototype · Python</p>
+    <p class="project-summary">A command-line workflow that summarizes the previous week of inbox messages with a locally run language model and emails a weekly digest.</p>
+    <h4 class="project-detail-label">Engineering work</h4>
+    <ul class="project-details"><li>Fetches recent messages over IMAP, skips messages without a body, and analyzes each message before creating a combined summary.</li><li>Uses LM Studio or GPT4All for local model inference, then sends the result as an email digest.</li><li>Reads account credentials and the digest recipient from environment variables rather than hard-coding them in the script.</li></ul>
+    <p class="project-tech">Python · IMAP · Local LLM · LM Studio · GPT4All</p>
+    <div class="project-links"><a class="project-open" href="projects.html#project-email-digest" data-project="email-digest">Read case study <span aria-hidden="true">↗</span></a><a class="project-open" href="https://github.com/boubakar12/email-assistant" target="_blank" rel="noopener">GitHub source <span aria-hidden="true">↗</span></a></div>
+  </div>
+</article>
+
 <article class="project-row project-row-reversed project-text-only" id="project-revery" data-categories="software ai" aria-labelledby="heading-revery">
 
   <div class="project-copy">
@@ -338,7 +388,7 @@
   </div>
 </footer>
 
-<script src="assets/js/projects.js?v=20261113-cs4750"></script>
+<script src="assets/js/projects.js?v=20261118-coursework"></script>
 <script src="assets/js/main.js?v=20261112"></script>
 </body>
 </html>

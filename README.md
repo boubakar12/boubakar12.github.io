@@ -32,5 +32,9 @@ conceptual SVG diagrams; captions distinguish their purpose.
 See [project evidence and figure notes](assets/docs/project-evidence.md) for
 repository sources, evaluation context, and the audio-result reproduction.
 
+Selected coursework source is grouped under [`coursework/`](coursework/README.md),
+including the ECE 3140 occupancy-counter archive and three UIKit assignment
+snapshots.
+
 The journey uses self-hosted Globe.gl assets and an SVG fallback. See
 `assets/vendor/globe-gl/README.md` for licenses and asset sources.

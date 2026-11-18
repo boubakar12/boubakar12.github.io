@@ -1,0 +1,5 @@
+.DS_Store
+**/Debug/
+**/xcuserdata/
+**/*.xcuserstate
+**/occupancy_log.csv
